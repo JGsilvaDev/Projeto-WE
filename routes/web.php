@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Produtos;
+use App\Mail\SendMailUser;
 
 Route::get('/', function () {
     return view('index');
@@ -19,10 +22,21 @@ Route::get('/config_pacote', function () {
     ]);
 });
 
-Route::get('/config_pacote2', function () {
+Route::post('/config_pacote', function (Request $request) {
 
-    return view('config_pacote2');
-    
+    $email = request('email');
+    $nome = request('nome');
+    $produtos = request('produtos');
+
+    $data = array(
+        'nome' => $nome,
+        'produtos' => $produtos,
+    );
+
+    Mail::to($email)
+        ->send(new SendMailUser($data));
+
+    return redirect('/');
 });
 
 Route::middleware([

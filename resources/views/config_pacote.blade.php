@@ -88,7 +88,21 @@
         <button id="btnCalc" onclick=btnConfirm()>Confirmar</button>
    </div>
 
-   <button onclick=reload()>Refrech</button>
+   <div>
+    <form method="POST">
+        @csrf
+        <label>Informe seu email:</label>
+        <input type="email" name="email" id="email">
+
+        <label>Nome:</label>
+        <input type="text" name="nome" id="nome">
+
+        <label>Produtos:</label>
+        <input type="text" name="produtos" id="produtos" disabled>
+
+        <button type="submit">Enviar</button>
+    </form>
+   </div>
 
    
 </body>
@@ -113,19 +127,15 @@
         box.addEventListener('dragleave', dragLeave);
     });
 
+    //seta o valor do texto ao arrastar
     function dragStart(e){
         e.dataTransfer.setData('text/plain', e.target.innerText);
-
-        /*setTimeout(()=>{
-            this.className = "invisible";
-        }, 0);*/
     }
-
+    //impede loop
     function dragOver(e){
         e.preventDefault();
-        
     }
-
+    //passa de uma div pra outra
     function dropEvent(e){
         e.preventDefault()
         this.className = "drag_item";
@@ -145,27 +155,15 @@
         texto += dataId + ' '
 
     }
-
+    //seta uma classe pra div
     function dragLeave(e){
         e.preventDefault()
 
         this.className = "drag_item";
     }
-        function clicked(event) {
-
-        }
-    function reload(){
-        location.reload();
-    }
 
     function btnConfirm(event){
-
-            Swal.fire({
-                icon: 'info',
-                title: texto,
-                text: 'conteudo',
-                showConfirmButton: true
-            })
+        $('#produtos').val(texto);
     
     }          
 
@@ -210,4 +208,5 @@
     });
 
 </script>
+
 
