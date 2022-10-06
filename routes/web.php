@@ -7,11 +7,17 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Produtos;
+<<<<<<< HEAD
 use App\Mail\SendMailUser;
+=======
+use App\Http\Controllers\BotManController;
+>>>>>>> 31af23a1f1bce0847722ff79cc9414767c25a1dd
 
 Route::get('/', function () {
     return view('index');
 });
+
+Route::match(['get', 'post'], 'botman', [BotManController::class, "handle"]);
 
 Route::get('/config_pacote', function () {
 
@@ -48,3 +54,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
