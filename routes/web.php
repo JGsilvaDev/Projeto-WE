@@ -5,10 +5,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use App\Models\Produtos;
+use App\Http\Controllers\BotManController;
 
 Route::get('/', function () {
     return view('index');
 });
+
+Route::match(['get', 'post'], 'botman', [BotManController::class, "handle"]);
 
 Route::get('/config_pacote', function () {
 
@@ -34,3 +37,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
