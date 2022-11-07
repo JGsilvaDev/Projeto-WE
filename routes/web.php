@@ -7,7 +7,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Produtos;
+use App\Models\Events;
+use App\Mail\SendMailUser;
 use App\Http\Controllers\BotManController;
+use Illuminate\Routing\UrlGenerator;
 
 Route::get('/', function () {
     return view('index');
@@ -51,4 +54,10 @@ Route::middleware([
     })->name('dashboard');
 });
 
+Route::get('/calendario', function(){
+    return view('fullcalendar.calendario');
+});
 
+Route::get('/calendario', function(){
+    return view('fullcalendar.calendario');
+});

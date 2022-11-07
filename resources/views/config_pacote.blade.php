@@ -71,10 +71,10 @@
 
 <body>
    <div class="drag_container">
-        <div class="drag_item"><p id="descript1"><box-icon name='info-circle'></box-icon></p><p class="drag" draggable="true" value="{{$produtos[0]->ID}}">{{$produtos[0]->NOME_PRODUTO}}</p></div>
-        <div class="drag_item"><p id="descript2"><box-icon name='info-circle'></box-icon></p><p class="drag" draggable="true" value="{{$produtos[1]->ID}}">{{$produtos[1]->NOME_PRODUTO}}</p></div>
-        <div class="drag_item"><p id="descript3"><box-icon name='info-circle'></box-icon></p><p class="drag" draggable="true" value="{{$produtos[2]->ID}}">{{$produtos[2]->NOME_PRODUTO}}</p></div>
-        <div class="drag_item"><p id="descript4"><box-icon name='info-circle'></box-icon></p><p class="drag" draggable="true" value="{{$produtos[3]->ID}}">{{$produtos[3]->NOME_PRODUTO}}</p></div>
+    @foreach ( $produtos as $prod )
+        <div class="drag_item"><p id="{{ $prod->ID }}"><box-icon name='info-circle'></box-icon></p><p class="drag" draggable="true" value="{{$prod->ID}}">{{$prod->NOME_PRODUTO}}</p></div>
+    @endforeach
+
    </div>
 
     <div class="drop_container">
@@ -97,8 +97,7 @@
         <label>Nome:</label>
         <input type="text" name="nome" id="nome">
 
-        <label>Produtos:</label>
-        <input type="text" name="produtos" id="produtos" disabled>
+        <input type="text" name="produtos" id="produtos">
 
         <button type="submit">Enviar</button>
     </form>
@@ -109,6 +108,9 @@
 </html>
 
 <script>//Script para Drag and Drop
+
+    $('#produtos').hide();
+
     var texto = ' '
     var selecionados = [] //array com os produtos que o clique selecionar
 
