@@ -12,17 +12,9 @@ class BotManController extends Controller
     public function handle()
     {
         $botman=app("botman");
-
         $botman->hears("{message}", function($botman, $message)
         {
-            if($message=="oi")
-            {
                 $this->askName($botman);
-            }
-            else
-            {
-                $botman->reply("Por favor, digite oi para conversarmos");
-            }
         });
 
         $botman->listen();
@@ -35,5 +27,6 @@ class BotManController extends Controller
             $name=$answer->getText();
             $this->say("Prazer em te conhecer ".$name.", como posso te ajudar?");
         });
+        
     }
 }
