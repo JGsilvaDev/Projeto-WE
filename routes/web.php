@@ -7,12 +7,18 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Produtos;
+use App\Models\Events;
+use App\Mail\SendMailUser;
 use App\Http\Controllers\BotManController;
+<<<<<<< HEAD
 use App\Mail\SendMailUser;
 use App\Models\historico_contact;
 use App\Mail\EnvioMail;
 use App\Http\Controllers\ContactController;
 use PharIo\Manifest\Email;
+=======
+use Illuminate\Routing\UrlGenerator;
+>>>>>>> e19bfceee3a82d306402f19f68df7fa94c91197b
 
 Route::get('/', function () {
     return view('index');
@@ -59,6 +65,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
+<<<<<<< HEAD
 //Route::resource('/contato', ContactController::class);
 
 Route::get('/contato', function () {
@@ -97,4 +104,12 @@ Route::post('/contato', function (Request $request) {
 
     return back()
             ->with('success', 'Obrigado por nos contactar');
+=======
+Route::get('/calendario', function(){
+    return view('fullcalendar.calendario');
+});
+
+Route::get('/calendario', function(){
+    return view('fullcalendar.calendario');
+>>>>>>> e19bfceee3a82d306402f19f68df7fa94c91197b
 });
