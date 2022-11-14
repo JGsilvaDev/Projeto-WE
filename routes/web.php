@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -10,15 +9,8 @@ use App\Models\Produtos;
 use App\Models\Events;
 use App\Mail\SendMailUser;
 use App\Http\Controllers\BotManController;
-<<<<<<< HEAD
-use App\Mail\SendMailUser;
 use App\Models\historico_contact;
-use App\Mail\EnvioMail;
-use App\Http\Controllers\ContactController;
-use PharIo\Manifest\Email;
-=======
-use Illuminate\Routing\UrlGenerator;
->>>>>>> e19bfceee3a82d306402f19f68df7fa94c91197b
+
 
 Route::get('/', function () {
     return view('index');
@@ -65,9 +57,6 @@ Route::middleware([
     })->name('dashboard');
 });
 
-<<<<<<< HEAD
-//Route::resource('/contato', ContactController::class);
-
 Route::get('/contato', function () {
     return view('contact.index');
 });
@@ -96,7 +85,6 @@ Route::post('/contato', function (Request $request) {
         'email' => $request->email,
         'mensagem' => $request->mensagem,
         'opcao' => $opcao
-
     );
 
     Mail::to($request->email)
@@ -104,12 +92,50 @@ Route::post('/contato', function (Request $request) {
 
     return back()
             ->with('success', 'Obrigado por nos contactar');
-=======
-Route::get('/calendario', function(){
-    return view('fullcalendar.calendario');
+
 });
 
 Route::get('/calendario', function(){
-    return view('fullcalendar.calendario');
->>>>>>> e19bfceee3a82d306402f19f68df7fa94c91197b
+
+    $events = Events::all();
+
+    return view('fullcalendar.calendario',[
+        'events'=> $events
+    ]);
+});
+
+Route::post('/calendario', function(Request $request){
+
+    $event = new Events;
+
+    $formatStart = str_replace('/','-',$request->start);
+    $transformStart =  strtotime($formatStart);
+    $dateStart = date('Y-m-d h:i:s', $transformStart);
+
+    $formatEnd = str_replace('/','-',$request->end);
+    $transformEnd =  strtotime($formatEnd);
+    $dateEnd = date('Y-m-d h:i:s', $transformEnd);
+
+    $event->title = $request->title;
+    $event->start = $dateStart;
+    $event->end = $dateEnd;
+    $event->color =  $request->color;
+
+    $event->save();
+
+    return back()->with('success', 'Evento cadastrado com sucesso');
+});
+
+Route::put('/calendario', function(Request $request){
+
+    Events::findOrFail($request->deletar)->update($request->all());
+
+    return back()->with('success', 'Evento editado com sucesso');
+});
+
+Route::delete('/calendario', function(Request $request){
+
+    Events::findOrFail($request->deletar)->delete();
+
+    return back()->with('success', 'Evento deletado com sucesso');
 });
