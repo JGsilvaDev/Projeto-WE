@@ -4,22 +4,13 @@ use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Mail;
 
 use App\Models\Produtos;
-use App\Models\produtos_fixos;
+use App\Models\Events;
 use App\Mail\SendMailUser;
-use App\Models\historico_contact;
 use App\Http\Controllers\BotManController;
-<<<<<<< HEAD
-use App\Mail\SendMailUser;
-use App\Models\historico_contact;
-use App\Mail\EnvioMail;
-use App\Http\Controllers\ContactController;
-use PharIo\Manifest\Email;
-=======
-use Illuminate\Routing\UrlGenerator;
->>>>>>> e19bfceee3a82d306402f19f68df7fa94c91197b
 
 Route::get('/', function () {
     return view('index');
@@ -97,6 +88,7 @@ Route::post('/contato', function (Request $request) {
         'email' => $request->email,
         'mensagem' => $request->mensagem,
         'opcao' => $opcao
+
     );
 
     Mail::to($request->email)
@@ -111,5 +103,4 @@ Route::get('/calendario', function(){
 
 Route::get('/calendario', function(){
     return view('fullcalendar.calendario');
->>>>>>> e19bfceee3a82d306402f19f68df7fa94c91197b
 });
