@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -11,6 +10,10 @@ use App\Models\Produtos;
 use App\Models\Events;
 use App\Mail\SendMailUser;
 use App\Http\Controllers\BotManController;
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 46c4509 (Merge branch 'main' of https://github.com/JGaSilva/ProjetoWE)
 
 Route::get('/', function () {
     return view('index');
@@ -57,9 +60,6 @@ Route::middleware([
     })->name('dashboard');
 });
 
-<<<<<<< HEAD
-//Route::resource('/contato', ContactController::class);
-
 Route::get('/contato', function () {
     return view('contact.index');
 });
@@ -96,11 +96,76 @@ Route::post('/contato', function (Request $request) {
 
     return back()
             ->with('success', 'Obrigado por nos contactar');
-=======
-Route::get('/calendario', function(){
-    return view('fullcalendar.calendario');
 });
 
 Route::get('/calendario', function(){
     return view('fullcalendar.calendario');
+<<<<<<< HEAD
+=======
+});
+
+Route::get('/pacotes', function(){
+
+    $produtos = Produtos::all();
+
+    $personzlizados = produtos_fixos::all();
+
+    return view('pacotes',[
+        'produtos' => $produtos,
+        'personalizados' => $personzlizados,
+    ]);
+});
+
+/*Route::post('/cadastrarPacote', function(Request $request){
+
+    $cadastrar = new produtos;
+    
+    $cadastrar->produto = $request->produto;
+    $cadastrar->descricao = $request->descricao;
+
+    $cadastrar-> save();
+
+    return view('cadastrarPacote',[
+        'produtos' => $produtos,
+    ]);
+});*/
+
+Route::get('/edit', function(Request $request){
+
+    $id = $request->value;
+    $ident = $request->ident;
+
+    dd($ident);
+
+    if( $ident == 'tab2'){
+        $sentença = DB::table('produtos')
+            ->select('NOME_PRODUTO','DESCRICAO')
+            ->where('ID','=', $id)
+            ->get();          
+
+        return view('edit',[
+            'id' => $id,
+            'sentenca' =>  $sentença,
+        ]);
+
+    }elseif( $ident == 'tab1'){
+        $sentença = DB::table('produtos_fixos')
+            ->select('NOME_PRODUTO','DESCRICAO')
+            ->where('ID','=', $id)
+            ->get();          
+
+        return view('edit',[
+            'id' => $id,
+            'sentenca' =>  $sentença,
+        ]);
+    }
+    
+});
+
+Route::put('/edit', function(Request $request){
+
+    produtos::findOrFail($request->id)->update(array("NOME_PRODUTO" => $request->nome, "DESCRIÇÃO" =>$request->desc));
+
+    return redirect('/cadastrarPacote');
+>>>>>>> parent of 46c4509 (Merge branch 'main' of https://github.com/JGaSilva/ProjetoWE)
 });
