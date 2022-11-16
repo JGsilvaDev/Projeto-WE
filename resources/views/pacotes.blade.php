@@ -90,7 +90,7 @@
                                                 <td>{{ $pers->ID }}</td>
                                                 <td id="{{ $pers->NOME_PRODUTO }}">{{ $pers->NOME_PRODUTO }}</td>
                                                 <td id="{{ $pers->DESCRICAO }}">{{ $pers->DESCRICAO }}</td>
-                                                <td><button type="submit" href="edit" onclick="edit(event)">Editar</button>
+                                                <td><button onclick="edit(event)">Editar</button>
                                                     <button onclick="deletarEvento(event)"> Deletar</button>
                                                 </td>
                                             </tr>
@@ -103,34 +103,42 @@
                 </div>
 
                 <div class="tab-pane active" id="tab2">
-                    <div class="col-md-10 offset-md-1 dashbord-title-container">
-                        <h1>Produtos Personalizados</h1>
-                    </div>
 
-                    <div class="col-md-10 offset-md-1 dashbord-events-container">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="col-md-10 offset-md-1 dashbord-title-container">
+                                <h1>Pacotes Personalizados</h1>
+                            </div>
+                        </div>
 
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Descrição</th>
-                                    <th scope="col">Ação</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($produtos as $prod)
-                                    <tr id="{{ $prod->ID }}">
-                                        <td>{{ $prod->ID }}</td>
-                                        <td>{{ $prod->NOME_PRODUTO }}</td>
-                                        <td>{{ $prod->DESCRICAO }}</td>
-                                        <td><button onclick="edit(event)">Editar </button>
-                                            <button onclick="deletarEvento(event)"> Deletar</button>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                        <div class="panel-body" id="conteudo">
+
+                            <div class="col-md-10 offset-md-1 dashbord-events-container">
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nome</th>
+                                            <th scope="col">Descrição</th>
+                                            <th scope="col">Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($produtos as $prod)
+                                            <tr id="{{ $prod->ID }}">
+                                                <td>{{ $prod->ID }}</td>
+                                                <td id="{{ $prod->NOME_PRODUTO }}">{{ $prod->NOME_PRODUTO }}</td>
+                                                <td id="{{ $prod->DESCRICAO }}">{{ $prod->DESCRICAO }}</td>
+                                                <td><button onclick="edit(event)">Editar</button>
+                                                    <button onclick="deletarEvento(event)">Deletar</button>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

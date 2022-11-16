@@ -125,7 +125,9 @@
 
     $('.drag_item').on('click',function(event){
         
-        getElementById('')
+        var teste = event.id;
+
+        console.log(teste);
     });
 
 </script>

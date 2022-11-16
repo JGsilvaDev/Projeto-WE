@@ -164,27 +164,13 @@ Route::put('/pacotes', function(Request $request){
 
         //dd($request->nomeProd);
 
-        $prod = new produtos;
-
-        $prod->NOME_PRODUTO = $request->nomeProd;
-        $prod->DESCRICAO = $request->descProd;
-        $prod = $prod->toArray();
-
-        produtos::findOrFail($request->value)->update($prod);
+        DB::table('produtos')->where('id','=',$request->value )->update(['NOME_PRODUTO' => $request->nomeProd, 'DESCRICAO' => $request->descProd ]);
 
         return back()->with('success', 'Produto editado com sucesso');
 
     }else if($request->ident == "tab1"){
 
-        //dd($request->value);
-
-        $prodFixo = new produtos_fixos();
-
-        $prodFixo->NOME_PRODUTO = $request->nomeProd;
-        $prodFixo->DESCRICAO = $request->descProd;
-        $prodFixo = $prodFixo->toArray();
-
-        produtos_fixos::findOrFail($request->value)->update($prodFixo);
+        DB::table('produtos_fixos')->where('id','=',$request->value )->update(['NOME_PRODUTO' => $request->nomeProd, 'DESCRICAO' => $request->descProd ]);
 
         return back()->with('success', 'Produto editado com sucesso');
     }else{
