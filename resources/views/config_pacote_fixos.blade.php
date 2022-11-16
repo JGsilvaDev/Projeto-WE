@@ -70,7 +70,8 @@
 <body>
     <div class="drag_container">
         @foreach ( $produtosFixos as $prodF )
-            <div class="drag_item"><p id="{{ $prodF->ID }}"></p><p class="drag" draggable="false" value="{{$prodF->ID}}">{{$prodF->NOME_PRODUTO}}</p></div>
+            <div class="drag_item"><p id="{{ $prodF->ID }}"></p><p id="{{$prodF->NOME_PRODUTO}}" class="drag" draggable="false" value="{{$prodF->ID}}">{{$prodF->NOME_PRODUTO}}</p></div>
+            <button id="btnTeste">TESTE</button>    
         @endforeach
     </div>
     
@@ -84,9 +85,9 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Confrime suas informações</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" onclick="limparCampos()">&times;</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -112,22 +113,20 @@
 </body>
 </html>
 
-<script>//Script para Drag and Drop
-
-    function btnConfirm(event){
-        $('#produtos').val(texto);
-    
-    }  
+<script>
     
     function confirmar(){
         document.getElementById('btnCalc').click();
     }
 
-    $('.drag_item').on('click',function(event){
+    $('#btnTeste').on('click',function(event){
         
-        var teste = event.id;
+        var title = event.target.parentElement.children[0].children[1].id;
 
-        console.log(teste);
+        $('#produtos').val(title);
+
+        $('#visualizar').modal('show');
+
     });
 
 </script>

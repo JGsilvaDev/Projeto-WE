@@ -43,9 +43,9 @@ Route::get('/config_pacote', function () {
 
 Route::post('/config_pacote', function (Request $request) {
 
-    $email = request('email');
-    $nome = request('nome');
-    $produtos = request('produtos');
+    $email = $request->email;
+    $nome = $request->nome;
+    $produtos = $request->produtos;
 
     $data = array(
         'nome' => $nome,
@@ -55,7 +55,7 @@ Route::post('/config_pacote', function (Request $request) {
     Mail::to($email)
         ->send(new SendMailUser($data));
 
-    return redirect('/');
+    return redirect('/')->with('success','Email enviado com sucesso');
 });
 
 Route::get('/config_pacote_fixo', function () {
@@ -65,6 +65,23 @@ Route::get('/config_pacote_fixo', function () {
     return view('config_pacote_fixos',[
         'produtosFixos' => $produtosFixos,
     ]);
+});
+
+Route::post('/config_pacote_fixo', function (Request $request) {
+
+    $email = $request->email;
+    $nome = $request->nome;
+    $produtos = $request->produtos;
+
+    $data = array(
+        'nome' => $nome,
+        'produtos' => $produtos
+    );
+
+    Mail::to($email)
+        ->send(new SendMailUser($data));
+
+    return redirect('/')->with('success','Email enviado com sucesso');
 });
 
 //ROTAS PARA LOGIN
