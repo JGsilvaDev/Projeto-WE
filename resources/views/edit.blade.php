@@ -12,6 +12,8 @@
         @method('PUT')
         @csrf
 
+        <input id="nome" type="text" value="{{ $ident}}" style="display: none">
+
         <label>ID:</label>
         <input id="id" type="text" value="{{$id}}" disabled>
 

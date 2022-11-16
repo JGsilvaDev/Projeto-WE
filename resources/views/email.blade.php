@@ -1,20 +1,21 @@
-@if ($data['opcao' ] == 0) 
+<h1>Solicitação Seviço We</h1>
 
-<h1>BATMAN</h1>
+<p>Olá, {{ $data['nome'] }}! </p>
 
-<h1>PEDIDO REQUISITADO</h1>
+<p>Este é um email automático. Não é necessário responder.</p>
 
-<p>O usuário {{ $data['nome'] }} pediu o seguinte:</p>
+<p>Somos da We, e recentemente você montou seu pacote de serviços em nosso site. Este e-mail é para salientar que seu pedido já está em analise, e logo entraremos em contato com vocês!</p>
+
+<p>Aproveitamos para lembrá-lo(a) que sua solicitação de serviço e eventual reunião com nossa equipe tem CUSTO ZERO!</p>
+
+<p>Abaixo, está um resumo do seu pedido.</p>
+
 <p>{{ $data['produtos'] }}</p>
 
-@elseif ($data['opcao'] == 1)
+<p>Caso prefira, entre em contato com a gente!</p>
 
-<h1>ROBIN</h1>
-
-<h1>CONTATO FEITO</h1>
-
-<p>O usuário {{ $data['nome'] }} fez o seguinte contato:</p>
-<p>{{ $data['mensagem'] }}</p>
-
-
-@endif
+<p>Whatsapp (XX) XXXXX-XXXX<br>
+<a href="http://127.0.0.1:8000">Site: www.wemarketingconsultoria.com.br</a><br>
+E-mail weconsultoriamarketing@gmail.com<br>
+Instagram @wejuntos<br>
+Linked-ln XXXXXXX</p>

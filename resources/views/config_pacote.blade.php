@@ -61,30 +61,24 @@
         margin: 10px;
     }
 
-    #btnCalc{
-        
-
-    }
-
     
 </style>
 
 <body>
-   <div class="drag_container">
-    @foreach ( $produtos as $prod )
-        <div class="drag_item"><p id="{{ $prod->ID }}"><box-icon name='info-circle'></box-icon></p><p class="drag" draggable="true" value="{{$prod->ID}}">{{$prod->NOME_PRODUTO}}</p></div>
-    @endforeach
-
-   </div>
+    <div class="drag_container">
+        @foreach ( $produtos as $prod )
+            <div class="drag_item"><p id="{{ $prod->ID }}"></p><p class="drag" draggable="true" value="{{$prod->ID}}">{{$prod->NOME_PRODUTO}}</p></div>
+        @endforeach
+    </div>
 
     <div class="drop_container">
-        <div class="drop_item"></div>
-        <div class="drop_item"></div>
-        <div class="drop_item"></div>
-        <div class="drop_item"></div>
-   </div>
+        @foreach (  $produtos as $prod )
+                <div class="drop_item"></div>
+        @endforeach
+    </div>
+    
 
-   <div id="dvBtn">
+   <div id="dvBtn" style="display: none">
         <button id="btnCalc" onclick=btnConfirm()>Confirmar</button>
    </div>
 
@@ -99,7 +93,7 @@
 
         <input type="text" name="produtos" id="produtos">
 
-        <button type="submit">Enviar</button>
+        <button type="submit" onclick="confirmar();">Enviar</button>
     </form>
    </div>
 
@@ -154,7 +148,7 @@
         const es = document.querySelector("[id='teste']");
         console.log(dataId);
         selecionados.push(dataId)
-        texto += dataId + ' '
+        texto += dataId + ' , '
 
     }
     //seta uma classe pra div
@@ -167,48 +161,10 @@
     function btnConfirm(event){
         $('#produtos').val(texto);
     
-    }          
+    }  
+    
+    function confirmar(){
+        document.getElementById('btnCalc').click();
+    }
 
 </script>
-
-<script>//Script para Sweet Alert
-
-    $("#descript1").click(function(){
-        Swal.fire({
-            icon: 'info',
-            title: 'Descrição',
-            text: '{{ $produtos[0]->DESCRIÇÃO }}',
-            showConfirmButton: true
-        })
-    });
-
-    $("#descript2").click(function(){
-        Swal.fire({
-            icon: 'info',
-            title: 'Descrição',
-            text: '{{ $produtos[1]->DESCRIÇÃO }}',
-            showConfirmButton: true
-        })
-    });
-
-    $("#descript3").click(function(){
-        Swal.fire({
-            icon: 'info',
-            title: 'Descrição',
-            text: '{{ $produtos[2]->DESCRIÇÃO }}',
-            showConfirmButton: true
-        })
-    });
-
-    $("#descript4").click(function(){
-        Swal.fire({
-            icon: 'info',
-            title: 'Descrição',
-            text: '{{ $produtos[3]->DESCRIÇÃO }}',
-            showConfirmButton: true
-        })
-    });
-
-</script>
-
-

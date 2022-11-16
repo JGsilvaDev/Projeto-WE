@@ -32,7 +32,7 @@ class SendMailUser extends Mailable
     {
         return $this
             ->from(config('mail.from.address'))
-            ->subject('Teste')
+            ->subject('Solicitação Serviço We')
             ->view('email')
             ->with([
                 'data' => $this->data,

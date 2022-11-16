@@ -192,6 +192,7 @@
                 <form method="POST">
                     @csrf
                     @method('PUT')
+                    <input id="edit" name="edit" type="number" style="display: none"><br>
                     <label>Titulo: </label><br>
                     <input id="titulo" type="text"><br>
                     <label>Inicio: </label><br>
@@ -278,7 +279,7 @@
                 $('#titulo').val(titulo);
                 $('#inicio').val(inicio);
                 $('#fim').val(fim);
-                $('#deletar').val(id);
+                $('#edit').val(id);
 
                 $('#visualizar').modal('show');
 
