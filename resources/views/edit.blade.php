@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <form method="POST">
+    <form action="pacotes" method="POST">
         @method('PUT')
         @csrf
 
@@ -18,9 +18,9 @@
         <input id="id" type="text" value="{{$id}}" disabled>
 
         <label>Nome Produto:</label>
-        <input id="nome" type="text" value="{{ $sentenca[0]->NOME_PRODUTO }}">
+        <input id="nome" name="nome" type="text" value="{{ $sentenca[0]->NOME_PRODUTO }}">
         <label>Descrição:</label>
-        <textarea id="desc" name="desc" id="desc" cols="30" rows="10">{{ $sentenca[0]->DESCRICAO }}</textarea>
+        <textarea id="desc" name="desc" cols="30" rows="10">{{ $sentenca[0]->DESCRICAO }}</textarea>
 
         <button type="submit">SALVAR</button>
     </form>

@@ -194,11 +194,11 @@
                     @method('PUT')
                     <input id="edit" name="edit" type="number" style="display: none"><br>
                     <label>Titulo: </label><br>
-                    <input id="titulo" type="text"><br>
+                    <input id="titulo" name="titulo" type="text"><br>
                     <label>Inicio: </label><br>
-                    <input id="inicio" type="text"><br>
+                    <input id="inicio" name="inicio" type="text"><br>
                     <label>Fim: </label><br>
-                    <input id="fim" type="text"><br>
+                    <input id="fim" name="fim" type="text"><br>
                     <button type="submit" style="margin-top: 30px">Editar</button>
                 </form>
                 <button onclick="deletarEvento()">Deletar</button>

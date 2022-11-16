@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
@@ -68,28 +69,22 @@
 
 <body>
     <div class="drag_container">
-        @foreach ( $produtos as $prod )
-            <div class="drag_item"><p id="{{ $prod->ID }}"></p><p class="drag" draggable="true" value="{{$prod->ID}}">{{$prod->NOME_PRODUTO}}</p></div>
-        @endforeach
-    </div>
-
-    <div class="drop_container">
-        @foreach (  $produtos as $prod )
-                <div class="drop_item"></div>
+        @foreach ( $produtosFixos as $prodF )
+            <div class="drag_item"><p id="{{ $prodF->ID }}"></p><p class="drag" draggable="false" value="{{$prodF->ID}}">{{$prodF->NOME_PRODUTO}}</p></div>
         @endforeach
     </div>
     
 
-   <div id="dvBtn">
+   {{-- <div id="dvBtn">
         <button id="btnCalc" onclick=btnConfirm()>Confirmar</button>
-   </div>
+   </div> --}}
 
-    <div class="modal fade" data-backdrop="static" id="visualizar" tabindex="-1" role="dialog"
+   <div class="modal fade" data-backdrop="static" id="visualizar" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Crie seu evento</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Confrime suas informações</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" onclick="limparCampos()">&times;</span>
                     </button>
@@ -112,74 +107,25 @@
             </div>
         </div>
     </div>
-  
+
+   
 </body>
 </html>
 
 <script>//Script para Drag and Drop
 
-    var texto = ' '
-    var selecionados = [] //array com os produtos que o clique selecionar
-
-    const dragItems = document.querySelectorAll('.drag');
-    const dropBoxes = document.querySelectorAll('.drop_item');
-
-    //Drag Events
-    dragItems.forEach(item => {
-        item.addEventListener('dragstart', dragStart);
-    });
-
-    //Drop Events
-    dropBoxes.forEach(box =>{
-        box.addEventListener('dragover', dragOver);
-        box.addEventListener('drop', dropEvent);
-        box.addEventListener('dragleave', dragLeave);
-    });
-
-    //seta o valor do texto ao arrastar
-    function dragStart(e){
-        e.dataTransfer.setData('text/plain', e.target.innerText);
-    }
-    //impede loop
-    function dragOver(e){
-        e.preventDefault();
-    }
-    //passa de uma div pra outra
-    function dropEvent(e){
-        e.preventDefault()
-        this.className = "drag_item";
-        
-        const el = document.createElement('p');
-        el.className = "drag";
-        el.setAttribute('id', 'teste');
-        const dataId = e.dataTransfer.getData('text');
-        el.setAttribute('data-id', dataId);
-        el.innerText =  e.dataTransfer.getData('text');
-
-        this.appendChild(el);
-
-        const es = document.querySelector("[id='teste']");
-        console.log(dataId);
-        selecionados.push(dataId)
-        texto += dataId + ' , '
-
-    }
-    //seta uma classe pra div
-    function dragLeave(e){
-        e.preventDefault()
-
-        this.className = "drag_item";
-    }
-
     function btnConfirm(event){
         $('#produtos').val(texto);
-        $('#visualizar').modal('show');
-    }
     
-    function limparCampos(){
-        $('#produtos').val('');
-        $('#nome').val('');
-        $('#email').val('');
+    }  
+    
+    function confirmar(){
+        document.getElementById('btnCalc').click();
     }
+
+    $('.drag_item').on('click',function(event){
+        
+        getElementById('')
+    });
 
 </script>

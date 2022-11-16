@@ -88,8 +88,8 @@
                                         @foreach ($personalizados as $pers)
                                             <tr id="{{ $pers->ID }}">
                                                 <td>{{ $pers->ID }}</td>
-                                                <td>{{ $pers->NOME_PRODUTO }}</td>
-                                                <td>{{ $pers->DESCRICAO }}</td>
+                                                <td id="{{ $pers->NOME_PRODUTO }}">{{ $pers->NOME_PRODUTO }}</td>
+                                                <td id="{{ $pers->DESCRICAO }}">{{ $pers->DESCRICAO }}</td>
                                                 <td><button type="submit" href="edit" onclick="edit(event)">Editar</button>
                                                     <button onclick="deletarEvento(event)"> Deletar</button>
                                                 </td>
@@ -134,14 +134,6 @@
                     </div>
                 </div>
 
-                {{-- Form de edit --}}
-                <form action="edit">
-                    @csrf
-                    <input id="value" name="value" style="display: none" type="text">
-                    <input id="ident" name="ident" style="display: none" type="text" value="tab1">
-                    <button id="btnEditar" type="submit" style="display: none">Editar</button>
-                </form>
-
                 {{-- Form de delete --}}
                 <form style="display: none" method="POST">
                     @csrf
@@ -162,28 +154,56 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                                <form method="POST">
+                                    @csrf
+                                    <label>Selecione qual tipo de pacote será criado:</label>
+                                    <select name="pacote" id="pacote">
+                                        <option value="PP">Pacote Padrão</option>
+                                        <option value="PS">Pacote Personalizado</option>
+                                    </select><br>
 
-                            {{-- Form para dar insert nas informações --}}
-                            <form method="POST">
-                                @csrf
-                                <label>Selecione qual tipo de pacote será criado:</label>
-                                <select name="pacote" id="pacote">
-                                    <option value="PP">Pacote Padrão</option>
-                                    <option value="PS">Pacote Personalizado</option>
-                                </select><br>
+                                    <label>Nome do Pacote:</label>
+                                    <input type="text" name="nome" id="nome" required><br>
 
-                                <label>Nome do Pacote:</label>
-                                <input type="text" name="nome" id="nome" required><br>
+                                    <label>Descrição do Pacote:</label>
+                                    <textarea name="descPacote" id="descPacote" cols="40" rows="2"></textarea><br>
 
-                                <label>Descrição do Pacote:</label>
-                                <textarea name="descPacote" id="descPacote" cols="40" rows="2"></textarea><br>
-
-                                <button type="submit">Salvar</button>
-                            </form>
-
+                                    <button type="submit">Salvar</button>
+                                </form>
                         </div>
                     </div>
                 </div>
+
+                {{-- Modal para editar produto --}}
+                <div class="modal fade" data-backdrop="static" id="editModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 id="exampleModalLabel">Editando Evento</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form method="POST">
+                                @method('PUT')
+                                @csrf
+                        
+                                <input id="ident" name="ident" type="text" value="tab1" style="display: none">
+                                <input id="value" name="value" type="text" style="display: none"><br>
+                        
+                                <label>Nome Produto:</label><br>
+                                <input id="nomeProd" name="nomeProd" type="text"><br>
+
+                                <label>Descrição:</label><br>
+                                <textarea id="descProd" name="descProd" cols="30" rows="10"></textarea><br>
+                        
+                                <button type="submit">SALVAR</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 </body>
 
@@ -193,10 +213,14 @@
     function edit(event) {
 
         var id = event.target.parentElement.parentElement.id;
+        var nome = event.target.parentElement.parentElement.children[1].id;
+        var desc = event.target.parentElement.parentElement.children[2].id;
 
         $('#value').val(id);
+        $('#nomeProd').val(nome);
+        $('#descProd').val(desc);
 
-        document.getElementById('btnEditar').click();
+        $('#editModal').modal('show');
 
     }
 

@@ -58,6 +58,15 @@ Route::post('/config_pacote', function (Request $request) {
     return redirect('/');
 });
 
+Route::get('/config_pacote_fixo', function () {
+
+    $produtosFixos = produtos_fixos::all();
+    
+    return view('config_pacote_fixos',[
+        'produtosFixos' => $produtosFixos,
+    ]);
+});
+
 //ROTAS PARA LOGIN
 
 Route::middleware([
@@ -146,6 +155,44 @@ Route::post('/pacotes', function(Request $request){
     return back()->with('success','Evento criado com sucesso');
 
 });
+
+Route::put('/pacotes', function(Request $request){
+
+    //dd($request->value);
+
+    if($request->ident == "tab2"){
+
+        //dd($request->nomeProd);
+
+        $prod = new produtos;
+
+        $prod->NOME_PRODUTO = $request->nomeProd;
+        $prod->DESCRICAO = $request->descProd;
+        $prod = $prod->toArray();
+
+        produtos::findOrFail($request->value)->update($prod);
+
+        return back()->with('success', 'Produto editado com sucesso');
+
+    }else if($request->ident == "tab1"){
+
+        //dd($request->value);
+
+        $prodFixo = new produtos_fixos();
+
+        $prodFixo->NOME_PRODUTO = $request->nomeProd;
+        $prodFixo->DESCRICAO = $request->descProd;
+        $prodFixo = $prodFixo->toArray();
+
+        produtos_fixos::findOrFail($request->value)->update($prodFixo);
+
+        return back()->with('success', 'Produto editado com sucesso');
+    }else{
+
+        return back()->with('error', 'Erro ao editar o produto');
+    }
+    
+});
         
 Route::delete('/pacotes', function(Request $request){
 
@@ -164,53 +211,7 @@ Route::delete('/pacotes', function(Request $request){
     }   
 });
 
-Route::get('/edit', function(Request $request){
 
-    $id = $request->value;
-    $ident = $request->ident;
-
-    if( $ident == 'tab2'){
-
-        $sentença = DB::table('produtos')
-            ->select('NOME_PRODUTO','DESCRICAO')
-            ->where('ID','=', $id)
-            ->get();  
-
-        return view('edit',[
-            'id' => $id,
-            'sentenca' =>  $sentença,
-            'ident' => $ident,
-        ]);
-
-    }elseif( $ident == 'tab1'){
-
-        $sentença = DB::table('produtos_fixos')
-            ->select('NOME_PRODUTO','DESCRICAO')
-            ->where('ID','=', $id)
-            ->get(); 
-
-        return view('edit',[
-            'id' => $id,
-            'sentenca' =>  $sentença,
-            'ident' => $ident,
-        ]);
-    }
-    
-});
-
-Route::put('/edit', function(Request $request){
-
-    if($request->ident == 'tab2'){
-        produtos::findOrFail($request->id)->update(array("NOME_PRODUTO" => $request->nome, "DESCRIÇÃO" =>$request->desc));
-        return redirect('/pacotes')->with('success', 'Produto editado com sucesso');
-    }else if($request->iden == 'tab1'){
-        DB::table('produtos_fixos')->where('ID','=', $request->id)->update(array("NOME_PRODUTO" => $request->nome, "DESCRIÇÃO" =>$request->desc));
-        return redirect('/pacotes')->with('error', 'Produto editado com sucesso');
-    }else{
-        return redirect('/pacotes')->with('error', 'Erro ao editar o produto');
-    }
-    
-});
 
 //ROTAS CALENDARIO
 
@@ -245,10 +246,24 @@ Route::post('/calendario', function(Request $request){
 });
 
 Route::put('/calendario', function(Request $request){
-    Events::find($request->edit)->update($request->all());
 
-    //dd($request->edit);
-    //DB::table('events')->where('ID','=', $request->deletar)->update($request->all());
+    $formatInicio = str_replace('/','-',$request->inicio);
+    $transformInicio =  strtotime($formatInicio);
+    $dateInicio = date('Y-m-d h:i:s', $transformInicio);
+
+    $formatFim = str_replace('/','-',$request->fim);
+    $transformFim =  strtotime($formatFim);
+    $dateFim = date('Y-m-d h:i:s', $transformFim);
+
+    $cal =  new Events;
+
+    $cal->title = $request->titulo;
+    $cal->start = $dateInicio;
+    $cal->end = $dateFim;
+    $cal = $cal->toArray();
+
+    Events::findOrFail($request->edit)->update($cal);
+
     return back()->with('success', 'Evento editado com sucesso');
 });
 
