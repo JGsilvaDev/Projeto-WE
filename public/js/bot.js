@@ -14,8 +14,6 @@
     const opcoes = ['Pacotes', 'Agendar um horário', 'Problemas ou dificuldades', 'Assinar ou contratar um serviço', 'Reunião online', 'Atendimento online','Qual é o melhor time?']
     const keys = Object.keys(botDicionario)
     const botKeys = opcoes.concat(keys)
-    console.log(botKeys)
-    console.log('keys: '+botKeys)
 
     //#region funcoes HTML
 
@@ -29,8 +27,9 @@
 
             //atribuindo a classe
             div.setAttribute('class', classe)
-            pgr.setAttribute('class', classe+'_p')
             div.setAttribute('id', id)
+            pgr.setAttribute('class', classe+'_p')
+            pgr.setAttribute('id', id+'_p')
             div.append(pgr)
             return div
         }
@@ -43,6 +42,7 @@
         }
         function Listen() {
             submitText = input.value
+            console.log(submitText)
             EnviarMensagem(submitText, userclass)
             
         }
@@ -52,6 +52,7 @@
         }
         function clicked(event) {
             var id = event.target.id //pega o id do elemento
+            console.log(id)
             var eventElement = document.getElementById(id).innerHTML
             EnviarMensagem(eventElement, userclass)
             Responder()
@@ -133,12 +134,10 @@
             for(i=0; i < keys.length; i++) {
                 
                 //adiciona cada div
-                console.log('ID antes de enviar: '+scrollID)
                 EnviarMensagem(keys[i],'help-msg')
-                console.log('ID depois de enviar: '+scrollID)
                 
 
-                document.getElementById('scroll_'+(scrollID-1)).setAttribute('onclick', 'clicked(event)')
+                document.getElementById('scroll_'+(scrollID-1)+'_p').setAttribute('onclick', 'clicked(event)')
                 await sleep(50)
             }
         }
@@ -172,8 +171,8 @@
             EnviarMensagem(opcoes[i],'help-msg')
             
 
-            document.getElementById('scroll_'+(scrollID-1)).setAttribute('onclick', 'clicked(event)')
-            await sleep(500)
+            document.getElementById('scroll_'+(scrollID-1)+'_p').setAttribute('onclick', 'clicked(event)')
+            await sleep(100)
         }
         return 0
     }

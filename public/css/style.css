@@ -308,10 +308,6 @@ h1 {
     bottom: 0;
 }
 
-#encher-linguica {
-    padding-bottom: 2500px;
-}
-
 #icon-show {
     background-color: rgb(112, 112, 183);
     border-radius: 90px;
@@ -323,4 +319,9 @@ h1 {
     text-align: center;
     background-color:rgb(72, 72, 72);
     color:white;
+}
+#bot-titulo:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid red;
 }
