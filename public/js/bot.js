@@ -152,6 +152,7 @@
         EnviarMensagem('Como posso te chamar?', botclass)
         await sleep(1000)
         nome = prompt('insira o nome')
+        EnviarMensagem(nome,userclass)
         console.log(nome)
         await sleep(1000)
         EnviarMensagem('Ah! É importante te avisar, '+ nome +', que talvez não seja capaz de responder e te ajudar com todas as questões. Nesse caso, irei te direcionar a comunicação para uma pessoa real', botclass)
@@ -162,7 +163,11 @@
 
     async function selectOption() {
         await askname()
-        EnviarMensagem('Agora, nos diga seu email [A FAZER]', botclass)
+        EnviarMensagem('Agora, nos diga seu email', botclass)
+        await sleep(1000)
+        email = prompt('Insira seu email')
+        EnviarMensagem(email,userclass)
+        console.log(email)
         EnviarMensagem('Agora, selecione uma opção para começar', botclass)
         var size = opcoes.length
         for(i=0; i < size; i++) {
