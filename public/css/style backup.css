@@ -36,17 +36,14 @@ body {
     padding: 50px;
     background-color: #333333;
     margin:0;
-}
-.fundo-preto {
-    padding:50px;
-    background-color:#1C1C1C;
-    margin:0;
+    
 }
 
 
 /*    HEADER    */
 #header {
     position:sticky;
+    background-color: #333333;
     padding:10px;
 }
 
@@ -70,7 +67,7 @@ body {
 }
 
 #produto_4 {
-    background-color: #018390;
+    background-color: #EE8811;
 }
 
 /*    SEGMENTO 1    */
@@ -78,7 +75,7 @@ body {
 button {
     font-size:24px;
     width:100%;
-    background-color:#018390;
+    background-color:#EE8811;
     color:white;
     border-style: none;
     border-radius: 10px;
@@ -100,22 +97,24 @@ button:hover {
     margin:0px;
 }
 
-
-
 #descricao-seg p {
     font-size: 24px;
 }
 
 /*   SEGMENTO 2     */
 
-
+#servicos {
+    padding: 50px;
+    background-color: #333333;
+    margin:0;
+}
 
 .button-box {
     padding:10px;
     border-style:solid;
     border-color:white;
     border-radius:20px;
-    background-color:#222222
+
     
 }
 .button-box:hover {
@@ -133,6 +132,12 @@ button:hover {
 }
 
 /*   segmento 3    */
+
+
+#sobre {
+    margin: 0;
+    background-color:#1C1C1C;
+}
 
 #sobre-imagem {
     object-fit:cover;
@@ -202,12 +207,12 @@ ul li {
 
 
 #nav-lista-titulo {
-    color:#018390;
+    color:#EE8811;
     color: #ffffff;
     
 }
 #contato-lista-titulo {
-    color:#018390;
+    color:#EE8811;
 }
 
 /* RODAPÉ */
@@ -215,112 +220,4 @@ ul li {
 #rodape {
     padding: 10px;
     background-color: #222222;
-}
-
-/*=============================== PÁGINA 2 =================================*/
-
-#titulo-pagina {
-    margin:0;
-    background-image: url('../img/bg.png');
-    background-size:100%;
-}
-#pag-titulo {
-    margin:0;
-    padding:50px 0 50px;
-}
-
-#sobre-pagina {
-    margin:0;
-}
-/*segmento 2*/
-
-#marketing {
-    margin: 0;
-}
-
-#marketing-desc {
-    margin: 0;
-    text-align: left;
-}
-
-#marketing-imagem {
-    margin: 40px 0 40px;
-    padding: 40px 0 40px;
-    object-fit:cover;
-    width:100%;
-    max-height:100%;
-}
-
-#marketing-valores {
-    margin: 0;
-    text-align: left;
-}
-
-/*=========== PAGINA 3 =============*/
-#contato-titulo {
-    margin: 0;
-    background-image: url('../img/celular_man.png');
-    background-size: 100%;
-}
-
-#contato-titulo p {
-    padding: 20px 0 20px;
-    margin: 0;
-}
-
-input {
-    border-style:none;
-    border-radius:10px;
-    width:100%;
-    margin: 23px 0 23px;
-    padding:5px 0 5px;
-}
-
-/* SERVICOS */
-
-h1 {
-    margin:0;
-}
-
-#nossos-servicos-titulo {
-    padding: 50px 0 50px;
-    background-image: url('../img/maopc.png');
-    background-size: 100%;
-    text-align: center;
-}
-
-
-#opcoes-label{
-    text-align: center;
-}
-
-/*pacote personalizado link*/
-
-#personalizado-img {
-    margin: 0;
-}
-
-/*CHATBOT*/
-#container {
-    padding: 10px;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-}
-
-#encher-linguica {
-    padding-bottom: 2500px;
-}
-
-#icon-show {
-    background-color: rgb(112, 112, 183);
-    border-radius: 90px;
-}
-
-#bot-titulo {
-    margin-top:0;
-    width:100%;
-    text-align: center;
-    background-color:rgb(72, 72, 72);
-    color:white;
 }
