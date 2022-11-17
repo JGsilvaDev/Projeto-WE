@@ -1,0 +1,305 @@
+
+/*Declaracao de grades*/
+/*#grade, #grade-2 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-content: center;
+}*/
+
+#header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+#descricao-seg {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+#servicos {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+
+#sobre {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+#projeto {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+#contato {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+#sobre-pagina {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+#marketing {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+
+#input-block {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+#opcoes-list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30;
+    justify-content: center;
+}
+#pacotes-block{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px,300px));
+    gap:30px;
+}
+#pacote-personalizado {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30;
+    justify-content: center;
+}
+
+
+
+/*posicionamento*/
+#botoes-produto {
+    display: inline;
+    grid-row-start:1;
+    grid-column-start: 12;
+    grid-column-end: 7;
+}
+
+#logo {
+    grid-row-start:1;
+}
+
+
+/*segmento 1*/
+
+#desc-titulo {
+    grid-column-start: 2;
+    grid-column-end: 9;
+}
+
+#desc-texto {
+    grid-column-start: 2;
+    grid-column-end: 9;
+}
+
+#orcamento-button {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+/*segmento 2*/
+
+#service-titulo {
+    grid-column-start:1;
+    grid-column-end: 12;
+}
+
+#service-desc {
+    grid-column-start:1;
+    grid-column-end:12;
+}
+
+#button-box-1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#button-box-2{
+    grid-column-start: 5;
+    grid-column-end: 8;
+}
+#button-box-3{
+    grid-column-start: 9;
+    grid-column-end: 12;
+}
+
+#servicos-button-end {
+    grid-column-start: 5;
+    grid-column-end: 8;
+}
+
+/*Segmento 3*/
+
+#sobre {
+    padding:60px 0 60px;
+}
+
+#sobre-imagem {
+    grid-column-start: 2;
+    grid-column-end:6; 
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#sobre-intro {
+    grid-column-start: 7;
+    grid-column-end: 12;
+}
+
+#sobre-desc {
+    grid-column-start: 7;
+    grid-column-end:12;
+}
+
+#detalhe-ex-img {
+    grid-column-start:8;
+    grid-column-end:10;
+
+}
+
+#detalhe-excelencia {
+    grid-column-start: 7;
+    grid-column-end: 9;
+}
+
+#detalhe-int-img {
+    grid-column-start:10;
+    grid-column-end:12;
+}
+#detalhe-integridade {
+    grid-column-start: 10;
+    grid-column-end: 12;
+}
+
+/* Segmento 4 */
+#projeto-titulo {
+
+    grid-column-start:2;
+    grid-column-end:7;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#projeto-desc {
+
+    grid-column-start:8;
+    grid-column-end:12;
+    grid-row-start:1;
+}
+#projeto-button {
+    grid-column-start:8;
+    grid-column-end:11;
+    grid-row-start:2;
+}
+
+/* Segmento 5 */
+#contato-logo {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#nav-lista {
+    grid-column-start: 6;
+    grid-column-end: 9;
+}
+#contato-lista {
+    grid-column-start:9;
+    grid-column-end: 11;
+}
+
+/*=============================== PÁGINA 2 =================================*/
+
+#marketing-intro {
+    grid-column-start: 6;
+    grid-column-end: 12;
+}
+
+#marketing-imagem {
+    grid-column-start:1;
+    grid-column-end:5; 
+}
+
+
+#marketing-valores {
+    grid-column-start:1;
+    grid-column-end: 12;
+}
+
+#marketing-valor1 {
+    grid-column-start:3;
+    grid-column-end: 5;
+}
+#marketing-valor2 {
+    grid-column-start:5;
+    grid-column-end: 7;
+}
+#marketing-valor3 {
+    grid-column-start:7;
+    grid-column-end: 9;
+}
+#marketing-valor4 {
+    grid-column-start:9;
+    grid-column-end: 11;
+}
+
+/*====================PAGINA DE CONTATOS ==================*/
+
+#input-block-campos {
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+
+#redes-sociais-contato {
+    grid-column-start: 8;
+    grid-column-end: 12;
+}
+
+/*================= OPCOES DE COMPRA ===================*/
+#opcao-01 {
+    grid-column-start:1;
+    grid-column-end: 3;
+}
+#opcao-02 {
+    grid-column-start:3;
+    grid-column-end: 5;
+}
+#opcao-03 {
+    grid-column-start:5;
+    grid-column-end: 7;
+}
+#opcoes-label {
+    grid-column-start:1;
+    grid-column-end:12;
+}
+
+/*================= MONTE SEU PACOTE PERSONALIZADO ================*/
+#personalizado-titulo {
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+#personalizado-desc {
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+#personalizado-img {
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}

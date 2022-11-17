@@ -1,0 +1,301 @@
+html,body {
+    margin:0;
+    padding:0;
+
+    color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    cursor:default;
+}
+/*Escondendo o scroll (chrome, safari e Opera)*/
+body::-webkit-scrollbar {
+    display:none;
+}
+/*Escondenedo o scroll (IE, Edge e Firefox)*/
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* TÍTULO */
+.txt-titulo {
+    width: 100%;
+    font-size:64px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+/* DESCRIÇÃO */
+.txt-desc {
+    width:100%;
+    font-size:18px;
+    text-align: center;
+}
+
+/*Segmento com fundo cinza*/
+.fundo-cinza {
+    padding: 50px;
+    background-color: #333333;
+    margin:0;
+}
+.fundo-preto {
+    padding:50px;
+    background-color:#1C1C1C;
+    margin:0;
+}
+
+
+/*    HEADER    */
+#header {
+    position:sticky;
+    padding:10px;
+}
+
+#botoes-produto li{
+    list-style:none;
+    display: inline;
+    
+}
+
+#logo {
+    padding: 10px;
+}
+
+.header-option {
+    padding: 0px 10px 0px;
+    font-size:16px;
+    letter-spacing: 0.1em;
+    color: white;
+
+    border-radius:5px;
+}
+
+#produto_4 {
+    background-color: #018390;
+}
+
+/*    SEGMENTO 1    */
+
+button {
+    font-size:24px;
+    width:100%;
+    background-color:#018390;
+    color:white;
+    border-style: none;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.55), 0px 0px 30px rgba(0, 0, 0, 0.15);
+
+    padding: 10px 30px 10px;
+
+    cursor:pointer;
+}
+button:hover {
+    background-color:#ffa845;
+}
+
+#descricao-seg {
+    background-image: url('../img/scott-graham-5fNmWej4tAA-unsplash\ 1.png');
+    background-size:100%;
+    padding: 20px;
+    margin:0px;
+}
+
+
+
+#descricao-seg p {
+    font-size: 24px;
+}
+
+/*   SEGMENTO 2     */
+
+
+
+.button-box {
+    padding:10px;
+    border-style:solid;
+    border-color:white;
+    border-radius:20px;
+    background-color:#222222
+    
+}
+.button-box:hover {
+    color:black;
+    background-color:white;
+}
+
+.btn-titulo {
+    font-size: 24px;
+    text-align:left;
+}
+.btn-desc {
+    font-size: 14;
+    text-align:left;
+}
+
+/*   segmento 3    */
+
+#sobre-imagem {
+    object-fit:cover;
+    width:100%;
+    max-height:100%;
+}
+
+
+#sobre-titulo {
+    text-align: center;
+}
+#sobre-desc {
+    text-align: center;
+}
+
+
+.detalhe-imagem {
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 64px;
+    height: 64px;
+}
+
+.detalhe-titulo {
+    font-size:18px;
+    text-align:center;
+}
+.detalhe-desc {
+    font-size:14px;
+    text-align:center;
+}
+
+/* SEGMENTO 4 */
+#projeto {
+    background-image: url('../img/aperto\ de\ mães.png');
+    background-size:100%;
+}
+
+#projeto-desc{
+    padding:30px 0 30px;
+}
+
+#projeto-button {
+    margin-top: 22.5px;
+}
+
+/* SEGMENTO 5 */
+
+#contato {
+    background: #333333;
+}
+
+ul li {
+    list-style: none;
+}
+
+#contato-logo {
+    padding:60px;
+    object-fit:cover;
+    width:100%;
+    max-height:100%;
+}
+
+
+
+#nav-lista-titulo {
+    color:#018390;
+    color: #ffffff;
+    
+}
+#contato-lista-titulo {
+    color:#018390;
+}
+
+/* RODAPÉ */
+
+#rodape {
+    padding: 10px;
+    background-color: #222222;
+}
+
+/*=============================== PÁGINA 2 =================================*/
+
+#titulo-pagina {
+    margin:0;
+    background-image: url('../img/bg.png');
+    background-size:100%;
+}
+#pag-titulo {
+    margin:0;
+    padding:50px 0 50px;
+}
+
+#sobre-pagina {
+    margin:0;
+}
+/*segmento 2*/
+
+#marketing {
+    margin: 0;
+}
+
+#marketing-desc {
+    margin: 0;
+    text-align: left;
+}
+
+#marketing-imagem {
+    margin: 40px 0 40px;
+    padding: 40px 0 40px;
+    object-fit:cover;
+    width:100%;
+    max-height:100%;
+}
+
+#marketing-valores {
+    margin: 0;
+    text-align: left;
+}
+
+/*=========== PAGINA 3 =============*/
+#contato-titulo {
+    margin: 0;
+    background-image: url('../img/celular_man.png');
+    background-size: 100%;
+}
+
+#contato-titulo p {
+    padding: 20px 0 20px;
+    margin: 0;
+}
+
+input {
+    border-style:none;
+    border-radius:10px;
+    width:100%;
+    margin: 23px 0 23px;
+    padding:5px 0 5px;
+}
+
+/* SERVICOS */
+
+h1 {
+    margin:0;
+}
+
+#nossos-servicos-titulo {
+    padding: 50px 0 50px;
+    background-image: url('../img/maopc.png');
+    background-size: 100%;
+    text-align: center;
+}
+
+
+#opcoes-label{
+    text-align: center;
+}
+
+/*pacote personalizado link*/
+
+#personalizado-img {
+    margin: 0;
+}
