@@ -65,3 +65,7 @@ body {
     background-color: black;
     color: white;
 }
+
+#chat {
+    padding: 0 10px 0;
+}
