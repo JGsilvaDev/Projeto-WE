@@ -190,7 +190,7 @@
     function mainLoop() {
         selectOption()
     }
-    //mainLoop()
+    mainLoop()
 
     /*================= A FAZER =================*/
     /*
