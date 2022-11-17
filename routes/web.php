@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Produtos;
 use App\Models\produtos_fixos;
 use App\Models\Events;
+use App\Models\Logins;
 use App\Http\Controllers\BotManController;
 
 use App\Mail\SendMailUser;
@@ -94,14 +95,68 @@ Route::post('/config_pacote_fixo', function (Request $request) {
 
 //ROTAS PARA LOGIN
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+// Route::middleware([
+//     'auth:sanctum',
+//     config('jetstream.auth_session'),
+//     'verified'
+// ])->group(function () {
+//     Route::get('/dashboard', function () {
+//         return view('dashboard');
+//     })->name('dashboard');
+// });
+
+Route::get('/login', function (Request $request) {
+    return view('login');
+});
+
+Route::post('/login', function(Request $request){
+
+    $sql = DB::table('logins')
+            ->select('email', 'senha')
+            ->where('email','=', $request->email)
+            ->where('senha','=', md5($request->senha))
+            ->first();
+
+    dd($sql);
+
+    if($sql != null){
+        return view('/login.home');
+    }else{
+        return back()->with('error','Email ou senha incorretas!!');
+    }        
+
+});
+
+Route::get('/register', function () {
+    return view('login.register');
+});
+
+Route::post('/register', function (Request $request) {
+
+    //dd($request->all());
+
+    $sql = DB::table('logins')
+            ->select('email','senha')
+            ->where('email','=', $request->email)
+            ->where('senha','=', md5($request->senha))
+            ->first();
+
+
+    if($sql == null){
+        $login = new logins;
+
+        $login->name = $request->name;
+        $login->email = $request->email;
+        $login->senha = md5($request->inputSenha);
+
+        $login->save();
+
+        return redirect('/login')->with('success','Conta criada com sucesso');
+
+    }else{
+        return back()->with('error','Conta existente');
+    }
+    
 });
 
 //ROTAS ENTRE EM CONTATO
@@ -118,6 +173,7 @@ Route::post('/contato', function (Request $request) {
     $contato->email = $request->email;
     $contato->descricao = $request->mensagem;
     $contato->data_envio = date('Y-m-d');
+    
 
     $contato -> save(); 
 
@@ -130,14 +186,15 @@ Route::post('/contato', function (Request $request) {
     $data = array (
         'nome' => $request->nome,
         'email' => $request->email,
-        'mensagem' => $request->mensagem
+        'mensagem' => $request->mensagem,
+        'produtos' => '',
     );
 
     Mail::to($request->email)
-        ->send( new SendMailUser($data) );
+        ->send( new SendMailUser($data));
 
 
-    return back()->with('success', 'Obrigado por nos contactar');
+    return back()->with('success', 'Email enviado com sucesso, obrigado por nos contactar');
 
 });
 

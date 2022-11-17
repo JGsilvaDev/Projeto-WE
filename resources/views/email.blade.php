@@ -10,7 +10,10 @@
 
 <p>Abaixo, está um resumo do seu pedido.</p>
 
-<p>{{ $data['produtos'] }}</p>
+@if ( $data['produtos'] )
+    <p>{{ $data['produtos'] }}</p>
+@endif
+
 
 <p>Caso prefira, entre em contato com a gente!</p>
 
