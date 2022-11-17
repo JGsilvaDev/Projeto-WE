@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+        /*Escondendo o scroll (chrome, safari e Opera)*/
+body::-webkit-scrollbar {
+    display:none;
+}
+/*Escondenedo o scroll (IE, Edge e Firefox)*/
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+#msg-input {
+    position: fixed;
+    width: 100%;
+    bottom:0;
+
+    background-color: white;
+}
+#chat {
+    margin-top: 30px;
+    margin-bottom:40px;
+}
+
+.bot-msg {
+    margin-top: 2px;
+    color:white;    
+    background-color:rgb(110, 110, 255);
+    text-align: left;
+    padding: 1px;
+    border-radius: 30px 30px 30px 0px;
+}
+.bot-msg_p {
+    margin: 10px;
+}
+.user-msg {
+    margin-top: 2px;
+    color:white;    
+    background-color:rgb(58, 58, 58);
+    text-align: right;
+    padding:1px;
+    border-radius: 30px 30px 0px 30px;
+}
+.user-msg_p {
+    margin: 10px;
+}
+
+.help-msg {
+    margin-top: 2px;
+    color:white;    
+    background-color:rgb(50, 153, 69);
+    text-align: left;
+    padding:1px;
+    border-radius: 30px 30px 30px 0px;
+}
+.help-msg_p {
+    margin: 10px;
+}
+.help-msg:hover {
+    background-color: black;
+    color: white;
+}

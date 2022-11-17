@@ -26,6 +26,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/chatbot', function () {
+    return view('chatbot');
+});
+
 Route::get('/sobre', function () {
     return view('sobre');
 });

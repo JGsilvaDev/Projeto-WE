@@ -128,6 +128,13 @@
                 <li id="contato-lista_4">ORÇAMENTO</li>
             </ul>
         </div>
+        <!--CONTAINER DO CHATBOT-->
+        <div id="container">
+            <img src="img\mensagem.png" width="64" height="64" onclick="hideshow()" id="icon-show">
+            <p id="bot-titulo" onclick="hideshow()" width=400>-----Chatbot-----</p>
+            <iframe id="bot-frame" src="\chatbot" frameborder="0" width=400 height=500></iframe>
+        </div>
+        <script src="\js\main.js"></script>
 
         <div id="rodape">We. 2022 - Todos os direitos reservados</div>
     </div>

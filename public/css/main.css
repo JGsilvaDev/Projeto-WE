@@ -1,0 +1,27 @@
+body {
+    color: white;
+    background-color: black;
+}
+#container {
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+#encher-linguica {
+    padding-bottom: 2500px;
+}
+
+#icon-show {
+    background-color: rgb(112, 112, 183);
+    border-radius: 90px;
+}
+
+#bot-titulo {
+    margin-top:0;
+    width:100%;
+    text-align: center;
+    background-color:rgb(72, 72, 72);
+    color:white;
+}
