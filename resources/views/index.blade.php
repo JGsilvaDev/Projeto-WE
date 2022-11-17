@@ -45,12 +45,15 @@
 <body>
     <div id="grade">
         <div id="header" class="fundo-cinza">
-            <img src="./img/logo.svg" alt="" id="logo">
+            <a href="/">
+                <img src="./img/logo.svg" alt="" id="logo">
+            </a>
+            
             <ul id="botoes-produto">
-                <li id="produto_1" class="header-option">Produtos</li> |
-                <li id="produto_2" class="header-option">Produtos</li> |
-                <li id="produto_3" class="header-option">Produtos</li> |
-                <li id="produto_4" class="header-option">Produtos</li>
+                <li id="produto_1"><a href="/sobre" class="header-option">SOBRE</a></li> |
+                <li id="produto_2"><a href="/contato" class="header-option">CONTATOS</a></li> |
+                <li id="produto_3"><a href="" class="header-option">SERVIÇOS</a></li> |
+                <li id="produto_4"><a href="/" class="header-option">PACOTES</a></li>
             </ul>
         </div>
         <div id="descricao-seg">
@@ -113,15 +116,15 @@
             <ul id="nav-lista">
                 <p id="nav-lista-titulo">CONTINUE NAVEGANDO</p>
                 <li id="nav-lista_1">SERVIÇOS</li> 
-                <li id="nav-lista_2">SOBRE</li> 
-                <li id="nav-lista_3">CONTATO</li> 
+                <li><a id="nav-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
+                <li><a id="nav-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
                 <li id="nav-lista_4">ORÇAMENTO</li>
             </ul>
             <ul id="contato-lista">
                 <p id="contato-lista-titulo">CONTINUE NAVEGANDO</p>
                 <li id="contato-lista_1">SERVIÇOS</li> 
-                <li id="contato-lista_2">SOBRE</li> 
-                <li id="contato-lista_3">CONTATO</li> 
+                <li><a id="contato-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
+                <li><a id="contato-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
                 <li id="contato-lista_4">ORÇAMENTO</li>
             </ul>
         </div>
@@ -131,15 +134,7 @@
 
 
     
-
-    
-    
-    
    
-
-
-
-    
 {{-- LIBRAS --}}
 <div vw class="enabled">
     <div vw-access-button class="active"></div>
@@ -150,7 +145,13 @@
 </body>
 </html>
 
-{{-- LIBRAS --}}
+
 <script>
+    // LIBRAS 
     new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+    $('#servicos-button-end').on('click', function(){
+        window.location.href = '/config_pacote';
+    });
+
 </script>

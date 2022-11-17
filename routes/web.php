@@ -26,6 +26,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/sobre', function () {
+    return view('sobre');
+});
+
 //ROTAS BOT
 
 Route::match(['get', 'post'], 'botman', [BotManController::class, "handle"]);
