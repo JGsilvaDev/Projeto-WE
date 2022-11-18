@@ -15,7 +15,7 @@ body {
 }
 
 
-#msg-input {
+input {
     position: fixed;
     width: 100%;
     bottom:0;
@@ -62,13 +62,8 @@ body {
     margin: 10px;
 }
 .help-msg:hover {
-<<<<<<< Updated upstream
     background-color: black;
     color: white;
-=======
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
->>>>>>> Stashed changes
 }
 
 #chat {

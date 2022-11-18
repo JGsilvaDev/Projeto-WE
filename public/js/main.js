@@ -1,5 +1,5 @@
-var hidden = false
-var iconHidden = true
+var hidden = true
+var iconHidden = !hidden
 const frame = document.getElementById('bot-frame')
 const icon = document.getElementById('icon-show')
 const title = document.getElementById('bot-titulo')
