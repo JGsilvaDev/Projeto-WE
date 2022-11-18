@@ -314,7 +314,7 @@ h1 {
 }
 
 #bot-titulo {
-    margin-top:0;
+    margin-bottom:0;
     width:100%;
     text-align: center;
     background-color:rgb(72, 72, 72);
