@@ -12,7 +12,7 @@
     <div id="chat">
     </div>
     <div id="message-input">
-        <input type="text" name="Texto-teste" id="msg-input" onKeyPress="return EnterKey(event)">
+        <input type="text" name="Texto-teste" id="msg-input" class="input" onKeyPress="return EnterKey(event)">
     </div>
     <script src="../js/bot.js"></script>
 </body>
