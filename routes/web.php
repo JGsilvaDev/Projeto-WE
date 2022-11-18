@@ -17,6 +17,7 @@ use App\Mail\SendMailUser;
 use App\Models\historico_contact;
 use App\Mail\EnvioMail;
 use App\Http\Controllers\ContactController;
+use Illuminate\Auth\Events\Login;
 use PharIo\Manifest\Email;
 use Illuminate\Routing\UrlGenerator;
 
@@ -44,8 +45,8 @@ Route::match(['get', 'post'], 'botman', [BotManController::class, "handle"]);
 Route::get('/config_pacote', function () {
 
     $produtos = Produtos::all();
-    
-    return view('config_pacote',[
+
+    return view('config_pacote', [
         'produtos' => $produtos,
     ]);
 });
@@ -56,22 +57,25 @@ Route::post('/config_pacote', function (Request $request) {
     $nome = $request->nome;
     $produtos = $request->produtos;
 
+    $opcao = 1;
+
     $data = array(
         'nome' => $nome,
-        'produtos' => $produtos
+        'produtos' => $produtos,
+        'opcao' => $opcao
     );
 
     Mail::to($email)
         ->send(new SendMailUser($data));
 
-    return redirect('/')->with('success','Email enviado com sucesso');
+    return redirect('/')->with('success', 'Email enviado com sucesso');
 });
 
 Route::get('/config_pacote_fixo', function () {
 
     $produtosFixos = produtos_fixos::all();
-    
-    return view('config_pacote_fixos',[
+
+    return view('config_pacote_fixos', [
         'produtosFixos' => $produtosFixos,
     ]);
 });
@@ -82,49 +86,71 @@ Route::post('/config_pacote_fixo', function (Request $request) {
     $nome = $request->nome;
     $produtos = $request->produtos;
 
+    $opcao = 1;
+
     $data = array(
         'nome' => $nome,
-        'produtos' => $produtos
+        'produtos' => $produtos,
+        'opcao' => $opcao
+
     );
 
     Mail::to($email)
         ->send(new SendMailUser($data));
-
-    return redirect('/')->with('success','Email enviado com sucesso');
+    return redirect('/')->with('success', 'Email enviado com sucesso');
 });
 
 //ROTAS PARA LOGIN
-
-// Route::middleware([
-//     'auth:sanctum',
-//     config('jetstream.auth_session'),
-//     'verified'
-// ])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
 
 Route::get('/login', function (Request $request) {
     return view('login');
 });
 
-Route::post('/login', function(Request $request){
+Route::post('/login', function (Request $request) {
 
-    $sql = DB::table('logins')
+    //dd($request->option);
+
+    if ($request->option == 'login') {
+        $sql = DB::table('logins')
             ->select('email', 'senha')
-            ->where('email','=', $request->email)
-            ->where('senha','=', md5($request->senha))
+            ->where('email', '=', $request->email)
+            ->where('senha', '=', md5($request->senha))
             ->first();
 
-    dd($sql);
+        if ($sql != null) {
+            return view('/login.home');
+        } else {
+            return back()->with('error', 'Email ou senha incorretas!!');
+        }
+        
+    } elseif ($request->option == 'email') {
 
-    if($sql != null){
-        return view('/login.home');
-    }else{
-        return back()->with('error','Email ou senha incorretas!!');
-    }        
+        $opcao = 2;
 
+        $sql = DB::table('logins')
+            ->select('name')
+            ->where('email', '=', $request->email)
+            ->first();
+
+        if ($sql != null) {
+            $data = array(
+                'nome' => $sql,
+                'email' => $request->email,
+                'opcao' => $opcao
+            );
+
+
+            Mail::to($request->email)
+                ->send(new SendMailUser($data));
+
+            return back()->with('success', 'E-Mail de alteração de senha enviado com sucesso!');
+        } else {
+            return back()->with('error', 'Este E-Mail não está cadastrado!');
+        }
+    }
+
+    return back()->with('error', 'erro ao enviar email');
+    
 });
 
 Route::get('/register', function () {
@@ -133,30 +159,28 @@ Route::get('/register', function () {
 
 Route::post('/register', function (Request $request) {
 
-    //dd($request->all());
+    //dd(md5($request->senha));
 
     $sql = DB::table('logins')
-            ->select('email','senha')
-            ->where('email','=', $request->email)
-            ->where('senha','=', md5($request->senha))
-            ->first();
+        ->select('email', 'senha')
+        ->where('email', '=', $request->email)
+        ->where('senha', '=', md5($request->senha))
+        ->first();
 
 
-    if($sql == null){
+    if ($sql == null) {
         $login = new logins;
 
         $login->name = $request->name;
         $login->email = $request->email;
-        $login->senha = md5($request->inputSenha);
+        $login->senha = md5($request->senha);
 
         $login->save();
 
-        return redirect('/login')->with('success','Conta criada com sucesso');
-
-    }else{
-        return back()->with('error','Conta existente');
+        return redirect('/login')->with('success', 'Conta criada com sucesso');
+    } else {
+        return back()->with('error', 'Conta existente');
     }
-    
 });
 
 //ROTAS ENTRE EM CONTATO
@@ -168,14 +192,15 @@ Route::get('/contato', function () {
 Route::post('/contato', function (Request $request) {
 
     $contato = new historico_contact;
-    
+
     $contato->nome = $request->nome;
     $contato->email = $request->email;
     $contato->descricao = $request->mensagem;
     $contato->data_envio = date('Y-m-d');
-    
 
-    $contato -> save(); 
+    $contato->save();
+
+    $opcao = 1;
 
     $request->validate([
         'nome' => 'required',
@@ -183,121 +208,115 @@ Route::post('/contato', function (Request $request) {
         'mensagem' => 'required'
     ]);
 
-    $data = array (
+    $data = array(
         'nome' => $request->nome,
         'email' => $request->email,
         'mensagem' => $request->mensagem,
         'produtos' => '',
+        'opcao' => $opcao
     );
 
     Mail::to($request->email)
-        ->send( new SendMailUser($data));
+        ->send(new SendMailUser($data));
 
 
     return back()->with('success', 'Email enviado com sucesso, obrigado por nos contactar');
-
 });
 
 //ROTAS DOS PACOTES
 
-Route::get('/pacotes', function(){
+Route::get('/pacotes', function () {
 
     $produtos = Produtos::all();
 
     $personzlizados = produtos_fixos::all();
 
-    return view('pacotes',[
+    return view('pacotes', [
         'produtos' => $produtos,
         'personalizados' => $personzlizados,
     ]);
 });
 
-Route::post('/pacotes', function(Request $request){
+Route::post('/pacotes', function (Request $request) {
 
-    if($request->pacote == 'PP'){
+    if ($request->pacote == 'PP') {
 
         $pacoteF = new produtos_fixos();
 
         $pacoteF->NOME_PRODUTO = $request->nome;
         $pacoteF->DESCRICAO = $request->descPacote;
-    
-        $pacoteF->save();
 
-    }else if($request->pacote == 'PS'){
+        $pacoteF->save();
+    } else if ($request->pacote == 'PS') {
 
         $pacote = new Produtos();
 
         $pacote->NOME_PRODUTO = $request->nome;
         $pacote->DESCRICAO = $request->descPacote;
-    
+
         $pacote->save();
     }
 
-    
-    return back()->with('success','Evento criado com sucesso');
 
+    return back()->with('success', 'Evento criado com sucesso');
 });
 
-Route::put('/pacotes', function(Request $request){
+Route::put('/pacotes', function (Request $request) {
 
     //dd($request->value);
 
-    if($request->ident == "tab2"){
+    if ($request->ident == "tab2") {
 
         //dd($request->nomeProd);
 
-        DB::table('produtos')->where('id','=',$request->value )->update(['NOME_PRODUTO' => $request->nomeProd, 'DESCRICAO' => $request->descProd ]);
+        DB::table('produtos')->where('id', '=', $request->value)->update(['NOME_PRODUTO' => $request->nomeProd, 'DESCRICAO' => $request->descProd]);
 
         return back()->with('success', 'Produto editado com sucesso');
+    } else if ($request->ident == "tab1") {
 
-    }else if($request->ident == "tab1"){
-
-        DB::table('produtos_fixos')->where('id','=',$request->value )->update(['NOME_PRODUTO' => $request->nomeProd, 'DESCRICAO' => $request->descProd ]);
+        DB::table('produtos_fixos')->where('id', '=', $request->value)->update(['NOME_PRODUTO' => $request->nomeProd, 'DESCRICAO' => $request->descProd]);
 
         return back()->with('success', 'Produto editado com sucesso');
-    }else{
+    } else {
 
         return back()->with('error', 'Erro ao editar o produto');
     }
-    
 });
-        
-Route::delete('/pacotes', function(Request $request){
+
+Route::delete('/pacotes', function (Request $request) {
 
     $ident = $request->identDelete;
 
-    if($ident == 'tab1' ){
-        DB::table('produtos_fixos')->where('ID','=', $request->deletar)->delete();
+    if ($ident == 'tab1') {
+        DB::table('produtos_fixos')->where('ID', '=', $request->deletar)->delete();
         return back()->with('success', 'Produto deletado com sucesso');
-
-    }else if($ident == 'tab2'){
-        DB::table('produtos')->where('ID','=', $request->deletar)->delete();
+    } else if ($ident == 'tab2') {
+        DB::table('produtos')->where('ID', '=', $request->deletar)->delete();
         return back()->with('success', 'Produto deletado com sucesso');
-
-    }else{
+    } else {
         return back()->with('error', 'Erro ao deletar o produto');
-    }   
+    }
 });
 
 
 
 //ROTAS CALENDARIO
 
-Route::get('/calendario', function(){
+Route::get('/calendario', function () {
 
     $events = Events::all();
-    
-    return view('fullcalendar.calendario',[
-        'events'=> $events
+
+    return view('fullcalendar.calendario', [
+        'events' => $events
     ]);
 });
 
-Route::post('/calendario', function(Request $request){
+Route::post('/calendario', function (Request $request) {
 
-    $formatStart = str_replace('/','-',$request->start);
+    $formatStart = str_replace('/', '-', $request->start);
     $transformStart =  strtotime($formatStart);
     $dateStart = date('Y-m-d h:i:s', $transformStart);
-    $formatEnd = str_replace('/','-',$request->end);
+    $formatEnd = str_replace('/', '-', $request->end);
     $transformEnd =  strtotime($formatEnd);
     $dateEnd = date('Y-m-d h:i:s', $transformEnd);
 
@@ -313,13 +332,13 @@ Route::post('/calendario', function(Request $request){
     return back()->with('success', 'Evento cadastrado com sucesso');
 });
 
-Route::put('/calendario', function(Request $request){
+Route::put('/calendario', function (Request $request) {
 
-    $formatInicio = str_replace('/','-',$request->inicio);
+    $formatInicio = str_replace('/', '-', $request->inicio);
     $transformInicio =  strtotime($formatInicio);
     $dateInicio = date('Y-m-d h:i:s', $transformInicio);
 
-    $formatFim = str_replace('/','-',$request->fim);
+    $formatFim = str_replace('/', '-', $request->fim);
     $transformFim =  strtotime($formatFim);
     $dateFim = date('Y-m-d h:i:s', $transformFim);
 
@@ -335,7 +354,7 @@ Route::put('/calendario', function(Request $request){
     return back()->with('success', 'Evento editado com sucesso');
 });
 
-Route::delete('/calendario', function(Request $request){
+Route::delete('/calendario', function (Request $request) {
     Events::findOrFail($request->deletar)->delete();
     return back()->with('success', 'Evento deletado com sucesso');
 });
