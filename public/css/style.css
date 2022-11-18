@@ -89,9 +89,6 @@ button {
 
     cursor:pointer;
 }
-button:hover {
-    background-color:#ffa845;
-}
 
 #descricao-seg {
     background-image: url('../img/scott-graham-5fNmWej4tAA-unsplash\ 1.png');
@@ -309,7 +306,7 @@ h1 {
 }
 
 #icon-show {
-    background-color: #ffa845;
+    background-color: #FA8F23;
     border-radius: 90px;
 }
 

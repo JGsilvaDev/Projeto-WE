@@ -42,10 +42,8 @@ const botKeys = opcoes.concat(keys)
     }
     function EnterKey(e) {
         if(e && e.keyCode == 13) { //realiza função ao apertar enter
-            console.log(input.id)
             if (input.id == msginputclass) {
                 submitText = input.value
-                console.log(submitText)
                 EnviarMensagem(submitText, userclass)
                 input.value = ""
                 Responder()
@@ -53,7 +51,6 @@ const botKeys = opcoes.concat(keys)
             
             if (input.id == nameinputclass) {
                 nome = input.value
-                console.log(submitText)
                 EnviarMensagem(nome, userclass)
                 input.value = ""
                 asknamepart2()
@@ -61,7 +58,6 @@ const botKeys = opcoes.concat(keys)
 
             if (input.id == emailinputclass) {
                 email = input.value
-                console.log(submitText)
                 EnviarMensagem(email, userclass)
                 input.value = ""
                 selectOption()
@@ -77,7 +73,6 @@ const botKeys = opcoes.concat(keys)
     }
     function clicked(event) {
         var id = event.target.id //pega o id do elemento
-        console.log(id)
         var eventElement = document.getElementById(id).innerHTML
         EnviarMensagem(eventElement, userclass)
         Responder()
@@ -106,7 +101,7 @@ const botKeys = opcoes.concat(keys)
         await sleep(300)
         switch(submitText) {
             case 'ajuda':
-                ajuda()
+                selectOption()
                 break;
             case opcoes[0]:
                 await sleep(500)
