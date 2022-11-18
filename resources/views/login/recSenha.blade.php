@@ -45,50 +45,41 @@
             @endif
 
             <div class="container" id="emailSenha">
-                <form class="container" id="login">
-                    <label for="email"><b>Email:</b></label>
-                    <input id="inputEmail" type="email" placeholder="Coloque seu Email" name="email" required>
+                <form method="POST" id="login">
+                    @csrf
+                    @method('PUT')
+
+                    <input type="number" value="{{ $id }}" style="display: none">
 
                     <label for="senha"><b>Senha:</b></label>
-                    <input id="inputSenha" type="password" placeholder="***********" name="senha" required>
-                    
-                    <input type="text" style="display: none" name="option" value="login">
-                    <div id="esqueciSenha">
-                        <a id="linkEsqueciSenha" style="float:right">Esqueci minha senha</a>
-                    </div>
+                    <input id="senha" type="password" placeholder="*************" name="senha" minlength="8" required>
+
+                    <label for="senha"><b>Confirmação de Senha:</b></label>
+                    <input id="confirmSenha" type="password" placeholder="***********" name="confirmSenha" minlength="8" required>
 
                     <button id="acessar" type="submit">Acessar</button>
 
-                    <h6 class="cadastro">Ainda não possui cadastro?<a href="register" id="link"> Clique aqui para
-                            se cadastrar</a></h6>
                 </form>
             </div>
         </form>
     </div>
-
-
 </body>
 
-    <form method='POST' style="display: none" >
-        @csrf
-        <input type="text" id="form_email" name="form_email">
-        <input type="text" name="option" value="email">
-        <button id="btnEmail" type="submit"></button>
-    </form>
-</html>
-
-
 <script>
-    $('#linkEsqueciSenha').on('click', function() {
-        Swal.fire({
-            title: 'Alterar senha',
-            text: 'Informe seu E-Mail: ',
-            input: 'email',
-            confirmButtonText: 'Enviar',
-            showLoaderOnConfirm: true,
-        }).then((event) => {
-            $('#form_email').val(event.value)
-            document.getElementById('btnEmail').click();
-        })
-    })
+
+    var password = document.getElementById("senha");
+    var confirm_password = document.getElementById("confirmSenha");
+
+    function validarSenha(){
+      if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Senhas diferentes!");
+      } else {
+        confirm_password.setCustomValidity('');
+      }
+    } 
+
+    password.onchange = validarSenha;
+    confirm_password.onkeyup = validarSenha;
+
 </script>
+

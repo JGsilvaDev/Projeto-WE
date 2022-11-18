@@ -1,4 +1,4 @@
-@if ($opcao == 1)
+@if ($data['opcao'] == 1)
     <h1>Solicitação Seviço We</h1>
 
     <p>Olá, {{ $data['nome'] }}! </p>
@@ -24,14 +24,16 @@
     Instagram @wejuntos<br>
     Linked-ln XXXXXXX</p> 
     
-@elseif ($opcao == 2)
+@elseif ($data['opcao'] == 2)
         <h1>ALTERAÇÃO DE SENHA</h1>
 
         <p>Olá, {{ $data['nome'] }}! </p>
 
         <p>Segue em o link para alteração de senha: </p>
-        <p><a href="http://127.0.0.1:8000/login"></a></p>
+        <p><a href="http://127.0.0.1:8000/recSenha?id={{ $data['id'] }}">Clique aqui</a></p>
 
+        <p>Att, <br>
+        Equipe We</p>
 
 @endif
 

@@ -97,6 +97,7 @@ Route::post('/config_pacote_fixo', function (Request $request) {
 
     Mail::to($email)
         ->send(new SendMailUser($data));
+
     return redirect('/')->with('success', 'Email enviado com sucesso');
 });
 
@@ -112,7 +113,7 @@ Route::post('/login', function (Request $request) {
 
     if ($request->option == 'login') {
         $sql = DB::table('logins')
-            ->select('email', 'senha')
+            ->select('email', 'senha', 'name')
             ->where('email', '=', $request->email)
             ->where('senha', '=', md5($request->senha))
             ->first();
@@ -128,25 +129,26 @@ Route::post('/login', function (Request $request) {
         $opcao = 2;
 
         $sql = DB::table('logins')
-            ->select('name')
-            ->where('email', '=', $request->email)
+            ->select('email','name', 'id')
+            ->where('email', '=', $request->form_email)
             ->first();
 
         if ($sql != null) {
             $data = array(
-                'nome' => $sql,
-                'email' => $request->email,
-                'opcao' => $opcao
+                'nome' => $sql->name,
+                'email' => $request->form_email,
+                'opcao' => $opcao,
+                'id' => $sql->id
             );
 
-
-            Mail::to($request->email)
+            Mail::to($request->form_email)
                 ->send(new SendMailUser($data));
 
             return back()->with('success', 'E-Mail de alteração de senha enviado com sucesso!');
         } else {
             return back()->with('error', 'Este E-Mail não está cadastrado!');
         }
+
     }
 
     return back()->with('error', 'erro ao enviar email');
@@ -181,6 +183,25 @@ Route::post('/register', function (Request $request) {
     } else {
         return back()->with('error', 'Conta existente');
     }
+});
+
+Route::get('/recSenha', function (Request $request) {
+
+    $id = $request->id;
+
+    return view('login.recSenha',['id' => $id]);
+});
+
+Route::put('/recSenha', function (Request $request) {
+
+    $login =  new Logins;
+
+    $login->senha = md5($request->senha);
+    $login = $login->toArray();
+
+    Logins::findOrFail($request->id)->update($login);
+
+    return redirect('/login')->with('success','Senha alterada com sucesso');
 });
 
 //ROTAS ENTRE EM CONTATO
@@ -299,7 +320,6 @@ Route::delete('/pacotes', function (Request $request) {
 });
 
 
-
 //ROTAS CALENDARIO
 
 Route::get('/calendario', function () {
@@ -355,6 +375,8 @@ Route::put('/calendario', function (Request $request) {
 });
 
 Route::delete('/calendario', function (Request $request) {
+
     Events::findOrFail($request->deletar)->delete();
+
     return back()->with('success', 'Evento deletado com sucesso');
 });

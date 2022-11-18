@@ -47,10 +47,10 @@
                     <input id="inputEmail" type="email" placeholder="Coloque seu Email" name="email" required>
         
                     <label for="senha" style="color: black"><b>Senha:</b></label>
-                    <input id="inputSenha" type="password" placeholder="***********" name="senha" required>
+                    <input id="inputSenha" type="password" placeholder="***********" name="senha" minlength="8" required>
 
                     <label for="confirmSenha" style="color: black"><b>Confirmação de senha:</b></label>
-                    <input id="inputConfirmaSenha" type="password" placeholder="***********" name="confirmSenha" required>
+                    <input id="inputConfirmaSenha" type="password" placeholder="***********" name="confirmSenha" minlength="8" required>
 
                     <button id="acessar" type="submit">Registrar</button>
                 </form>
