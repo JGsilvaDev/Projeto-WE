@@ -128,6 +128,17 @@
                 <li id="contato-lista_4">ORÇAMENTO</li>
             </ul>
         </div>
+        <!--CONTAINER DO COOKIE-->
+        <link rel="stylesheet" href="\css\cookies.css">
+            <div id="cookies-container">
+                <p id="cookies-titulo">Controle sua privacidade</p>
+                <p id="cookies-descricao">Nosso site utiliza <strong>cookies</strong> para melhorar sua experiência. Ao utilizar nossos serviços, você concorda com tal monitoramento.</p>
+
+                <button id="recusar" class="cookie-botao" onclick="Recusar()">recusar</button>
+                <button id="aceitar" class="cookie-botao" onclick="Aceitar()">aceitar</button>
+            </div>
+        <script src="\js\cookies.js"></script>
+
         <!--CONTAINER DO CHATBOT-->
         <div id="container">
             <img src="img\mensagem.png" width="64" height="64" onclick="hideshow()" id="icon-show">
