@@ -10,15 +10,14 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="\css\login.css">
   </head>
   <body>
 
     <div class="container" id="container_index">
         <form method="post">
         @csrf
-            <div class="imgcontainer">
-                <img id="unimedLogo" src="./img/logo.svg" alt="img" class="img">
-            </div>
+            
 
             @if ($message = Session::get('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -36,7 +35,10 @@
                     </button>
                 </div>
             @endif
-
+          <div id="login-wrap">
+            <div class="imgcontainer">
+              <img id="unimedLogo" src="./img/logo_preta.svg" alt="img" class="img">
+            </div>
             <div class="container" id="emailSenha">
                 <form method="POST">
 
@@ -55,6 +57,7 @@
                     <button id="acessar" type="submit">Registrar</button>
                 </form>
             </div>
+          </div>
         </form>
     </div>
     

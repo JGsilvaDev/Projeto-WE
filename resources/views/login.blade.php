@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="\css\login.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -24,7 +25,6 @@
         <form method="post">
             @csrf
             <div class="imgcontainer">
-                <img id="unimedLogo" src="./img/logo.svg" alt="img" class="img">
             </div>
 
             @if ($message = Session::get('success'))
@@ -43,29 +43,28 @@
                     </button>
                 </div>
             @endif
+            <div id="login-wrap">
 
-            <div class="container" id="emailSenha">
-                <form class="container" id="login">
-                    <label for="email"><b>Email:</b></label>
-                    <input id="inputEmail" type="email" placeholder="Coloque seu Email" name="email" required>
-
-                    <label for="senha"><b>Senha:</b></label>
-                    <input id="inputSenha" type="password" placeholder="***********" name="senha" required>
-                    
-                    <input type="text" style="display: none" name="option" value="login">
-                    <div id="esqueciSenha">
-                        <a id="linkEsqueciSenha" style="float:right">Esqueci minha senha</a>
-                    </div>
-
-                    <button id="acessar" type="submit">Acessar</button>
-
-                    <h6 class="cadastro">Ainda não possui cadastro?<a href="register" id="link"> Clique aqui para
-                            se cadastrar</a></h6>
-                </form>
+                <h1>BEM VINDO A WE.!</h1>
+                <div class="container" id="emailSenha">
+                    <form class="container" id="login">
+                        <label for="email"><b>Email:</b></label>
+                        <input id="inputEmail" type="email" placeholder="" name="email" required>
+    
+                        <label for="senha"><b>Senha:</b></label>
+                        <input id="inputSenha" type="password" placeholder="••••••••••" name="senha" required>
+                        
+                        <input type="text" style="display: none" name="option" value="login">
+                        <div id="esqueciSenha">
+                            <a id="linkEsqueciSenha" style="float:right">Esqueci minha senha</a>
+                        </div>
+    
+                        <button id="acessar" type="submit">Acessar</button>
+                    </form>
+                </div>
             </div>
         </form>
     </div>
-
 
 </body>
 

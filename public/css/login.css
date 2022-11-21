@@ -1,0 +1,35 @@
+
+
+body {
+    background-image: url('../img/wood_background2.png');
+}
+img {
+    margin-bottom: 30px;
+}
+input {
+    padding: 5px 10px 5px;
+    border: 5px solid black;
+    margin-bottom: 10px;
+}
+label {
+    margin: 0;
+}
+
+#acessar {
+    background-color:#018390; 
+}
+
+#login-wrap {
+    margin-top: 5%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+#linkEsqueciSenha {
+    margin: 10px 0 10px;
+    color: #018390;
+}
+#linkEsqueciSenha:hover {
+    color:#004248; 
+}
