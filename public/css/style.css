@@ -343,7 +343,7 @@ h1 {
 }
 
 #icon-show {
-    background-color: #FA8F23;
+    background-color: var(--fundo-preto);
     border-radius: 90px;
 }
 
