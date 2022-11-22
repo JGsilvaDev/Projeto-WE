@@ -26,6 +26,13 @@
     justify-content: center;
 }
 
+#servicosBanco{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    justify-content: center;
+}
+
 #sobre {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -87,8 +94,8 @@
 #botoes-produto {
     display: inline;
     grid-row-start:1;
-    grid-column-start: 12;
-    grid-column-end: 7;
+    grid-column-start: 14;
+    grid-column-end: 8;
 }
 
 #logo {
@@ -127,7 +134,7 @@
 
 #button-box-1{
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 2;
 }
 #button-box-2{
     grid-column-start: 5;

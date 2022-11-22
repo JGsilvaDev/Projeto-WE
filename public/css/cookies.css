@@ -31,7 +31,8 @@
 
 #recusar {
     grid-column-start: 8;  
-    grid-column-end: 10;  
+    grid-column-end: 10;
+    align-items: center;  
 }
 #aceitar {
     grid-column-start: 10;  

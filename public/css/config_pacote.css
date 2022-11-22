@@ -1,0 +1,45 @@
+:root {
+    --branco: #F3F3F3;
+    --azul: #018390;
+}
+body {
+    background-color: var(--branco);
+
+
+    margin-top: 0px;
+}
+#system {
+    display: flex;
+    justify-content: space-around;
+}
+#drop-wrap,
+#drag-wrap {
+    width: 40%;
+    background-color: var(--branco);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    border: 3px solid var(--azul);
+    border-radius: 10px;
+}
+
+.drag-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    background-color:var(--azul);
+    color:white;
+
+    border-radius: 10px;
+    
+}
+
+#btnCalc {
+    border: none;
+    background-color: var(--azul);
+    height:100%;
+}

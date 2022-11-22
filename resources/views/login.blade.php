@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Portal do Beneficiario</title>
+    <title>Login We</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     
@@ -26,28 +26,29 @@
             @csrf
             <div class="imgcontainer">
             </div>
-
-            @if ($message = Session::get('success'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{ $message }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            @endif
-            @if ($message = Session::get('error'))
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    {{ $message }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            @endif
               
                 <div class="container" id="login-wrap">
                     <div class="imgcontainer">
                     <img id="welogo" src="./img/logo_preta.svg" alt="img" class="img">
                     </div>
+
+                    @if ($message = Session::get('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ $message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+                    @if ($message = Session::get('error'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{ $message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+                    
                     <form class="container" id="emailSenha">
                         <label for="email"><b>Email:</b></label>
                         <input id="inputEmail" type="email" placeholder="E-mail" name="email" required>

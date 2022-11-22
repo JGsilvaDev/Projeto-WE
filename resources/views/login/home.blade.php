@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="\css\grid.css">
     <link rel="stylesheet" type="text/css" href="\css\style.css">
+    <link rel="stylesheet" type="text/css" href="\css\login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
@@ -46,14 +47,14 @@
     <div id="grade">
         <div id="header" class="fundo-preto" onclick="mudarIframe();">
             <a href="/">
-                <img src="./img/logo.svg" alt="" id="logo">
+                <img src="./img/logo.svg" alt="" id="logo" style="width: 200%">
             </a>
 
             <ul id="botoes-produto">
-                <li id="produto_1" onclick="mudarIframe(event)">PERFIL</li> |
-                <li id="produto_2"onclick="mudarIframe(event)">CALENDARIO</li> |
-                <li id="produto_3"onclick="mudarIframe(event)">PACOTES</li> |
-                <li id="produto_4"><a href="/login">LOGOUT</a></li>
+                <li id="produto_1" style="color:white" onclick="mudarIframe(event)">REGISTRAR |</li> 
+                <li id="produto_2" style="color:white" onclick="mudarIframe(event)">CALENDARIO |</li> 
+                <li id="produto_3" style="color:white" onclick="mudarIframe(event)">PACOTES |</li> 
+                <li id="produto_4"><a href="/login" style="color:white">LOGOUT</a></li>
             </ul>
         </div>
     </div>
@@ -99,11 +100,12 @@
                     break;
                 case "produto_2":
                     $('#pacotes').fadeOut('fast');
+                    $('#register').fadeOut('fast');
                     $('#calendario').fadeIn('fast');
                     break;
                 case "produto_3":
                     $('#calendario').fadeOut('fast');
-
+                    $('#register').fadeOut('fast');
                     $('#pacotes').fadeIn('fast');
                     break;
             }

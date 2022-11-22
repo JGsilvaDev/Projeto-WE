@@ -19,7 +19,7 @@
 
 <body>
     <div id="grade">
-        <div id="header" class="fundo-cinza">
+        <div id="header" class="fundo-preto">
             <a href="/">
                 <img src="./img/logo.svg" alt="" id="logo">
             </a>

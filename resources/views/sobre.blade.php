@@ -13,14 +13,14 @@
 </head>
 <body>
     <div id="grade-pg2">
-        <div id="header" class="fundo-cinza">
+        <div id="header" class="fundo-preto">
             <a href="/">
                 <img src="./img/logo.svg" alt="" id="logo">
             </a>
             <ul id="botoes-produto">
-                <li id="produto_1"><a href="/sobre" class="header-option">SOBRE</a></li> |
-                <li id="produto_2"><a href="/contato" class="header-option">CONTATOS</a></li> |
-                <li id="produto_3"><a href="" class="header-option">SERVIÇOS</a></li> |
+                <li id="produto_1"><a href="/sobre" class="header-option">SOBRE</a> |</li>
+                <li id="produto_2"><a href="/contato" class="header-option">CONTATOS</a> |</li> 
+                <li id="produto_3"><a href="" class="header-option">SERVIÇOS</a> |</li> 
                 <li id="produto_4"><a href="" class="header-option">PACOTES</a></li>
             </ul>
         </div>

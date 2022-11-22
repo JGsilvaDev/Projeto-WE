@@ -7,59 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="\css\config_pacote.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
 </head>
-
-<style>
-    :root {
-        --branco: #F3F3F3;
-        --azul: #018390;
-    }
-    body {
-        background-color: var(--branco);
-
-
-        margin-top: 0px;
-    }
-    #system {
-        display: flex;
-        justify-content: space-around;
-    }
-    #drop-wrap,
-    #drag-wrap {
-        width: 40%;
-        background-color: var(--branco);
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(4,1fr);
-        border: 3px solid var(--azul);
-        border-radius: 10px;
-    }
-
-    .drag-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        margin: 10px;
-        width: 150px;
-        height: 150px;
-        background-color:var(--azul);
-        color:white;
-
-        border-radius: 10px;
-        
-    }
-
-    #btnCalc {
-        border: none;
-        background-color: var(--azul);
-        height:100%;
-    }
-</style>
 
 <body>
     <h3 id="pacote-titulo">Selecione os pacotes que deseja</h3>

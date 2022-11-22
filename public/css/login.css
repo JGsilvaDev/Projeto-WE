@@ -18,8 +18,8 @@ input {
     font-weight: bold;
 }
 
-#register-wrap, #login-wrap {
-    margin-top:15%;
+#register-wrap{
+    margin-top: 1%;
     width: 50%;
     margin-left: 25%;
     background-color: #fcfcfc;
@@ -31,6 +31,11 @@ input {
 #login-wrap{
     width: 43%;
     margin-left: 28.5%;
+    margin-top:15%;
+    background-color: #fcfcfc;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 #linkEsqueciSenha {
@@ -48,4 +53,15 @@ input {
 
 #textSenha{
     margin-top: 16px;
+}
+
+#botoes-produto{
+    margin-top: 5px;
+}
+
+#produto_1:hover,
+#produto_2:hover,
+#produto_3:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
