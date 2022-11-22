@@ -43,15 +43,16 @@
                     </button>
                 </div>
             @endif
-            <div id="login-wrap">
-
-                <h1>BEM VINDO A WE.!</h1>
-                <div class="container" id="emailSenha">
-                    <form class="container" id="login">
+              
+                <div class="container" id="login-wrap">
+                    <div class="imgcontainer">
+                    <img id="welogo" src="./img/logo_preta.svg" alt="img" class="img">
+                    </div>
+                    <form class="container" id="emailSenha">
                         <label for="email"><b>Email:</b></label>
-                        <input id="inputEmail" type="email" placeholder="" name="email" required>
+                        <input id="inputEmail" type="email" placeholder="E-mail" name="email" required>
     
-                        <label for="senha"><b>Senha:</b></label>
+                        <label for="senha" id="textSenha"><b>Senha:</b></label>
                         <input id="inputSenha" type="password" placeholder="••••••••••" name="senha" required>
                         
                         <input type="text" style="display: none" name="option" value="login">

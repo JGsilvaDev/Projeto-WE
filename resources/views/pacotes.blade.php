@@ -16,13 +16,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/pacotes.css">
+
+    <script src="https://ajax.googleapis.com/ajax/l ibs/jquery/1.11.0/jquery.min.js"></script>
 
 </head>
 
@@ -56,7 +59,7 @@
                     <div id="btnTab2" data-toggle="tab" style="margin-left: 30px">Pacotes Personalizados</div>
                 </li>
                 <li>
-                    <button onclick="abrirModal()">+</button>
+                    <button id="bt-abrirmodal" onclick="abrirModal()">+</button>
                 </li>
             </ul>
 
@@ -77,21 +80,21 @@
 
                                 <table class="table">
                                     <thead>
-                                        <tr>
+                                        <tr id="table-columns">
                                             <th scope="col">#</th>
-                                            <th scope="col">Nome</th>
+                                            <th scope="col">Nome pacote</th>
                                             <th scope="col">Descrição</th>
                                             <th scope="col">Ação</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody >
                                         @foreach ($personalizados as $pers)
-                                            <tr id="{{ $pers->ID }}">
+                                            <tr id="{{ $pers->ID }}" class="top">
                                                 <td>{{ $pers->ID }}</td>
-                                                <td id="{{ $pers->NOME_PRODUTO }}">{{ $pers->NOME_PRODUTO }}</td>
+                                                <td id="{{ $pers->NOME_PRODUTO }}" class="nomeprod">{{ $pers->NOME_PRODUTO }}</td>
                                                 <td id="{{ $pers->DESCRICAO }}">{{ $pers->DESCRICAO }}</td>
-                                                <td><button onclick="edit(event)">Editar</button>
-                                                    <button onclick="deletarEvento(event)"> Deletar</button>
+                                                <td><button onclick="edit(event)" class = "bt-action bt-edit">Editar</button>
+                                                    <button onclick="deletarEvento(event)" class = "bt-action bt-delete"> Deletar</button>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -117,7 +120,7 @@
 
                                 <table class="table">
                                     <thead>
-                                        <tr>
+                                        <tr id="table-columns">
                                             <th scope="col">#</th>
                                             <th scope="col">Nome</th>
                                             <th scope="col">Descrição</th>
@@ -130,8 +133,8 @@
                                                 <td>{{ $prod->ID }}</td>
                                                 <td id="{{ $prod->NOME_PRODUTO }}">{{ $prod->NOME_PRODUTO }}</td>
                                                 <td id="{{ $prod->DESCRICAO }}">{{ $prod->DESCRICAO }}</td>
-                                                <td><button onclick="edit(event)">Editar</button>
-                                                    <button onclick="deletarEvento(event)">Deletar</button>
+                                                <td><button onclick="edit(event)" class = "bt-action bt-edit">Editar</button>
+                                                    <button onclick="deletarEvento(event)" class = "bt-action bt-delete">Deletar</button>
                                                 </td>
                                             </tr>
                                         @endforeach

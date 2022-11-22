@@ -1,0 +1,49 @@
+.table{
+    background-color: #fcfcfc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#table-columns{
+    background-color: #018390;
+    color: #fcfcfc;
+}
+
+h1{
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.bt-action{
+    border-radius: 4px;
+    width: 85px;
+    height: 35px;
+    border: solid #000 1px;
+}
+
+.bt-edit{
+    font-weight: bold;
+    color: #fcfcfc;
+    margin-right: 10px;
+    background-color: #018390;
+}
+
+.nomeprod{
+    font-weight: bold;
+}
+
+.nav-tabs{
+    font-weight: bold;
+}
+
+#bt-abrirmodal{
+    margin-left: 16px;
+    background-color: #018390;
+    color: #fcfcfc;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 1);
+    padding: 15px;
+}
