@@ -115,17 +115,17 @@
             <img src="./img/logo.svg" alt="" id="contato-logo">
             <ul id="nav-lista">
                 <p id="nav-lista-titulo">CONTINUE NAVEGANDO</p>
-                <li id="nav-lista_1">SERVIÇOS</li> 
+                <li><a id="nav-lista_1" href="#" class="header-option">SERVICOS</a></li> 
                 <li><a id="nav-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
                 <li><a id="nav-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
-                <li id="nav-lista_4">ORÇAMENTO</li>
+                <li><a id="nav-lista_4" href="#" class="header-option">ORÇAMENTO</a></li>
             </ul>
             <ul id="contato-lista">
                 <p id="contato-lista-titulo">CONTINUE NAVEGANDO</p>
-                <li id="contato-lista_1">SERVIÇOS</li> 
-                <li><a id="contato-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
-                <li><a id="contato-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
-                <li id="contato-lista_4">ORÇAMENTO</li>
+                <li><a id="nav-lista_1" href="#" class="header-option">SERVICOS</a></li> 
+                <li><a id="nav-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
+                <li><a id="nav-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
+                <li><a id="nav-lista_4" href="#" class="header-option">ORÇAMENTO</a></li>
             </ul>
         </div>
         <!--CONTAINER DO COOKIE-->

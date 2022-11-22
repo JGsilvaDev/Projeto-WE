@@ -33,16 +33,16 @@
         </div>
 
         <div id="contato-titulo">
-            <p class="txt-titulo">CONTATO</p>
+            <p class="txt-titulo" id="contato-titulo">CONTATO</p>
         </div>
         
-        <div id="contato-desc-campo" class="fundo-preto">
+        <div id="contato-desc-campo" class="fundo-cinza">
             <p class="txt-desc">
                 Tem alguma dúvida sobre nossos serviços, procedimentos, solicitação de orçamento e/ou então assuntos<br>relacionados à empresa.
             </p>
         </div>
 
-        <div id="contato-input-page" class="fundo-preto">
+        <div id="contato-input-page" class="fundo-cinza">
             <div id="input-block">
             
                 <div id="input-block-campos">
@@ -86,21 +86,21 @@
                         @endif
     
                         <div class="form-group">
-                            <label for="nome">Nome</label>
+                            <label for="nome" class="form-items">Nome</label>
                             <input name="nome" type="text" class="form-control" placeholder="Seu nome">
                         </div>
     
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email" class="form-items">Email</label>
                             <input name="email" type="email" class="form-control" placeholder="Seu E-Mail">
                         </div>
     
                         <div class="form-group">
-                            <label for="mensagem">Mensagem</label>
+                            <label for="mensagem" class="form-items">Mensagem</label>
                             <textarea name="mensagem" class="form-control" cols="10" rows="5" placeholder="Sua mensagem"></textarea>
                         </div>
             
-                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button type="submit" class="btn btn-primary" id="form-send">Enviar</button>
                             </form>
                         </div>
                     
@@ -122,17 +122,17 @@
             <img src="./img/logo.svg" alt="" id="contato-logo">
             <ul id="nav-lista">
                 <p id="nav-lista-titulo">CONTINUE NAVEGANDO</p>
-                <li id="nav-lista_1">SERVIÇOS</li> 
+                <li><a id="nav-lista_1" href="#" class="header-option">SERVICOS</a></li> 
                 <li><a id="nav-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
                 <li><a id="nav-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
-                <li id="nav-lista_4">ORÇAMENTO</li>
+                <li><a id="nav-lista_4" href="#" class="header-option">ORÇAMENTO</a></li>
             </ul>
             <ul id="contato-lista">
                 <p id="contato-lista-titulo">CONTINUE NAVEGANDO</p>
-                <li id="contato-lista_1">SERVIÇOS</li> 
-                <li><a id="contato-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
-                <li><a id="contato-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
-                <li id="contato-lista_4">ORÇAMENTO</li>
+                <li><a id="nav-lista_1" href="#" class="header-option">SERVICOS</a></li> 
+                <li><a id="nav-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
+                <li><a id="nav-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
+                <li><a id="nav-lista_4" href="#" class="header-option">ORÇAMENTO</a></li>
             </ul>
         </div>
     
