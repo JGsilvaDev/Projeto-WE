@@ -1,3 +1,8 @@
+:root {
+    --fundo-cinza: #F3F3F3;
+    --fundo-preto: #018390;
+}
+
 html,body {
     margin:0;
     padding:0;
@@ -34,12 +39,12 @@ body {
 /*Segmento com fundo cinza*/
 .fundo-cinza {
     padding: 50px;
-    background-color: #333333;
+    background-color: var(--fundo-cinza);
     margin:0;
 }
 .fundo-preto {
     padding:50px;
-    background-color:#1C1C1C;
+    background-color:var(--fundo-preto);
     margin:0;
 }
 
@@ -70,7 +75,7 @@ body {
 }
 
 #produto_4 {
-    background-color: #018390;
+    background-color: var(--fundo-preto);
 }
 
 /*    SEGMENTO 1    */
@@ -78,7 +83,7 @@ body {
 button {
     font-size:24px;
     width:100%;
-    background-color:#018390;
+    background-color:var(--fundo-preto);
     color:white;
     border-style: none;
     border-radius: 10px;
@@ -88,9 +93,9 @@ button {
 }
 
 button:hover{
-    color:#018390;
-    background-color:#fcfcfc; 
-    border: solid 2px #018390;
+    color:var(--fundo-preto);
+    background-color:var(--fundo-cinza); 
+    border: solid 2px --fundo-preto;
 }
 
 #descricao-seg {
@@ -113,14 +118,15 @@ button:hover{
 .button-box {
     padding:10px;
     border-style:solid;
-    border-color:white;
+    border-color:var(--fundo-preto);
     border-radius:20px;
-    background-color:#222222
+    background-color:var(--fundo-cinza);
+    color:#333333;
     
 }
 .button-box:hover {
-    color:black;
-    background-color:white;
+    color:var(--fundo-cinza);
+    background-color:var(--fundo-preto);
 }
 
 .btn-titulo {
@@ -185,7 +191,7 @@ button:hover{
 /* SEGMENTO 5 */
 
 #contato {
-    background: #333333;
+    background-color: var(--fundo-preto);
 }
 
 ul li {
