@@ -14,75 +14,68 @@
 </head>
 
 <style>
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
+    :root {
+        --branco: #F3F3F3;
+        --azul: #018390;
     }
+    body {
+        background-color: var(--branco);
 
-    .drag_container,
-    .drop_container{
+
+        margin-top: 0px;
+    }
+    #system {
         display: flex;
-        justify-content: center;
-        background-color: #eee;
-        padding: 30px 100px;
+        justify-content: space-around;
+    }
+    #drop-wrap,
+    #drag-wrap {
+        width: 40%;
+        background-color: var(--branco);
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+        border: 3px solid var(--azul);
+        border-radius: 10px;
     }
 
-    .drop_item,
-    .drag_item{
-        width: 100px;
-        height: 100px;
-        border-radius: 5px;
-        background-color:#fff;
-        margin-right: 20px;
-        padding: 10px;
-    }
-
-    .drop_container{
-        margin-top: 200px;
-    }
-
-    .drag{
-        font-size: 36px;
-        font-weight: bold;
-        width: 100%;
-        height: 100%;
-        background-color: goldenrod;
+    .drag-item {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 5px;
-    }
 
-    .invisible{
-        display: none;
-    }
-
-    #dvBtn{
-        text-align: center;
         margin: 10px;
+        width: 150px;
+        height: 150px;
+        background-color:var(--azul);
+        color:white;
+
+        border-radius: 10px;
+        
     }
 
-    
+    #btnCalc {
+        border: none;
+        background-color: var(--azul);
+        height:100%;
+    }
 </style>
 
 <body>
-    <div class="drag_container">
-        @foreach ( $produtos as $prod )
-            <div class="drag_item"><p id="{{ $prod->ID }}"></p><p class="drag" draggable="true" value="{{$prod->ID}}">{{$prod->NOME_PRODUTO}}</p></div>
-        @endforeach
-    </div>
-
-    <div class="drop_container">
-        @foreach (  $produtos as $prod )
-                <div class="drop_item"></div>
-        @endforeach
-    </div>
+    <h3 id="pacote-titulo">Selecione os pacotes que deseja</h3>
+    <div id="system">
+        <div id="drag-wrap">
+            @foreach ( $produtos as $prod )
+                <div class="drag_item"><p id="{{ $prod->ID }}"></p><p class="drag drag-item" ondragstart="drag(event)" draggable="true" value="{{$prod->ID}}">{{$prod->NOME_PRODUTO}}</p></div>
+            @endforeach
+        </div>
+        <div id="drop-wrap" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        
     
-
-   <div id="dvBtn">
-        <button id="btnCalc" onclick=btnConfirm()>Confirmar</button>
-   </div>
+       <div id="dvBtn">
+            <button id="btnCalc" onclick=btnConfirm()><img src="\img\confirm.png" width=128 height=128></button>
+       </div>
+    </div>
 
     <div class="modal fade" data-backdrop="static" id="visualizar" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -123,7 +116,43 @@
 
     const dragItems = document.querySelectorAll('.drag');
     const dropBoxes = document.querySelectorAll('.drop_item');
+    const dropParent = document.getElementById('drop-wrap')
+    const dragParent = document.getElementById('drag-wrap')
+    dragging = undefined //variável que armazena div arrastada
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    
+    function drag(ev) {
+        console.log('dragou')
+        ev.dataTransfer.setData("text", ev.target.id);
+        dragging = ev.target //passa o target pra variavel
+    }
 
+    function drop(ev) {
+        console.log('dropou')
+        dropParent.append(dragging); //passa a variavel pra outra div
+        dropParent.lastChild.setAttribute('onclick','SendBack(event)')
+        console.log(dropParent.lastChild)
+        texto += dragging.innerHTML + ' | '
+    }
+
+    function SendBack(event) {
+        dragParent.append(event.target)
+    }
+
+    function AddElement(name, ammount) {
+        for (i=0;i<ammount;i++) {
+            var div = document.createElement('div')
+            div.innerHTML = name
+            div.setAttribute('draggable','true')
+            div.setAttribute('ondragstart','drag(event)')
+            div.setAttribute('class','drag-item')
+            dragParent.append(div)
+        }
+    }
+
+    /*
     //Drag Events
     dragItems.forEach(item => {
         item.addEventListener('dragstart', dragStart);
@@ -161,7 +190,7 @@
         const es = document.querySelector("[id='teste']");
         console.log(dataId);
         selecionados.push(dataId)
-        texto += dataId + ' , '
+        
 
     }
     //seta uma classe pra div
@@ -171,15 +200,15 @@
         this.className = "drag_item";
     }
 
-    function btnConfirm(event){
-        $('#produtos').val(texto);
-        $('#visualizar').modal('show');
-    }
-    
-    function limparCampos(){
-        $('#produtos').val('');
-        $('#nome').val('');
-        $('#email').val('');
-    }
-
+    */
+   function btnConfirm(event){
+       $('#produtos').val(texto);
+       $('#visualizar').modal('show');
+   }
+   
+   function limparCampos(){
+       $('#produtos').val('');
+       $('#nome').val('');
+       $('#email').val('');
+   }
 </script>
