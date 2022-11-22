@@ -280,7 +280,8 @@
                 $('#inicio').val(inicio);
                 $('#fim').val(fim);
                 $('#edit').val(id);
-
+                $('#deletar').val(id);
+                
                 $('#visualizar').modal('show');
 
             },
