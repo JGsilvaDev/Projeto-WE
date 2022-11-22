@@ -50,9 +50,9 @@
             </a>
 
             <ul id="botoes-produto">
-                <li id="produto_1">PERFIL</li> |
-                <li id="produto_2">CALENDARIO</li> |
-                <li id="produto_3">PACOTES</li> |
+                <li id="produto_1" onclick="mudarIframe(event)">PERFIL</li> |
+                <li id="produto_2"onclick="mudarIframe(event)">CALENDARIO</li> |
+                <li id="produto_3"onclick="mudarIframe(event)">PACOTES</li> |
                 <li id="produto_4"><a href="/login">LOGOUT</a></li>
             </ul>
         </div>
@@ -60,6 +60,8 @@
 
     <iframe src="/calendario" id="calendario" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:55px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
     <iframe src="/pacotes" id="pacotes" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:55px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
+    <iframe src="/register" id="register" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:55px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
+
 
     {{-- LIBRAS --}}
     <div vw class="enabled">
@@ -75,6 +77,7 @@
 <script>
 
     $('#pacotes').hide();
+    $('#register').hide();
 
     // LIBRAS 
     new window.VLibras.Widget('https://vlibras.gov.br/app');
@@ -83,25 +86,41 @@
         window.location.href = '/config_pacote';
     });
 
-    function mudarIframe(){
-
-        $('li').click(function(event) { 
+    function mudarIframe(event){
+       // $('li').click(function(event) { 
             var confirm = event.target.id;
 
-            if(confirm == 'produto_1'){
-                $('#editPerfil').modal('show');
+            console.log(event.target.id);
+            switch(confirm) {
+                case "produto_1":
+                    $('#register').fadeIn('fast');
+                    $('#calendario').fadeOut('fast');
+                    $('#pacote').fadeOut('fast');
+                    break;
+                case "produto_2":
+                    $('#pacotes').fadeOut('fast');
+                    $('#calendario').fadeIn('fast');
+                    break;
+                case "produto_3":
+                    $('#calendario').fadeOut('fast');
 
-            }else if(confirm == 'produto_2'){
-                $('#pacotes').fadeOut('fast');
-
-                $('#calendario').fadeIn('fast');
-
-            }else if(confirm == 'produto_3'){
-                $('#calendario').fadeOut('fast');
-
-                $('#pacotes').fadeIn('fast');
-                
+                    $('#pacotes').fadeIn('fast');
+                    break;
             }
-        })
+            // if(event.target.id == 'produto_1'){
+            //     $('#editPerfil').modal('show');
+
+            // }else if(event.target.id == 'produto_2'){
+            //     $('#pacotes').fadeOut('fast');
+
+            //     $('#calendario').fadeIn('fast');
+
+            // }else if(event.target.id == 'produto_3'){
+            //     $('#calendario').fadeOut('fast');
+
+            //     $('#pacotes').fadeIn('fast');
+                
+            // }
+        // })
     }
 </script>
