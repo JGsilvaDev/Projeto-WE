@@ -35,9 +35,9 @@
                     </button>
                 </div>
             @endif
-          <div id="login-wrap">
+          <div id="register-wrap">
             <div class="imgcontainer">
-              <img id="unimedLogo" src="./img/logo_preta.svg" alt="img" class="img">
+              <img id="welogo" src="./img/logo_preta.svg" alt="img" class="img">
             </div>
             <div class="container" id="emailSenha">
                 <form method="POST">
@@ -46,7 +46,7 @@
                     <input type="text" placeholder="Informe seu nome" name="name" required>
 
                     <label for="email" style="color: black"><b>Email:</b></label>
-                    <input id="inputEmail" type="email" placeholder="Coloque seu Email" name="email" required>
+                    <input id="inputEmail" type="email" placeholder="E-mail" name="email" required>
         
                     <label for="senha" style="color: black"><b>Senha:</b></label>
                     <input id="inputSenha" type="password" placeholder="***********" name="senha" minlength="8" required>
