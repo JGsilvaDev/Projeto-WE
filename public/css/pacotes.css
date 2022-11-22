@@ -30,3 +30,20 @@ h1{
 .nomeprod{
     font-weight: bold;
 }
+
+.nav-tabs{
+    font-weight: bold;
+}
+
+#bt-abrirmodal{
+    margin-left: 16px;
+    background-color: #018390;
+    color: #fcfcfc;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 1);
+    padding: 15px;
+}

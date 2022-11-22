@@ -59,7 +59,7 @@
                     <div id="btnTab2" data-toggle="tab" style="margin-left: 30px">Pacotes Personalizados</div>
                 </li>
                 <li>
-                    <button onclick="abrirModal()">+</button>
+                    <button id="bt-abrirmodal" onclick="abrirModal()">+</button>
                 </li>
             </ul>
 
