@@ -37,3 +37,7 @@
     grid-column-start: 10;  
     grid-column-end: 12;  
 }
+
+.cookie-botao {
+    text-align:center;
+}
