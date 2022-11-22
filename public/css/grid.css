@@ -26,12 +26,6 @@
     justify-content: center;
 }
 
-#servicosBanco{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
-    justify-content: center;
-}
 
 #sobre {
     display: grid;
@@ -309,4 +303,12 @@
     grid-column-end: 12;
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+/*=====SERVIÇOS BANCO======*/
+#servicos-banco {
+    margin: 0;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
 }

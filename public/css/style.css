@@ -359,3 +359,37 @@ h1 {
     color: black;
     border: 1px solid red;
 }
+
+#servicos-banco {
+    margin: 0;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.button-box-banco {
+    width:  300px;
+    height: 300px;
+    padding:10px;
+    border-style:solid;
+    border-color:var(--fundo-preto);
+    border-radius:20px;
+    background-color:var(--fundo-cinza);
+    color:#333333;
+}
+.button-box-banco:hover {
+    color:var(--fundo-cinza);
+    background-color:var(--fundo-preto);
+}
+
+
+
+
+.filho {
+    width: 100px;
+    height: 100px;
+
+    background-color:black;
+    color:white;
+}
+

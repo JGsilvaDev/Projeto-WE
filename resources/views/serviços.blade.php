@@ -78,19 +78,17 @@
             </div>
         </div>
 
-        <div id="servicosBanco" class="fundo-preto" >
-            <p id="service-titulo" class="txt-titulo" style="color: white;"><b>PACOTES</b></p>
-
+        <p id="service-titulo" class="txt-titulo fundo-preto" ><b>PACOTES</b></p>
+        <div id="servicos-banco" class="fundo-preto" >
             @foreach ( $produtos as  $prod)
                 
-                <div class="button-box" id="button-box-1">
+                <div class="button-box-banco" id="button-box-banco-1">
                     <p id="button-titulo" class="btn-titulo">{{ $prod->NOME_PRODUTO }}</p>
                     <p id="button-desc" class="btn-desc"> {{ $prod->DESCRICAO }}</p>
                 </div>
             
             @endforeach
         </div>
-        
 
         <div id="contato" class="fundo-cinza">
             <img src="./img/logo.svg" alt="" id="contato-logo">
