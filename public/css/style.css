@@ -7,7 +7,7 @@ html,body {
     margin:0;
     padding:0;
 
-    color:white;
+    color:#00353A;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     cursor:default;
@@ -80,6 +80,11 @@ body {
 
 /*    SEGMENTO 1    */
 
+#desc-titulo,
+#desc-texto {
+    color: var(--fundo-cinza);
+}
+
 button {
     font-size:24px;
     width:100%;
@@ -148,13 +153,18 @@ button:hover{
 
 
 #sobre-titulo {
+    color: var(--fundo-cinza);
     text-align: center;
 }
 #sobre-desc {
+    color: var(--fundo-cinza);
     text-align: center;
 }
 
-
+#detalhe-excelencia,
+#detalhe-integridade {
+    color: var(--fundo-cinza);
+}
 .detalhe-imagem {
     
     display: block;
@@ -178,6 +188,9 @@ button:hover{
 #projeto {
     background-image: url('../img/aperto\ de\ mães.png');
     background-size:100%;
+}
+#projeto-titulo {
+    color:#00353A;
 }
 
 #projeto-desc{
@@ -218,6 +231,7 @@ ul li {
 /* RODAPÉ */
 
 #rodape {
+    color: var(--fundo-cinza);
     padding: 10px;
     background-color: #222222;
 }
@@ -230,6 +244,7 @@ ul li {
     background-size:100%;
 }
 #pag-titulo {
+    color: var(--fundo-cinza);
     margin:0;
     padding:50px 0 50px;
 }
@@ -257,6 +272,7 @@ ul li {
 }
 
 #marketing-valores {
+    color: var(--fundo-preto);
     margin: 0;
     text-align: left;
 }
@@ -279,6 +295,19 @@ input {
     width:100%;
     margin: 0;
     padding:5px 0 5px;
+}
+
+#contato-titulo {
+    color: var(--fundo-cinza);
+}
+
+.form-items {
+    color: var(--fundo-preto);
+}
+
+#form-send {
+    border-style: none;
+    background-color: var(--fundo-preto);
 }
 
 /* SERVICOS */

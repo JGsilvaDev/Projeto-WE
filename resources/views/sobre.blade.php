@@ -30,7 +30,7 @@
         <div id="titulo-pagina">
             <p id="pag-titulo" class="txt-titulo">SOMOS WE.</p>
         </div>
-    <div id="marketing" class="fundo-preto">
+    <div id="marketing" class="fundo-cinza">
         <img src="./img/umportodos.png" alt="" id="marketing-imagem">
         <div id="marketing-intro">
             <p id="marketing-titulo" class="txt-titulo">A melhor empresa para cuidar do seu marketing :D</p>
@@ -65,22 +65,22 @@
     </div>
 
     <div id="contato" class="fundo-cinza">
-        <img src="./img/logo.svg" alt="" id="contato-logo">
-        <ul id="nav-lista">
-            <p id="nav-lista-titulo">CONTINUE NAVEGANDO</p>
-            <li id="nav-lista_1">SERVIÇOS</li> 
-            <li><a id="nav-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
-            <li><a id="nav-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
-            <li id="nav-lista_4">ORÇAMENTO</li>
-        </ul>
-        <ul id="contato-lista">
-            <p id="contato-lista-titulo">CONTINUE NAVEGANDO</p>
-            <li id="contato-lista_1">SERVIÇOS</li> 
-            <li><a id="contato-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
-            <li><a id="contato-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
-            <li id="contato-lista_4">ORÇAMENTO</li>
-        </ul>
-    </div>
+            <img src="./img/logo.svg" alt="" id="contato-logo">
+            <ul id="nav-lista">
+                <p id="nav-lista-titulo">CONTINUE NAVEGANDO</p>
+                <li><a id="nav-lista_1" href="#" class="header-option">SERVICOS</a></li> 
+                <li><a id="nav-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
+                <li><a id="nav-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
+                <li><a id="nav-lista_4" href="#" class="header-option">ORÇAMENTO</a></li>
+            </ul>
+            <ul id="contato-lista">
+                <p id="contato-lista-titulo">CONTINUE NAVEGANDO</p>
+                <li><a id="nav-lista_1" href="#" class="header-option">SERVICOS</a></li> 
+                <li><a id="nav-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
+                <li><a id="nav-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
+                <li><a id="nav-lista_4" href="#" class="header-option">ORÇAMENTO</a></li>
+            </ul>
+        </div>
 
     <div id="rodape">We. 2022 - Todos os direitos reservados</div>
 </body>
