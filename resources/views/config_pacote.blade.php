@@ -19,7 +19,7 @@
     <div id="system">
         <div id="drag-wrap">
             @foreach ( $produtos as $prod )
-                <div class="drag_item"><p id="{{ $prod->ID }}"></p><p class="drag drag-item" ondragstart="drag(event)" draggable="true" value="{{$prod->ID}}">{{$prod->NOME_PRODUTO}}</p></div>
+                <div class="drag drag-item" ondragstart="drag(event)" draggable="true" value="{{$prod->ID}}">{{$prod->NOME_PRODUTO}}</div>
             @endforeach
         </div>
         <div id="drop-wrap" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
