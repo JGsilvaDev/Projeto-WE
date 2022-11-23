@@ -86,8 +86,8 @@
                 
                 <div class="button-box-banco" id="button-box-banco-1">
                     <p id="button-titulo-banco" class="btn-titulo-banco" data-id="{{ $prod->NOME_PRODUTO }}" data-confirm="{{ $prod->ID }}" style="font-size: 24px;text-align:left;">{{ $prod->NOME_PRODUTO }}</p>
-                    <p id="button-desc-banco" class="btn-desc-banco" style="font-size: 16px;text-align:left;"> {{ $prod->DESCRICAO }}</p>
-                    <button id="btnTeste" onclick="modalClick(event);">Fale Conosco</button>
+                    <p id="button-desc-banco" class="btn-desc-banco" style="font-size: 16px;text-align:left; display:none;"> {{ $prod->DESCRICAO }}</p>
+                    <button id="btnTeste" onclick="modalClick(event);" style="display:none">Fale Conosco</button>
                 </div>
             
             @endforeach
@@ -182,44 +182,52 @@
     $(document).ready(function() {
 
         var divHeight = $(".button-box-banco").height();
-        
-        $('#btnTeste').hide();
-            
+        var debounce = null
+
         $(".button-box-banco").mouseenter(function(event){
-            if(!animationLocked) {
-                animationLocked = true
-                var conteudo = event.target.children[0];
-                
-                var id = conteudo.getAttribute("data-confirm");
+                clearTimeout(debounce )
 
-                if(id == 2 || id == 5){
-                    $(this).animate({
-                        height: "190"
-                    });
-                }else if(id == 6){
-                    $(this).animate({
-                        height: "240"
-                    });
+                var desc = event.target.children[1]
+                var btn = event.target.children[2]
+                debounce = setTimeout(function(event) {
+                    if(desc) {
+                    desc.style.display = 'block'
+                    btn.style.display = 'block'
+                    }
+                },100)
+                // await sleep(300)
+                // var id = conteudo.getAttribute("data-confirm");
+                // console.log(conteudo)
+                // if(id == 2 || id == 5){
+                //     $(this).animate({
+                //         height: "190"
+                //     });
+                // }else if(id == 6){
+                //     $(this).animate({
+                //         height: "240"
+                //     });
 
-                }else if(id == 7){
-                    $(this).animate({
-                        height: "200"
-                    });
+                // }else if(id == 7){
+                //     $(this).animate({
+                //         height: "200"
+                //     });
 
-                }else{
-                    $(this).animate({
-                        height: "220"
-                    });
-                }
+                // }else{
+                //     $(this).animate({
+                //         height: "220"
+                //     });
+                // }
+            // }
+        }).mouseleave(function(event){
+            var desc = event.target.children[1]
+            var btn = event.target.children[2]
+                // $(this).animate({
+                //     height: "70"
+                // });
+            if(desc) {
+                desc.style.display = 'none'
+                btn.style.display = 'none'
             }
-        }).mouseleave(async function(event){
-            console.log('arquivo this: '+this)
-            await sleep(500)
-                $(this).animate({
-                    height: "70"
-                });
-            await sleep(500)
-            animationLocked = false
         });
       
     });
