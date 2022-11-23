@@ -105,6 +105,10 @@
     grid-column-start: 2;
     grid-column-end: 9;
 }
+#desc-subtitulo {
+    grid-column-start: 2;
+    grid-column-end: 9;
+}
 
 
 #desc-texto {
