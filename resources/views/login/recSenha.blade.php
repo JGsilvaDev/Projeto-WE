@@ -16,6 +16,9 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="\css\login.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -53,9 +56,13 @@
 
                     <label for="senha"><b>Senha:</b></label>
                     <input id="senha" type="password" placeholder="*************" name="senha" minlength="8" required>
+                    <span id="olhoAberto3" onclick="mostrarOcultarSenha3()"><ion-icon name="eye-outline"></ion-icon></span>
+                    <span id="olhoFechado3" onclick="mostrarOcultarSenha3()"><ion-icon name="eye-off-outline"></ion-icon></span>
 
                     <label for="senha"><b>Confirmação de Senha:</b></label>
                     <input id="confirmSenha" type="password" placeholder="***********" name="confirmSenha" minlength="8" required>
+                    <span id="olhoAberto4" onclick="mostrarOcultarSenha4()"><ion-icon name="eye-outline"></ion-icon></span>
+                    <span id="olhoFechado4" onclick="mostrarOcultarSenha4()"><ion-icon name="eye-off-outline"></ion-icon></span>
 
                     <button id="acessar" type="submit">Acessar</button>
 
@@ -81,5 +88,35 @@
     password.onchange = validarSenha;
     confirm_password.onkeyup = validarSenha;
 
+    $('#olhoAberto3').hide();
+    $('#olhoAberto4').hide();
+
+    function mostrarOcultarSenha3(){
+        var senha = document.getElementById('senha');
+
+        if(senha.type ==  "password"){
+            senha.type = 'text';
+            $('#olhoFechado3').hide();
+            $('#olhoAberto3').show();
+        }else{
+            senha.type = 'password';
+            $('#olhoAberto3').hide();
+            $('#olhoFechado3').show();
+        }
+    }
+
+    function mostrarOcultarSenha4(){
+        var senha = document.getElementById('confirmSenha');
+
+        if(senha.type ==  "password"){
+            senha.type = 'text';
+            $('#olhoFechado4').hide();
+            $('#olhoAberto4').show();
+        }else{
+            senha.type = 'password';
+            $('#olhoAberto4').hide();
+            $('#olhoFechado4').show();
+        }
+    }
 </script>
 

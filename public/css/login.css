@@ -65,3 +65,33 @@ input {
     text-decoration: underline;
     cursor: pointer;
 }
+
+#olhoAberto, #olhoFechado{
+    position: fixed;
+    top: 61.8%;
+    right: 35.2%;
+}
+
+#olhoAberto1, #olhoFechado1{
+    position: fixed;
+    top: 51.4%;
+    right: 34%;
+}
+
+#olhoAberto2, #olhoFechado2{
+    position: fixed;
+    top: 64.8%;
+    right: 34%;
+}
+
+#olhoAberto3, #olhoFechado3{
+    position: fixed;
+    top: 14%;
+    right: 11%;
+}
+
+#olhoAberto4, #olhoFechado4{
+    position: fixed;
+    top: 27.75%;
+    right: 11%;
+}

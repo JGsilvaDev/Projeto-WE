@@ -17,6 +17,8 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -55,6 +57,8 @@
     
                         <label for="senha" id="textSenha"><b>Senha:</b></label>
                         <input id="inputSenha" type="password" placeholder="••••••••••" name="senha" required>
+                        <span id="olhoAberto" onclick="mostrarOcultarSenha()"><ion-icon name="eye-outline"></ion-icon></span>
+                        <span id="olhoFechado" onclick="mostrarOcultarSenha()"><ion-icon name="eye-off-outline"></ion-icon></span>
                         
                         <input type="text" style="display: none" name="option" value="login">
                         <div id="esqueciSenha">
@@ -92,4 +96,20 @@
             document.getElementById('btnEmail').click();
         })
     })
+
+    $('#olhoAberto').hide();
+
+    function mostrarOcultarSenha(){
+        var senha = document.getElementById('inputSenha');
+
+        if(senha.type ==  "password"){
+            senha.type = 'text';
+            $('#olhoFechado').hide();
+            $('#olhoAberto').show();
+        }else{
+            senha.type = 'password';
+            $('#olhoAberto').hide();
+            $('#olhoFechado').show();
+        }
+    }
 </script>
