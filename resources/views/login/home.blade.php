@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="\css\grid.css">
     <link rel="stylesheet" type="text/css" href="\css\style.css">
+    <link rel="stylesheet" type="text/css" href="\css\login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
@@ -46,20 +47,22 @@
     <div id="grade">
         <div id="header" class="fundo-preto" onclick="mudarIframe();">
             <a href="/">
-                <img src="./img/logo.svg" alt="" id="logo">
+                <img src="./img/logo.svg" alt="" id="logo" style="width: 200%">
             </a>
 
             <ul id="botoes-produto">
-                <li id="produto_1">PERFIL</li> |
-                <li id="produto_2">CALENDARIO</li> |
-                <li id="produto_3">PACOTES</li> |
-                <li id="produto_4"><a href="/login">LOGOUT</a></li>
+                <li id="produto_1" style="color:white" onclick="mudarIframe(event)">REGISTRAR |</li> 
+                <li id="produto_2" style="color:white" onclick="mudarIframe(event)">CALENDARIO |</li> 
+                <li id="produto_3" style="color:white" onclick="mudarIframe(event)">PACOTES |</li> 
+                <li id="produto_4"><a href="/login" style="color:white">LOGOUT</a></li>
             </ul>
         </div>
     </div>
 
     <iframe src="/calendario" id="calendario" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:55px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
     <iframe src="/pacotes" id="pacotes" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:55px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
+    <iframe src="/register" id="register" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:55px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
+
 
     {{-- LIBRAS --}}
     <div vw class="enabled">
@@ -75,6 +78,7 @@
 <script>
 
     $('#pacotes').hide();
+    $('#register').hide();
 
     // LIBRAS 
     new window.VLibras.Widget('https://vlibras.gov.br/app');
@@ -83,25 +87,42 @@
         window.location.href = '/config_pacote';
     });
 
-    function mudarIframe(){
-
-        $('li').click(function(event) { 
+    function mudarIframe(event){
+       // $('li').click(function(event) { 
             var confirm = event.target.id;
 
-            if(confirm == 'produto_1'){
-                $('#editPerfil').modal('show');
-
-            }else if(confirm == 'produto_2'){
-                $('#pacotes').fadeOut('fast');
-
-                $('#calendario').fadeIn('fast');
-
-            }else if(confirm == 'produto_3'){
-                $('#calendario').fadeOut('fast');
-
-                $('#pacotes').fadeIn('fast');
-                
+            console.log(event.target.id);
+            switch(confirm) {
+                case "produto_1":
+                    $('#register').fadeIn('fast');
+                    $('#calendario').fadeOut('fast');
+                    $('#pacote').fadeOut('fast');
+                    break;
+                case "produto_2":
+                    $('#pacotes').fadeOut('fast');
+                    $('#register').fadeOut('fast');
+                    $('#calendario').fadeIn('fast');
+                    break;
+                case "produto_3":
+                    $('#calendario').fadeOut('fast');
+                    $('#register').fadeOut('fast');
+                    $('#pacotes').fadeIn('fast');
+                    break;
             }
-        })
+            // if(event.target.id == 'produto_1'){
+            //     $('#editPerfil').modal('show');
+
+            // }else if(event.target.id == 'produto_2'){
+            //     $('#pacotes').fadeOut('fast');
+
+            //     $('#calendario').fadeIn('fast');
+
+            // }else if(event.target.id == 'produto_3'){
+            //     $('#calendario').fadeOut('fast');
+
+            //     $('#pacotes').fadeIn('fast');
+                
+            // }
+        // })
     }
 </script>

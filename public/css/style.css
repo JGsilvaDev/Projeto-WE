@@ -26,14 +26,16 @@ body {
 .txt-titulo {
     width: 100%;
     font-size:64px;
+
+    font-weight: 900;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 /* DESCRIÇÃO */
 .txt-desc {
-    width:100%;
-    font-size:18px;
-    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    text-align: left;
 }
 
 /*Segmento com fundo cinza*/
@@ -42,23 +44,53 @@ body {
     background-color: var(--fundo-cinza);
     margin:0;
 }
+
 .fundo-preto {
-    padding:50px;
+    padding:0px;
     background-color:var(--fundo-preto);
     margin:0;
 }
 
 
 /*    HEADER    */
-#header {
+
+.header-sobre{
+    margin-top: 0;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#botoes-produto, #logo {
+    padding: 32px 32px 20px 32px;
+}
+
+#botoes-produto li{
+    list-style: none;
+    display: inline;
+    margin-right: 24px;
+}
+
+.separador{
+    margin-left: 24px;
+    color: #fff;
+}
+#botoes-produto li::after{
+    color: #fff;
+}
+
+/* #header {
     position:sticky;
     padding:10px;
+    
 }
 
 #botoes-produto li{
     list-style:none;
     display: inline;
-    
 }
 
 #logo {
@@ -70,18 +102,26 @@ body {
     font-size:16px;
     letter-spacing: 0.1em;
     color: white;
-
     border-radius:5px;
 }
-
+ */
 #produto_4 {
     background-color: var(--fundo-preto);
 }
 
 /*    SEGMENTO 1    */
 
+ login-rework{
 #desc-subtitulo,
 #desc-titulo,
+}
+
+#desc-titulo{
+    text-align: left;
+    color: #fff;
+    font-weight: bold;
+}
+
 #desc-texto {
     color: var(--fundo-cinza);
 }
@@ -96,13 +136,17 @@ button {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.55), 0px 0px 30px rgba(0, 0, 0, 0.15);
     padding: 10px 30px 10px;
     cursor:pointer;
+    margin-bottom: 32px;
 }
 
 button:hover{
     color:var(--fundo-preto);
     background-color:var(--fundo-cinza); 
     border: solid 2px --fundo-preto;
+    
 }
+
+
 
 #descricao-seg {
     background-image: url('../img/scott-graham-5fNmWej4tAA-unsplash\ 1.png');
@@ -111,9 +155,14 @@ button:hover{
     margin:0px;
 }
 
+#text-button{
+    text-decoration: none; 
+    color:white;
+}
 
 
 #descricao-seg p {
+    text-align: left;
     font-size: 24px;
 }
 
@@ -155,11 +204,11 @@ button:hover{
 
 #sobre-titulo {
     color: var(--fundo-cinza);
-    text-align: center;
+    text-align: left;
 }
 #sobre-desc {
     color: var(--fundo-cinza);
-    text-align: center;
+    text-align: left;
 }
 
 #detalhe-excelencia,
@@ -178,6 +227,7 @@ button:hover{
 
 .detalhe-titulo {
     font-size:18px;
+    font-weight: bold;
     text-align:center;
 }
 .detalhe-desc {
@@ -188,10 +238,13 @@ button:hover{
 /* SEGMENTO 4 */
 #projeto {
     background-image: url('../img/aperto\ de\ mães.png');
-    background-size:100%;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 #projeto-titulo {
     color:#00353A;
+    text-align: left;
 }
 
 #projeto-desc{
@@ -358,4 +411,46 @@ h1 {
     background-color: white;
     color: black;
     border: 1px solid red;
+}
+
+#servicos-banco {
+    margin: 0;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.button-box-banco {
+    width:  300px;
+    height: 300px;
+    padding:10px;
+    border-style:solid;
+    border-color:var(--fundo-preto);
+    border-radius:20px;
+    background-color:var(--fundo-cinza);
+    color:#333333;
+}
+.button-box-banco:hover {
+    color:var(--fundo-cinza);
+    background-color:var(--fundo-preto);
+}
+
+
+
+
+.filho {
+    width: 100px;
+    height: 100px;
+
+    background-color:black;
+    color:white;
+}
+
+
+#projeto-titulo{
+    padding-top: 60px;
+}
+
+#projeto-desc{
+    margin-top: 50px;
 }

@@ -36,6 +36,16 @@ Route::get('/sobre', function () {
     return view('sobre');
 });
 
+Route::get('/serviços', function () {
+
+    $produtos = produtos_fixos::all();
+
+    return view('serviços',[
+        'produtos' => $produtos,
+    ]);
+});
+
+
 //ROTAS BOT
 
 Route::match(['get', 'post'], 'botman', [BotManController::class, "handle"]);

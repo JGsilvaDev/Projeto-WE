@@ -47,3 +47,7 @@ h1{
     box-shadow: 0 0 1px rgba(0, 0, 0, 1);
     padding: 15px;
 }
+
+#btnTab1, #btnTab2{
+    cursor: pointer;
+}

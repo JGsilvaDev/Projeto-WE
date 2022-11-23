@@ -1,0 +1,30 @@
+form{
+    padding-left: 15px;
+}
+
+#pacote, #nome, #descPacote, button{
+    margin-bottom: 12px;
+}
+
+#primeiraLabel{
+    margin-top: 16px;
+}
+
+input, textarea, select {
+    width: 95%;
+}
+
+.modal-header{
+    background-color: #018390;
+}
+
+#exampleModalLabel{
+    color: white;
+}
+
+.close{
+    background-color: #018390;
+    color: white;
+    border-color: white;
+}
+

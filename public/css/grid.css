@@ -13,6 +13,7 @@
     gap: 30px;
     justify-content: center;
 }
+
 #descricao-seg {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -25,6 +26,7 @@
     gap: 30px;
     justify-content: center;
 }
+
 
 #sobre {
     display: grid;
@@ -63,6 +65,7 @@
     gap: 30px;
     justify-content: center;
 }
+
 #opcoes-list {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -87,8 +90,8 @@
 #botoes-produto {
     display: inline;
     grid-row-start:1;
-    grid-column-start: 12;
-    grid-column-end: 7;
+    grid-column-start: 14;
+    grid-column-end: 8;
 }
 
 #logo {
@@ -106,6 +109,7 @@
     grid-column-start: 2;
     grid-column-end: 9;
 }
+
 
 #desc-texto {
     grid-column-start: 2;
@@ -131,7 +135,7 @@
 
 #button-box-1{
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 2;
 }
 #button-box-2{
     grid-column-start: 5;
@@ -192,12 +196,11 @@
 
 /* Segmento 4 */
 #projeto-titulo {
-
     grid-column-start:2;
-    grid-column-end:7;
+    grid-column-end:8;
 
     grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: 3;
 }
 #projeto-desc {
 
@@ -306,4 +309,12 @@
     grid-column-end: 12;
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+/*=====SERVIÇOS BANCO======*/
+#servicos-banco {
+    margin: 0;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
 }

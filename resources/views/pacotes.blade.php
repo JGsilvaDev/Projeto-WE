@@ -17,6 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
@@ -24,8 +25,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/pacotes.css">
+    <link rel="stylesheet" type="text/css" href="/css/modal.css">
 
-    <script src="https://ajax.googleapis.com/ajax/l ibs/jquery/1.11.0/jquery.min.js"></script>
+    
 
 </head>
 
@@ -160,27 +162,29 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 id="exampleModalLabel">Criar evento Evento</h5>
+                                <h3 id="exampleModalLabel">Criar evento Evento</h3>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <div>
                                 <form method="POST">
                                     @csrf
-                                    <label>Selecione qual tipo de pacote será criado:</label>
+                                    <label id="primeiraLabel"><b>Selecione qual tipo de pacote será criado:</b></label><br>
                                     <select name="pacote" id="pacote">
                                         <option value="PP">Pacote Padrão</option>
                                         <option value="PS">Pacote Personalizado</option>
                                     </select><br>
 
-                                    <label>Nome do Pacote:</label>
+                                    <label><b>Nome do Pacote:</b></label><br>
                                     <input type="text" name="nome" id="nome" required><br>
 
-                                    <label>Descrição do Pacote:</label>
+                                    <label><b>Descrição do Pacote:</b></label><br>
                                     <textarea name="descPacote" id="descPacote" cols="40" rows="2"></textarea><br>
 
-                                    <button type="submit">Salvar</button>
+                                    <button type="submit" class="bt-action bt-edit">Salvar</button>
                                 </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -200,16 +204,16 @@
                                 @method('PUT')
                                 @csrf
                         
+                                <label><b>Nome Produto:</b></label><br>
+                                <input id="nomeProd" name="nomeProd" type="text"><br>
+
+                                <label><b>Descrição:</b></label><br>
+                                <textarea id="descProd" name="descProd" cols="30" rows="10"></textarea><br>
+
                                 <input id="ident" name="ident" type="text" value="tab1" style="display: none">
                                 <input id="value" name="value" type="text" style="display: none"><br>
                         
-                                <label>Nome Produto:</label><br>
-                                <input id="nomeProd" name="nomeProd" type="text"><br>
-
-                                <label>Descrição:</label><br>
-                                <textarea id="descProd" name="descProd" cols="30" rows="10"></textarea><br>
-                        
-                                <button type="submit">SALVAR</button>
+                                <button type="submit" class="bt-action bt-edit">SALVAR</button>
                             </form>
                         </div>
                     </div>
