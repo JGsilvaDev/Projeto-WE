@@ -12,16 +12,17 @@
     <title>Sobre a Empresa</title>
 </head>
 <body>
-    <div id="grade-pg2">
+    <div id="grade">
         <div id="header" class="fundo-preto">
             <a href="/">
                 <img src="./img/logo.svg" alt="" id="logo">
             </a>
-            <ul id="botoes-produto">
-                <li id="produto_1"><a href="/sobre" class="header-option">SOBRE</a> |</li>
-                <li id="produto_2"><a href="/contato" class="header-option">CONTATOS</a> |</li> 
-                <li id="produto_3"><a href="" class="header-option">SERVIÇOS</a> |</li> 
-                <li id="produto_4"><a href="" class="header-option">PACOTES</a></li>
+            
+            <ul id="botoes-produto" class="header-sobre">
+                <li id="produto_1"><a href="/sobre" class="header-option" style="color: #fff">SOBRE</a><span class="separador">|</span></li> 
+                <li id="produto_2"><a href="/contato" class="header-option" style="color: #fff">CONTATOS</a><span class="separador">|</span></li> 
+                <li id="produto_3"><a href="/serviços" class="header-option" style="color: #fff">SERVIÇOS</a><span class="separador">|</span></li> 
+                <li id="produto_4"><a href="/" class="header-option" style="color: #fff">PACOTES</a></li>
             </ul>
         </div>
     </div>

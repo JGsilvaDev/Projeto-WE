@@ -50,10 +50,10 @@
             </a>
             
             <ul id="botoes-produto">
-                <li id="produto_1"><a href="/sobre" class="header-option">SOBRE</a> |</li> 
-                <li id="produto_2"><a href="/contato" class="header-option">CONTATOS</a> |</li> 
-                <li id="produto_3"><a href="/serviços" class="header-option">SERVIÇOS</a> |</li> 
-                <li id="produto_4"><a href="/" class="header-option">PACOTES</a></li>
+                <li id="produto_1"><a href="/sobre" class="header-option" style="color: #fff">SOBRE</a><span class="separador">|</span></li> 
+                <li id="produto_2"><a href="/contato" class="header-option" style="color: #fff">CONTATOS</a><span class="separador">|</span></li> 
+                <li id="produto_3"><a href="/serviços" class="header-option" style="color: #fff">SERVIÇOS</a><span class="separador">|</span></li> 
+                <li id="produto_4"><a href="/" class="header-option" style="color: #fff">PACOTES</a></li>
             </ul>
         </div>
         <div id="descricao-seg">
@@ -86,7 +86,7 @@
         <div id="sobre" class="fundo-preto">
             <img src="./img/olhos.png" alt="" id="sobre-imagem">
             <div id="sobre-intro">
-                <p id="sobre-titulo" class="txt-titulo">SOBRE A WE</p>
+                <p id="sobre-titulo" class="txt-titulo">SOBRE A WE.</p>
                 <p id="sobre-desc" class="txt-desc">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, recusandae nobis, eaque doloribus cum nulla tempore praesentium qui, labore nisi sapiente repellendus ipsa reiciendis! Voluptatem maiores beatae quisquam! Asperiores recusandae porro nihil hic, magni iusto voluptate ea in excepturi officiis veritatis neque voluptas eligendi reiciendis fugiat aspernatur ratione, natus maiores!
                 </p>
@@ -107,7 +107,7 @@
         <div id="projeto">
             <div id="projeto-titulo" class="txt-titulo">Bora começar um projeto juntos?</div>
             <div id="projeto-desc" class="txt-desc">Seu projeto merece ficar em boas mãos e nós, da We, temos o que é preciso para entregar a melhor versão do seu sonho! Está preparado? Então bora começar!
-            <button id="projeto-button">COMEÇAR UM PROJETO</button>
+            <button id="projeto-button"><a id="text-button" href="/serviços">COMEÇAR UM PROJETO</a></button>
             </div>
         </div>
 
@@ -128,6 +128,7 @@
                 <li><a id="nav-lista_4" href="#" class="header-option">ORÇAMENTO</a></li>
             </ul>
         </div>
+        
         <!--CONTAINER DO COOKIE-->
         <link rel="stylesheet" href="\css\cookies.css">
             <div id="cookies-container">
