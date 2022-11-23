@@ -80,6 +80,7 @@ body {
 
 /*    SEGMENTO 1    */
 
+#desc-subtitulo,
 #desc-titulo,
 #desc-texto {
     color: var(--fundo-cinza);

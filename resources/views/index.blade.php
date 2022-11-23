@@ -58,6 +58,7 @@
         </div>
         <div id="descricao-seg">
             <h1 id="desc-titulo" class="txt-titulo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <h2 id="desc-subtitulo">Subtítulo, para adicionar coisas que só poderiam ser adicionadas em um subtítulo</h2>
             <p id="desc-texto" class="txt-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maxime iure numquam saepe ea ipsam omnis vero quasi adipisci esse animi, perspiciatis fugiat! Non, expedita. Aliquam pariatur ad alias iure?</p>
             <button id="orcamento-button">Faça seu orçamento</button>
         </div>
