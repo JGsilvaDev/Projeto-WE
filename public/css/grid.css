@@ -120,6 +120,7 @@
 /*segmento 2*/
 
 #service-titulo {
+    text-align: left;
     grid-column-start:1;
     grid-column-end: 12;
 }

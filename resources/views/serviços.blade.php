@@ -9,6 +9,7 @@
     <title>We</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="\css\modal.css">
     <link rel="stylesheet" type="text/css" href="\css\grid.css">
     <link rel="stylesheet" type="text/css" href="\css\style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,16 +79,34 @@
             </div>
         </div>
 
-        <p id="service-titulo" class="txt-titulo fundo-preto" ><b>PACOTES</b></p>
+        <p id="service-titulo" class="txt-titulo fundo-preto" style="color: #fff"><b>PACOTES</b></p>
+
         <div id="servicos-banco" class="fundo-preto" >
             @foreach ( $produtos as  $prod)
                 
                 <div class="button-box-banco" id="button-box-banco-1">
-                    <p id="button-titulo" class="btn-titulo">{{ $prod->NOME_PRODUTO }}</p>
-                    <p id="button-desc" class="btn-desc"> {{ $prod->DESCRICAO }}</p>
+                    <p id="button-titulo-banco" class="btn-titulo-banco" data-id="{{ $prod->NOME_PRODUTO }}" data-confirm="{{ $prod->ID }}" style="font-size: 24px;text-align:left;">{{ $prod->NOME_PRODUTO }}</p>
+                    <p id="button-desc-banco" class="btn-desc-banco" style="font-size: 16px;text-align:left;"> {{ $prod->DESCRICAO }}</p>
+                    <button id="btnTeste" onclick="modalClick(event);">Fale Conosco</button>
                 </div>
             
             @endforeach
+        </div>
+
+        <div id="contato-input-page" class="fundo-cinza">
+            <p id="service-titulo" class="txt-titulo" style="color: #018390"><b>MONTE SEU PACOTE PERSONALIZADO</b></p>
+            <div id="input-block">
+                <div id="input-block-campos">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, harum. Repellat alias eos quas quisquam, fuga nesciunt facilis perferendis sequi tempora itaque delectus magni consectetur corrupti illo fugit error dolorum!</p>
+
+                    <button id="pacote_personalizado" style="width: 55%; font-size: 18px"><b>MONTE SEU PACOTE ESPECIAL</b></button>
+                </div>    
+
+                <div id="redes-sociais-contato">
+                    <p>AQUI VAI UMA IMAGEM</p>
+                </div>
+            
+            </div>
         </div>
 
         <div id="contato" class="fundo-cinza">
@@ -107,6 +126,36 @@
                 <li><a id="nav-lista_4" href="#" class="header-option">ORÇAMENTO</a></li>
             </ul>
         </div>
+
+        <div class="modal fade" data-backdrop="static" id="visualizar" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST">
+                        @csrf
+                        <label>Informe seu email:</label>
+                        <input type="email" name="email" id="email"><br>
+                
+                        <label>Nome:</label>
+                        <input type="text" name="nome" id="nome"><br>
+                
+                        <label>Produtos:</label>
+                        <input type="text" name="produtos" id="produtos"><br>
+                
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <div id="rodape">We. 2022 - Todos os direitos reservados</div>
 
     
@@ -125,9 +174,59 @@
 <script>
     // LIBRAS 
     new window.VLibras.Widget('https://vlibras.gov.br/app');
+    
+    $(document).ready(function() {
+
+        var divHeight = $(".button-box-banco").height();
+        
+        $('#btnTeste').hide();
+            
+        $(".button-box-banco").mouseenter(function(event){
+            var conteudo = event.target.children[0];
+            
+            var id = conteudo.getAttribute("data-confirm");
+
+            if(id == 2 || id == 5){
+                $(this).animate({
+                    height: "190"
+                });
+            }else if(id == 6){
+                $(this).animate({
+                    height: "240"
+                });
+
+            }else if(id == 7){
+                $(this).animate({
+                    height: "200"
+                });
+
+            }else{
+                $(this).animate({
+                    height: "220"
+                });
+            }
+        }).mouseleave(function(event){
+            $(this).animate({
+                height: "70"
+            });
+        });
+      
+    });
 
     $('#servicos-button-end').on('click', function(){
         window.location.href = '/config_pacote';
     });
+
+    function confirmar(){
+        document.getElementById('btnCalc').click();
+    }
+
+    function modalClick(event){
+        var conteudo = event.target.parentElement.children[0];
+
+        $('#produtos').val(conteudo.getAttribute("data-id"));
+
+        $('#visualizar').modal('show');
+    }
 
 </script>

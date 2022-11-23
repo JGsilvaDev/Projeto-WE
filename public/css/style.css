@@ -104,6 +104,13 @@ button:hover{
     border: solid 2px --fundo-preto;
 }
 
+#btnTeste{
+    font-size:14px;
+    width:45%;
+    background-color:var(--fundo-preto);
+    color:white;
+}
+
 #descricao-seg {
     background-image: url('../img/scott-graham-5fNmWej4tAA-unsplash\ 1.png');
     background-size:100%;
@@ -139,8 +146,9 @@ button:hover{
     font-size: 24px;
     text-align:left;
 }
+
 .btn-desc {
-    font-size: 14;
+    font-size: 14px;
     text-align:left;
 }
 
@@ -379,22 +387,16 @@ h1 {
 }
 
 .button-box-banco {
-    width:  300px;
-    height: 300px;
-    padding:10px;
+    width:  400px;
+    height: 70px;
+    padding: 10px;
     border-style:solid;
     border-color:var(--fundo-preto);
     border-radius:20px;
     background-color:var(--fundo-cinza);
     color:#333333;
+    overflow: hidden;
 }
-.button-box-banco:hover {
-    color:var(--fundo-cinza);
-    background-color:var(--fundo-preto);
-}
-
-
-
 
 .filho {
     width: 100px;
