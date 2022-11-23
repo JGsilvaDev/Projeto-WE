@@ -33,7 +33,7 @@ body {
 .txt-desc {
     width:100%;
     font-size:18px;
-    text-align: center;
+    text-align: left;
 }
 
 /*Segmento com fundo cinza*/
@@ -163,11 +163,11 @@ button:hover{
 
 #sobre-titulo {
     color: var(--fundo-cinza);
-    text-align: center;
+    text-align: left;
 }
 #sobre-desc {
     color: var(--fundo-cinza);
-    text-align: center;
+    text-align: left;
 }
 
 #detalhe-excelencia,
@@ -413,4 +413,8 @@ h1 {
 
 #projeto-desc{
     margin-top: 50px;
+}
+
+.separador{
+    color: #fff;
 }

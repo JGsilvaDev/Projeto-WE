@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>We</title>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="\css\modal.css">
     <link rel="stylesheet" type="text/css" href="\css\grid.css">
     <link rel="stylesheet" type="text/css" href="\css\style.css">
@@ -198,7 +199,7 @@
                     });
                 }else if(id == 6){
                     $(this).animate({
-                        height: "240"
+                        height: "260"
                     });
 
                 }else if(id == 7){
@@ -208,7 +209,7 @@
 
                 }else{
                     $(this).animate({
-                        height: "220"
+                        height: "260"
                     });
                 }
             }

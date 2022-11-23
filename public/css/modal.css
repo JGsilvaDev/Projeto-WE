@@ -16,6 +16,7 @@ input, textarea, select {
 
 .modal-header{
     background-color: #018390;
+    height: 70px;
 }
 
 #exampleModalLabel{
@@ -24,7 +25,30 @@ input, textarea, select {
 
 .close{
     background-color: #018390;
-    color: white;
+    color: #000;
     border-color: white;
+    box-shadow: 0px 0px 2px rgb(0 0 0 / 0%), 0px 0px 30px rgb(0 0 0 / 0%);
 }
 
+.close:hover{
+    background-color: #018390;
+    color: white;
+}
+
+#email, #nome, #produtos{
+    border: solid 1px #000;
+    padding-left: 12px;
+}
+
+.close{
+    width: 10%;
+}
+
+
+#produtos{
+    margin-bottom: 16px;
+}
+
+.modal-title{
+    margin-left: 16px;
+}
