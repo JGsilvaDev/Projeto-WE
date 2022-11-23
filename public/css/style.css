@@ -205,6 +205,7 @@ button:hover{
 /* SEGMENTO 5 */
 
 #contato {
+    padding: 10px 0 10px;
     background-color: var(--fundo-preto);
 }
 
@@ -213,13 +214,11 @@ ul li {
 }
 
 #contato-logo {
-    padding:60px;
+    padding: 50px 0 50px;
     object-fit:cover;
     width:100%;
     max-height:100%;
 }
-
-
 
 #nav-lista-titulo {
     color:#27FBB8;
