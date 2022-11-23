@@ -174,7 +174,11 @@
 <script>
     // LIBRAS 
     new window.VLibras.Widget('https://vlibras.gov.br/app');
-    
+    var animationLocked = false
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms))
+    }
+
     $(document).ready(function() {
 
         var divHeight = $(".button-box-banco").height();
@@ -182,33 +186,40 @@
         $('#btnTeste').hide();
             
         $(".button-box-banco").mouseenter(function(event){
-            var conteudo = event.target.children[0];
-            
-            var id = conteudo.getAttribute("data-confirm");
+            if(!animationLocked) {
+                animationLocked = true
+                var conteudo = event.target.children[0];
+                
+                var id = conteudo.getAttribute("data-confirm");
 
-            if(id == 2 || id == 5){
-                $(this).animate({
-                    height: "190"
-                });
-            }else if(id == 6){
-                $(this).animate({
-                    height: "240"
-                });
+                if(id == 2 || id == 5){
+                    $(this).animate({
+                        height: "190"
+                    });
+                }else if(id == 6){
+                    $(this).animate({
+                        height: "240"
+                    });
 
-            }else if(id == 7){
-                $(this).animate({
-                    height: "200"
-                });
+                }else if(id == 7){
+                    $(this).animate({
+                        height: "200"
+                    });
 
-            }else{
-                $(this).animate({
-                    height: "220"
-                });
+                }else{
+                    $(this).animate({
+                        height: "220"
+                    });
+                }
             }
-        }).mouseleave(function(event){
-            $(this).animate({
-                height: "70"
-            });
+        }).mouseleave(async function(event){
+            console.log('arquivo this: '+this)
+            await sleep(500)
+                $(this).animate({
+                    height: "70"
+                });
+            await sleep(500)
+            animationLocked = false
         });
       
     });
