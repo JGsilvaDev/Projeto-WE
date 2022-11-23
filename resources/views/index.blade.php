@@ -108,7 +108,12 @@
         <div id="projeto">
             <div id="projeto-titulo" class="txt-titulo">Bora começar um projeto juntos?</div>
             <div id="projeto-desc" class="txt-desc">Seu projeto merece ficar em boas mãos e nós, da We, temos o que é preciso para entregar a melhor versão do seu sonho! Está preparado? Então bora começar!
-            <button id="projeto-button"><a id="text-button" href="/serviços">COMEÇAR UM PROJETO</a></button>
+            <button id="projeto-button" onClick="redirect('/serviços')">COMEÇAR UM PROJETO</button>
+            <script>
+                //você não viu nada aqui. shhhhhh
+                function redirect(page) {window.location.href = page;}
+            </script>
+            <!--<button id="projeto-button"><a id="text-button" href="/serviços">COMEÇAR UM PROJETO</a></button>-->
             </div>
         </div>
 

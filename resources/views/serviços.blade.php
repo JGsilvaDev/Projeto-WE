@@ -107,7 +107,7 @@
                 <li><a id="nav-lista_4" href="#" class="header-option">ORÇAMENTO</a></li>
             </ul>
         </div>
-        
+        <div id="rodape">We. 2022 - Todos os direitos reservados</div>
 
     
    
