@@ -87,8 +87,8 @@
 #botoes-produto {
     display: inline;
     grid-row-start:1;
-    grid-column-start: 12;
-    grid-column-end: 7;
+    grid-column-start: 14;
+    grid-column-end: 8;
 }
 
 #logo {

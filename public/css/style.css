@@ -50,28 +50,32 @@ body {
 
 
 /*    HEADER    */
-#header {
-    position:sticky;
-    padding:10px;
+.header-sobre{
+    margin-top: 0;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#botoes-produto, #logo {
+    padding: 32px 32px 20px 32px;
 }
 
 #botoes-produto li{
-    list-style:none;
+    list-style: none;
     display: inline;
-    
+    margin-right: 24px;
 }
 
-#logo {
-    padding: 10px;
+.separador{
+    margin-left: 24px;
+    color: #fff;
 }
-
-.header-option {
-    padding: 0px 10px 0px;
-    font-size:16px;
-    letter-spacing: 0.1em;
-    color: white;
-
-    border-radius:5px;
+#botoes-produto li::after{
+    color: #fff;
 }
 
 #produto_4 {
@@ -83,6 +87,7 @@ body {
 #desc-subtitulo,
 #desc-titulo,
 #desc-texto {
+    text-align:left;
     color: var(--fundo-cinza);
 }
 
