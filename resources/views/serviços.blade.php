@@ -87,8 +87,8 @@
                 
                 <div class="button-box-banco" id="button-box-banco-1">
                     <p id="button-titulo-banco" class="btn-titulo-banco" data-id="{{ $prod->NOME_PRODUTO }}" data-confirm="{{ $prod->ID }}" style="font-size: 24px;text-align:left;">{{ $prod->NOME_PRODUTO }}</p>
-                    <p id="button-desc-banco" class="btn-desc-banco" style="font-size: 16px;text-align:left;"> {{ $prod->DESCRICAO }}</p>
-                    <button id="btnTeste" onclick="modalClick(event);">Fale Conosco</button>
+                    <p id="button-desc-banco" class="btn-desc-banco" style="font-size: 16px;text-align:left; display:none;"> {{ $prod->DESCRICAO }}</p>
+                    <button id="btnTeste" onclick="modalClick(event);" style="display:none">Fale Conosco</button>
                 </div>
             
             @endforeach
@@ -183,9 +183,8 @@
     $(document).ready(function() {
 
         var divHeight = $(".button-box-banco").height();
-        
-        $('#btnTeste').hide();
-            
+        var debounce = null
+
         $(".button-box-banco").mouseenter(function(event){
             if(!animationLocked) {
                 animationLocked = true
@@ -199,7 +198,7 @@
                     });
                 }else if(id == 6){
                     $(this).animate({
-                        height: "260"
+                        height: "240"
                     });
 
                 }else if(id == 7){
@@ -209,18 +208,10 @@
 
                 }else{
                     $(this).animate({
-                        height: "260"
+                        height: "220"
                     });
                 }
             }
-        }).mouseleave(async function(event){
-            console.log('arquivo this: '+this)
-            await sleep(500)
-                $(this).animate({
-                    height: "70"
-                });
-            await sleep(500)
-            animationLocked = false
         });
       
     });
