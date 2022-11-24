@@ -67,12 +67,15 @@ function alternateNightMode() {
         root.style.setProperty('--button-box-text-hover', preto)
         root.style.setProperty('--proj-text',branco)
 
-        document.getElementById('svg-alvo').setAttribute('src', '../img/Vector_alvo_night.svg')
-        document.getElementById('svg-aquarela').setAttribute('src', '../img/Vector_aquarela_night.svg')
-        document.getElementById('svg-megafone').setAttribute('src', '../img/Vector_megafone_night.svg')
+        //imagens
+        try {
+            document.getElementById('svg-alvo').setAttribute('src', '../img/Vector_alvo_night.svg')
+            document.getElementById('svg-aquarela').setAttribute('src', '../img/Vector_aquarela_night.svg')
+            document.getElementById('svg-megafone').setAttribute('src', '../img/Vector_megafone_night.svg')
 
-        document.querySelector('#projeto').style.backgroundImage = "url('../img/aperto_de_maos_night.png')"
-        console.log(document.getElementById('projeto').style.backgroundImage)
+            document.querySelector('#projeto').style.backgroundImage = "url('../img/aperto_de_maos_night.png')"
+        } catch {
+        }
     }
     else if (modoEscuro){
         //alternando para modo claro
@@ -90,12 +93,17 @@ function alternateNightMode() {
         root.style.setProperty('--button-box-text-hover', branco)
         root.style.setProperty('--proj-text',azul)
 
-        document.getElementById('svg-alvo').setAttribute('src', '../img/Vector_alvo.svg')
-        document.getElementById('svg-aquarela').setAttribute('src', '../img/Vector_aquarela.svg')
-        document.getElementById('svg-megafone').setAttribute('src', '../img/Vector_megafone.svg')
+        //imagens
+        try {
+            document.getElementById('svg-alvo').setAttribute('src', '../img/Vector_alvo.svg')
+            document.getElementById('svg-aquarela').setAttribute('src', '../img/Vector_aquarela.svg')
+            document.getElementById('svg-megafone').setAttribute('src', '../img/Vector_megafone.svg')
 
-        document.querySelector('#projeto').style.backgroundImage = "url('../img/aperto_de_maos.png')"
-        console.log(document.getElementById('projeto').style.backgroundImage)
+            document.querySelector('#projeto').style.backgroundImage = "url('../img/aperto\ de\ mães.png')"
+            console.log(document.getElementById('projeto').style.backgroundImage)
+            console.log('Erro, imagem não foi puxada\n'+err)
+        } catch {
+        }
     }
 
     modoEscuro = !modoEscuro

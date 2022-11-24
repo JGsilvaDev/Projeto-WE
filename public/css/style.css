@@ -151,7 +151,9 @@ button:hover{
 #service-desc {
     color: var(--proj-text)
 }
-
+#service-titulo-wrap {
+    width:80%;
+}
 
 .button-box {
     padding:10px;
@@ -427,6 +429,11 @@ h1 {
     color:#333333;
     overflow: hidden;
 }
+#button-desc-banco,
+#button-titulo-banco {
+    color: var(--proj-text)
+}
+
 
 .filho {
     width: 100px;
