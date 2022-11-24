@@ -1,6 +1,17 @@
 :root {
     --fundo-cinza: #F3F3F3;
     --fundo-preto: #018390;
+    --btn-color: #018390;
+    --btn-color-hover: #F3F3F3;
+    --btn-text: #F3F3F3;
+    --btn-text-hover: #018390;
+    --ciano: #27FBB8;
+    --button-box: #F3F3F3;
+    --button-box-border: #018390;
+    --button-box-hover: #018390;
+    --button-box-text: #333333;
+    --button-box-text-hover: #F3F3F3;
+    --proj-text: #00353A;
 }
 
 html,body {
@@ -21,6 +32,7 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 
 /* TÍTULO */
 .txt-titulo {
@@ -90,14 +102,14 @@ body {
 #desc-subtitulo,
 #desc-titulo,
 #desc-texto {
-    color: var(--fundo-cinza);
+    color: var(--btn-text);
 }
 
 button {
     font-size:24px;
     width:100%;
-    background-color:var(--fundo-preto);
-    color:white;
+    background-color:var(--btn-color);
+    color:var(--btn-text);
     border-style: none;
     border-radius: 10px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.55), 0px 0px 30px rgba(0, 0, 0, 0.15);
@@ -106,15 +118,15 @@ button {
 }
 
 button:hover{
-    color:var(--fundo-preto);
-    background-color:var(--fundo-cinza); 
-    border: solid 2px --fundo-preto;
+    color:var(--btn-text-hover);
+    background-color:var(--btn-color-hover); 
+    border: solid 2px var(--btn-color-hover);
 }
 
 #btnTeste{
     font-size:14px;
     width:45%;
-    background-color:var(--fundo-preto);
+    background-color:var(--btn-color);
     color:white;
 }
 
@@ -133,20 +145,26 @@ button:hover{
 
 /*   SEGMENTO 2     */
 
+#service-titulo {
+    color: var(--proj-text)
+}
+#service-desc {
+    color: var(--proj-text)
+}
 
 
 .button-box {
     padding:10px;
     border-style:solid;
-    border-color:var(--fundo-preto);
+    border-color:var(--button-box-border);
     border-radius:20px;
-    background-color:var(--fundo-cinza);
-    color:#333333;
+    background-color:var(--button-box);
+    color:var(--button-box-text);
     
 }
 .button-box:hover {
-    color:var(--fundo-cinza);
-    background-color:var(--fundo-preto);
+    color:var(--button-box-text-hover);
+    background-color:var(--button-box-hover);
 }
 
 .btn-titulo {
@@ -169,17 +187,17 @@ button:hover{
 
 
 #sobre-titulo {
-    color: var(--fundo-cinza);
+    color: var(--btn-text);
     text-align: left;
 }
 #sobre-desc {
-    color: var(--fundo-cinza);
+    color: var(--btn-text);
     text-align: left;
 }
 
 #detalhe-excelencia,
 #detalhe-integridade {
-    color: var(--fundo-cinza);
+    color: var(--btn-text);
 }
 .detalhe-imagem {
     
@@ -206,10 +224,11 @@ button:hover{
     background-size:100%;
 }
 #projeto-titulo {
-    color:#00353A;
+    color:var(--proj-text);
 }
 
 #projeto-desc{
+    color: var(--proj-text);
     padding:30px 0 30px;
 }
 
@@ -245,11 +264,11 @@ ul li {
 
 
 #nav-lista-titulo {
-    color:#27FBB8;
+    color:var(--ciano);
     
 }
 #contato-lista-titulo {
-    color:#27FBB8;
+    color:var(--ciano);
 }
 
 /* RODAPÉ */
