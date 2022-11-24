@@ -44,6 +44,7 @@
 
 <body>
     <div id="grade">
+        <button onclick="alternateNightMode()">MODO ESCURO</button>
         <div id="header" class="fundo-preto">
             <a href="/">
                 <img src="./img/logo.svg" alt="" id="logo">
@@ -67,17 +68,17 @@
             <p id="service-desc" class="txt-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iusto, architecto saepe laborum cumque aspernatur ad delectus, eos facilis hic quia, laudantium consectetur veritatis temporibus?</p>
 
             <div class="button-box" id="button-box-1">
-                <img src="./img/Vector_alvo.svg" id="button-img"></img>
+                <img src="./img/Vector_alvo.svg" id="svg-alvo" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Marketing Digital</p>
                 <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
             </div>
             <div class="button-box" id="button-box-2">
-                <img src="./img/Vector_aquarela.svg" id="button-img"></img>
+                <img src="./img/Vector_aquarela.svg" id="svg-aquarela" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Identidade Visual</p>
                 <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
             </div>
             <div class="button-box" id="button-box-3">
-                <img src="./img/Vector_megafone.svg" id="button-img"></img>
+                <img src="./img/Vector_megafone.svg" id="svg-megafone" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Marketing Publicitário</p>
                 <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
             </div>
@@ -167,6 +168,8 @@
         <div class="vw-plugin-top-wrapper"></div>
     </div>
 </div>
+
+<script src="\js\nightmode.js"></script>
 </body>
 </html>
 
