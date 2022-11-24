@@ -45,6 +45,7 @@
 
 <body>
     <div id="grade">
+    <button onclick="alternateNightMode()">MODO ESCURO</button>
         <div id="header" class="fundo-preto">
             <a href="/">
                 <img src="./img/logo.svg" alt="" id="logo">
@@ -63,17 +64,17 @@
             <p id="service-desc" class="txt-desc">Fique por dentro do que a agência We pode fazer para que você tenha mais impressões, leads, conversões e venda para seu negócio por meio de nossos serviços de marketinkg digital.</p>
 
             <div class="button-box" id="button-box-1">
-                <img src="./img/Vector_alvo.svg" id="button-img"></img>
+                <img src="./img/Vector_alvo.svg" id="svg-alvo" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Marketing Digital</p>
                 <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
             </div>
             <div class="button-box" id="button-box-2">
-                <img src="./img/Vector_aquarela.svg" id="button-img"></img>
+                <img src="./img/Vector_aquarela.svg" id="svg-aquarela" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Identidade Visual</p>
                 <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
             </div>
             <div class="button-box" id="button-box-3">
-                <img src="./img/Vector_megafone.svg" id="button-img"></img>
+                <img src="./img/Vector_megafone.svg" id="svg-megafone" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Marketing Publicitário</p>
                 <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
             </div>
@@ -94,18 +95,22 @@
         </div>
 
         <div id="contato-input-page" class="fundo-cinza">
-            <p id="service-titulo" class="txt-titulo" style="color: #018390"><b>MONTE SEU PACOTE PERSONALIZADO</b></p>
-            <div id="input-block">
-                <div id="input-block-campos">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, harum. Repellat alias eos quas quisquam, fuga nesciunt facilis perferendis sequi tempora itaque delectus magni consectetur corrupti illo fugit error dolorum!</p>
+            <div id="service-desc-wrap">
 
-                    <button id="pacote_personalizado" style="width: 55%; font-size: 18px"><b>MONTE SEU PACOTE ESPECIAL</b></button>
-                </div>    
+                <p id="service-titulo-wrap" class="txt-titulo" style="color: #018390"><b id="service-titulo">MONTE SEU PACOTE PERSONALIZADO</b></p>
+                <div id="input-block">
+                    
+                    <div id="input-block-campos">
+                        <p id="service-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, harum. Repellat alias eos quas quisquam, fuga nesciunt facilis perferendis sequi tempora itaque delectus magni consectetur corrupti illo fugit error dolorum!</p>
+    
+                        <button id="pacote_personalizado" style="width: 55%; font-size: 18px"><b>MONTE SEU  PACOTE ESPECIAL</b></button>
+                    </div>    
+            </div>
 
                 <div id="redes-sociais-contato">
-                    <p>AQUI VAI UMA IMAGEM</p>
+                    <img src="\img\caixas.png" width="400" height="400">
+                    <!-- <p>AQUI VAI UMA IMAGEM</p> -->
                 </div>
-            
             </div>
         </div>
 
@@ -169,6 +174,8 @@
         <div class="vw-plugin-top-wrapper"></div>
     </div>
 </div>
+
+<script src="\js\nightmode.js"></script>
 </body>
 </html>
 

@@ -130,6 +130,10 @@
     grid-column-end:12;
 }
 
+#contato-input-campo {
+    display:inline-block;
+}
+
 #button-box-1{
     grid-column-start: 1;
     grid-column-end: 4;
