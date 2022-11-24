@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>We</title>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="\css\modal.css">
     <link rel="stylesheet" type="text/css" href="\css\grid.css">
     <link rel="stylesheet" type="text/css" href="\css\style.css">
@@ -186,31 +185,48 @@
         var debounce = null
         //a
         $(".button-box-banco").mouseenter(function(event){
-            if(!animationLocked) {
-                animationLocked = true
-                var conteudo = event.target.children[0];
-                
-                var id = conteudo.getAttribute("data-confirm");
+                clearTimeout(debounce )
 
-                if(id == 2 || id == 5){
-                    $(this).animate({
-                        height: "190"
-                    });
-                }else if(id == 6){
-                    $(this).animate({
-                        height: "240"
-                    });
+                var desc = event.target.children[1]
+                var btn = event.target.children[2]
+                debounce = setTimeout(function(event) {
+                    if(desc) {
+                    desc.style.display = 'block'
+                    btn.style.display = 'block'
+                    }
+                },100)
+                // await sleep(300)
+                // var id = conteudo.getAttribute("data-confirm");
+                // console.log(conteudo)
+                // if(id == 2 || id == 5){
+                //     $(this).animate({
+                //         height: "190"
+                //     });
+                // }else if(id == 6){
+                //     $(this).animate({
+                //         height: "240"
+                //     });
 
-                }else if(id == 7){
-                    $(this).animate({
-                        height: "200"
-                    });
+                // }else if(id == 7){
+                //     $(this).animate({
+                //         height: "200"
+                //     });
 
-                }else{
-                    $(this).animate({
-                        height: "220"
-                    });
-                }
+                // }else{
+                //     $(this).animate({
+                //         height: "220"
+                //     });
+                // }
+            // }
+        }).mouseleave(function(event){
+            var desc = event.target.children[1]
+            var btn = event.target.children[2]
+                // $(this).animate({
+                //     height: "70"
+                // });
+            if(desc) {
+                desc.style.display = 'none'
+                btn.style.display = 'none'
             }
         });
       
