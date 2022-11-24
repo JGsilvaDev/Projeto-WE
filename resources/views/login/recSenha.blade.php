@@ -23,11 +23,11 @@
 
 <body>
 
-    <div class="container" id="container_index">
+    <div class="container container-recsenha" id="container_index" style="width: 35%">
         <form method="post">
             @csrf
             <div class="imgcontainer">
-                <img id="unimedLogo" src="./img/logo.svg" alt="img" class="img">
+                <img id="unimedLogo" src="./img/logo_preta.svg" alt="img" class="img">
             </div>
 
             @if ($message = Session::get('success'))
@@ -64,7 +64,7 @@
                     <span id="olhoAberto4" onclick="mostrarOcultarSenha4()"><ion-icon name="eye-outline"></ion-icon></span>
                     <span id="olhoFechado4" onclick="mostrarOcultarSenha4()"><ion-icon name="eye-off-outline"></ion-icon></span>
 
-                    <button id="acessar" type="submit">Acessar</button>
+                    <button id="acessar" class="acessar-button" type="submit">Acessar</button>
 
                 </form>
             </div>

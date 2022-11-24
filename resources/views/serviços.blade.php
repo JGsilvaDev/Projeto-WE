@@ -147,7 +147,9 @@
                         <input type="text" name="nome" id="nome"><br>
                 
                         <label>Produtos:</label>
-                        <input type="text" name="produtos" id="produtos"><br>
+                        <input type="text" name="produtos" id="produtos" style="display: none"><br>
+
+                        <input type="text" name="produtosHiden" id="produtosHiden" disabled><br>
                 
                         <button type="submit">Enviar</button>
                     </form>
@@ -244,6 +246,7 @@
         var conteudo = event.target.parentElement.children[0];
 
         $('#produtos').val(conteudo.getAttribute("data-id"));
+        $('#produtosHiden').val(conteudo.getAttribute("data-id"));
 
         $('#visualizar').modal('show');
     }

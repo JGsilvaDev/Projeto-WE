@@ -35,7 +35,7 @@ input, textarea, select {
     color: white;
 }
 
-#email, #nome, #produtos{
+#email, #nome, #produtosHiden{
     border: solid 1px #000;
     padding-left: 12px;
 }
@@ -45,7 +45,8 @@ input, textarea, select {
 }
 
 
-#produtos{
+#produtosHiden{
+    background-color: #e2e2e2;
     margin-bottom: 16px;
 }
 
