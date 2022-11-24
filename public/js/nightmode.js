@@ -33,39 +33,34 @@ modoEscuro = false
 
 // root.style.setProperty('--fundo-preto','red')
 
+const colorLabel = [
+'--fundo-cinza', 
+'--fundo-preto', 
+'--btn-color', 
+'--btn-color-hover', 
+'--btn-text', 
+'--btn-text-hover', 
+'--ciano', 
+'--button-box', 
+'--button-box-border', 
+'--button-box-hover', 
+'--button-box-text', 
+'--button-box-text-hover', 
+'--proj-text']
+const colorNight = [cinza, preto, azul, azul, branco, branco, azul, cinza, branco, branco, branco,preto,branco]
+const colorLight = [branco, azul, azul, branco, branco, azul, cianoC, branco, azul, azul, azul, branco, azul]
+
+
 function alternateNightMode() {
     let root = document.querySelector(':root')
     let gcs = getComputedStyle(root)
-
-    // let fundoPreto = gcs.getPropertyValue('--fundo-preto')
-    // let fundoCinza = gcs.getPropertyValue('--fundo-cinza')
-    // let btnColor = gcs.getPropertyValue('--btn-color')
-    // let btnColorHover = gcs.getPropertyValue('--btn-color-hover')
-    // let btnText = gcs.getPropertyValue('--btn-text')
-    // let btnTextHover = gcs.getPropertyValue('--btn-text-hover')
-    // let Ciano = gcs.getPropertyValue('--ciano')
-    // let buttonBox = gcs.getPropertyValue('--button-box')
-    // let buttonBoxBorder = gcs.getPropertyValue('--button-box-border')
-    // let buttonBoxHover = gcs.getPropertyValue('--button-box-hover')
-    // let buttonBoxText = gcs.getPropertyValue('--button-box-text')
-    // let buttonBoxTextHover = gcs.getPropertyValue('--button-box-text-hover')
-    // let projText = gcs.getPropertyValue('--proj-text')
-
+    
     if(!modoEscuro) {
         //alternando para modo escuro
-        root.style.setProperty('--fundo-cinza', cinza)
-        root.style.setProperty('--fundo-preto', preto)
-        root.style.setProperty('--btn-color', laranja)
-        root.style.setProperty('--btn-color-hover', laranja)
-        root.style.setProperty('--btn-text', branco)
-        root.style.setProperty('--btn-text-hover', branco)
-        root.style.setProperty('--ciano', laranja)
-        root.style.setProperty('--button-box', cinza)
-        root.style.setProperty('--button-box-border', branco)
-        root.style.setProperty('--button-box-hover', branco)
-        root.style.setProperty('--button-box-text', branco)
-        root.style.setProperty('--button-box-text-hover', preto)
-        root.style.setProperty('--proj-text',branco)
+        //variáveis de cores
+        for(i=0; i<colorLabel.length;i++) {
+            root.style.setProperty(colorLabel[i],colorNight[i])
+        }
 
         //imagens
         try {
@@ -79,19 +74,9 @@ function alternateNightMode() {
     }
     else if (modoEscuro){
         //alternando para modo claro
-        root.style.setProperty('--fundo-cinza', branco)
-        root.style.setProperty('--fundo-preto', azul)
-        root.style.setProperty('--btn-color', azul)
-        root.style.setProperty('--btn-color-hover', branco)
-        root.style.setProperty('--btn-text', branco)
-        root.style.setProperty('--btn-text-hover', azul)
-        root.style.setProperty('--ciano', cianoC)
-        root.style.setProperty('--button-box', branco)
-        root.style.setProperty('--button-box-border', azul)
-        root.style.setProperty('--button-box-hover', azul)
-        root.style.setProperty('--button-box-text', azul)
-        root.style.setProperty('--button-box-text-hover', branco)
-        root.style.setProperty('--proj-text',azul)
+        for(i=0; i<colorLabel.length;i++) {
+            root.style.setProperty(colorLabel[i],colorLight[i])
+        }
 
         //imagens
         try {
