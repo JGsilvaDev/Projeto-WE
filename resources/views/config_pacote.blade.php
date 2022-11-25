@@ -77,20 +77,21 @@
     }
     
     function drag(ev) {
-        console.log('dragou')
         ev.dataTransfer.setData("text", ev.target.id);
         dragging = ev.target //passa o target pra variavel
     }
 
     function drop(ev) {
-        console.log('dropou')
         dropParent.append(dragging); //passa a variavel pra outra div
         dropParent.lastChild.setAttribute('onclick','SendBack(event)')
-        console.log(dropParent.lastChild)
-        texto += dragging.innerHTML + ' | '
+        selecionados.push(dragging.innerHTML)
+        // texto += dragging.innerHTML + ' | '
     }
-
+    
     function SendBack(event) {
+        var index = selecionados.indexOf(event.target.innerHTML) //procura pelo índice do selecionado
+        selecionados.splice(index,1) //remove o elemento do índice
+
         dragParent.append(event.target)
     }
 
@@ -155,6 +156,7 @@
 
     */
    function btnConfirm(event){
+        texto = selecionados
        $('#produtos').val(texto);
        $('#visualizar').modal('show');
    }
