@@ -41,25 +41,25 @@
         </div>
         <p id="marketing-valores" class="txt-titulo">VALORES</p>
         <div id="marketing-valor1" class="detalhe">
-            <img src="./img/Vector_V.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
+            <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem svg-img">
             <p id="marketing-detalhe-titulo" class="detalhe-titulo">Valor 1</p>
             <p id="marketing-detalhe-desc" class="detalhe-desc">Um textinho brabo explicando um pouquinho sobre este valor poderoso que a empresa possui em sua identidade</p>
         </div>
 
         <div id="marketing-valor2" class="detalhe">
-            <img src="./img/Vector_V.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
+            <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
             <p id="marketing-detalhe-titulo" class="detalhe-titulo">Valor 2</p>
             <p id="marketing-detalhe-desc" class="detalhe-desc">Um textinho brabo explicando um pouquinho sobre este valor poderoso que a empresa possui em sua identidade</p>
         </div>
 
         <div id="marketing-valor3" class="detalhe">
-            <img src="./img/Vector_V.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
+            <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
             <p id="marketing-detalhe-titulo" class="detalhe-titulo">Valor 3</p>
             <p id="marketing-detalhe-desc" class="detalhe-desc">Um textinho brabo explicando um pouquinho sobre este valor poderoso que a empresa possui em sua identidade</p>
         </div>
 
         <div id="marketing-valor4" class="detalhe">
-            <img src="./img/Vector_V.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
+            <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
             <p id="marketing-detalhe-titulo" class="detalhe-titulo">Valor 4</p>
             <p id="marketing-detalhe-desc" class="detalhe-desc">Um textinho brabo explicando um pouquinho sobre este valor poderoso que a empresa possui em sua identidade</p>
         </div>
@@ -85,4 +85,5 @@
 
     <div id="rodape">We. 2022 - Todos os direitos reservados</div>
 </body>
+<script src="\js\nightmode.js"></script>
 </html>

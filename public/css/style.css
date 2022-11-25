@@ -307,6 +307,13 @@ ul li {
     margin: 0;
     text-align: left;
 }
+#marketing-valores,
+#marketing-titulo,
+#marketing-desc,
+#marketing-detalhe-desc,
+#marketing-detalhe-titulo {
+    color: var(--proj-text)
+}
 
 #marketing-imagem {
     margin: 40px 0 40px;
@@ -317,7 +324,6 @@ ul li {
 }
 
 #marketing-valores {
-    color: var(--fundo-preto);
     margin: 0;
     text-align: left;
 }
