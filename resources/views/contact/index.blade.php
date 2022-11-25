@@ -19,6 +19,7 @@
 
 <body>
     <div id="grade">
+        <button onclick="alternateNightMode()">MODO ESCURO</button>
         <div id="header" class="fundo-preto">
             <a href="/">
                 <img src="./img/logo.svg" alt="" id="logo">
@@ -37,7 +38,7 @@
         </div>
         
         <div id="contato-desc-campo" class="fundo-cinza">
-            <p class="txt-desc">
+            <p class="txt-desc" id="contato-desc-top">
                 Tem alguma dúvida sobre nossos serviços, procedimentos, solicitação de orçamento e/ou então assuntos<br>relacionados à empresa.
             </p>
         </div>
@@ -49,7 +50,7 @@
                     <form action="{{ url('/contato') }}"method="POST">
                         @csrf
     
-                        <div class="form-group">
+                        <div class="form-group" id="form-text">
                             <h2>Envie o seu contato</h2>
                         </div>
     
@@ -86,17 +87,17 @@
                         @endif
     
                         <div class="form-group">
-                            <label for="nome" class="form-items">Nome</label>
+                            <label for="nome" class="form-items" id="form-text">Nome</label>
                             <input name="nome" type="text" class="form-control" placeholder="Seu nome">
                         </div>
     
                         <div class="form-group">
-                            <label for="email" class="form-items">Email</label>
+                            <label for="email" class="form-items" id="form-text">Email</label>
                             <input name="email" type="email" class="form-control" placeholder="Seu E-Mail">
                         </div>
     
                         <div class="form-group">
-                            <label for="mensagem" class="form-items">Mensagem</label>
+                            <label for="mensagem" class="form-items" id="form-text">Mensagem</label>
                             <textarea name="mensagem" class="form-control" cols="10" rows="5" placeholder="Sua mensagem"></textarea>
                         </div>
             
@@ -142,6 +143,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="\js\nightmode.js"></script>
 </body>
 </html>
