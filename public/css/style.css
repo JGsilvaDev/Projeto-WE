@@ -323,6 +323,12 @@ ul li {
 }
 
 /*=========== PAGINA 3 =============*/
+#redes-sociais-contato,
+#form-text,
+#contato-desc-top {
+    color: var(--proj-text)
+}
+
 #contato-titulo {
     margin: 0;
     background-image: url('../img/celular_man.png');
