@@ -156,9 +156,18 @@
 
     */
    function btnConfirm(event){
-        texto = selecionados
-       $('#produtos').val(texto);
-       $('#visualizar').modal('show');
+        if(selecionados == ![]) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Nenhum elemento selecionado',
+                text: 'Por favor, selecione algum pacote para confirmar'
+            })
+        } else {
+            texto = selecionados
+            
+           $('#produtos').val(texto);
+           $('#visualizar').modal('show');
+        }
    }
    
    function limparCampos(){
