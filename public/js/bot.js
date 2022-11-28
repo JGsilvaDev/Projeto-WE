@@ -123,19 +123,30 @@ const botKeys = opcoes.concat(keys)
                 break;
 
             case opcoes[1]:
-                alert('página de agendamento')
+                await sleep(1000)
+                EnviarMensagem('Muito bem, '+nome+', para agendar um horário, acesse a página de contato, ou aguarde 3 segundos que te redirecionaremos para lá', botclass)
+                await sleep(3000)
+                window.parent.location.href = '/contato';
                 break;
             case opcoes[2]:
-                EnviarMensagem('Estamos quase lá José, informe o problema ou a dificuldade ocorrida que irei te ajudar.', botclass)
+                EnviarMensagem('Para entrar em contato com a equipe, acesse a página de contato, ou aguarde 3 segundos que te redirecionaremos para lá', botclass)
+                await sleep(3000)
+                window.parent.location.href = '/contato';
                 break;
             case opcoes[3]:
-                alert('Assinar serviço')
+                EnviarMensagem('Para assinar algum serviço, acesse a página de serviço, ou aguarde 3 segundos que te redirecionaremos para lá', botclass)
+                await sleep(3000)
+                window.parent.location.href = '/serviços';
                 break;
             case opcoes[4]:
-                alert('redirecionar para página de contato/calendário')
+                EnviarMensagem('Para entrar em contato com a equipe, acesse a página de contato, ou aguarde 3 segundos que te redirecionaremos para lá', botclass)
+                await sleep(3000)
+                window.parent.location.href = '/contato';
                 break;
             case opcoes[5]:
-                alert('redirecionar para página de contato')
+                EnviarMensagem('Para entrar em contato com a equipe, acesse a página de contato, ou aguarde 3 segundos que te redirecionaremos para lá', botclass)
+                await sleep(3000)
+                window.parent.location.href = '/contato';
                 break;
             case opcoes[6]:
                 await sleep(100)
