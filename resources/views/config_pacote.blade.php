@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="\css\config_pacote.css">
+    <link rel="stylesheet" type="text/css" href="\css\style.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
@@ -15,6 +16,19 @@
 </head>
 
 <body>
+        <div id="header" class="fundo-preto">
+            <a href="/">
+                <img src="./img/logo.svg" alt="" id="logo">
+            </a>
+            
+            <ul id="botoes-produto">
+                <li id="modo_escuro_button" onclick="alternateNightMode()"><img src="./img/Vector_nightmode.svg" alt=""></li>
+                <li id="produto_1"><a href="/sobre" class="header-option" style="color: #fff">SOBRE</a><span class="separador">|</span></li> 
+                <li id="produto_2"><a href="/contato" class="header-option" style="color: #fff">CONTATOS</a><span class="separador">|</span></li> 
+                <li id="produto_3"><a href="/serviços" class="header-option" style="color: #fff">SERVIÇOS</a><span class="separador">|</span></li> 
+                <li id="produto_4"><a href="/" class="header-option" style="color: #fff">PACOTES</a></li>
+            </ul>
+        </div>
     <h3 id="pacote-titulo">Selecione os pacotes que deseja</h3>
     <div id="system">
         <div id="drag-wrap">
@@ -26,7 +40,7 @@
         
     
        <div id="dvBtn">
-            <button id="btnCalc" onclick=btnConfirm()><img src="\img\confirm.png" width=128 height=128></button>
+            <button id="btnCalc" onclick=btnConfirm()><img src="\img\confirm.svg" width=128 height=128 id="confirm-button"></button>
        </div>
     </div>
 
@@ -58,7 +72,8 @@
             </div>
         </div>
     </div>
-  
+    <div id="rodape">We. 2022 - Todos os direitos reservados</div>
+    <script src="\js\nightmode.js"></script>
 </body>
 </html>
 

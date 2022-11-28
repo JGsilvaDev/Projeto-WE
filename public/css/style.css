@@ -276,7 +276,7 @@ ul li {
 /* RODAPÉ */
 
 #rodape {
-    color: var(--fundo-cinza);
+    color: #F3F3F3;
     padding: 10px;
     background-color: #222222;
 }

@@ -93,3 +93,9 @@ function alternateNightMode() {
 
     modoEscuro = !modoEscuro
 }
+
+
+
+cbutton = document.getElementById('confirm-button')
+
+cbutton.style.fill = '#ffffff'

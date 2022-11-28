@@ -57,6 +57,7 @@
                 <li id="produto_4"><a href="/" class="header-option" style="color: #fff">PACOTES</a></li>
             </ul>
         </div>
+        
         <div id="descricao-seg">
             <h1 id="desc-titulo" class="txt-titulo" style="margin-top:32px; font-weight:bold;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
             <h2 id="desc-subtitulo">Subtítulo, para adicionar coisas que só poderiam ser adicionadas em um subtítulo</h2>

@@ -1,25 +1,43 @@
 :root {
-    --branco: #F3F3F3;
-    --azul: #018390;
+    --fundo-cinza: #F3F3F3;
+    --fundo-preto: #018390;
+    --btn-color: #018390;
+    --btn-color-hover: #F3F3F3;
+    --btn-text: #F3F3F3;
+    --btn-text-hover: #018390;
+    --ciano: #27FBB8;
+    --button-box: #F3F3F3;
+    --button-box-border: #018390;
+    --button-box-hover: #018390;
+    --button-box-text: #333333;
+    --button-box-text-hover: #F3F3F3;
+    --proj-text: #00353A;
 }
 body {
-    background-color: var(--branco);
+    background-color: var(--fundo-cinza);
 
 
     margin-top: 0px;
 }
 #system {
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-around;
 }
+
+#pacote-titulo {
+    color: var(--proj-text);
+    margin-left: 20px;
+}
+
 #drop-wrap,
 #drag-wrap {
     width: 40%;
-    background-color: var(--branco);
+    background-color: var(--fundo-cinza);
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(4,1fr);
-    border: 3px solid var(--azul);
+    border: 3px solid var(--btn-color);
     border-radius: 10px;
 }
 
@@ -31,7 +49,7 @@ body {
     margin: 10px;
     width: 150px;
     height: 150px;
-    background-color:var(--azul);
+    background-color:var(--btn-color);
     color:white;
 
     border-radius: 10px;
@@ -40,6 +58,6 @@ body {
 
 #btnCalc {
     border: none;
-    background-color: var(--azul);
+    background-color: var(--btn-color);
     height:100%;
 }
