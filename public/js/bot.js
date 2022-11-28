@@ -53,7 +53,7 @@ const botKeys = opcoes.concat(keys)
                 nome = input.value
                 EnviarMensagem(nome, userclass)
                 input.value = ""
-                asknamepart2()
+                selectOption()
             }
 
             if (input.id == emailinputclass) {
@@ -186,7 +186,8 @@ async function asknamepart2() {
 async function selectOption() {
     input.id = msginputclass
     //await askname()
-    EnviarMensagem('Agora, selecione uma opção para começar', botclass)
+    EnviarMensagem('Agora, '+nome+', selecione uma opção para começar', botclass)
+    await sleep(1500)
     var size = opcoes.length
     for(i=0; i < size; i++) {
         

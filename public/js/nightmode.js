@@ -1,61 +1,84 @@
-//===== MODO ESCURO FEITO PELO DIGAS, THE JS NINJA ===== //
 
-const log = console.log
 
-//cores
-//variáveis originais
-const fundo_cinza= '#F3F3F3'
-const fundo_preto= '#018390'
-const btn_color= '#018390'
-const btn_color_hover= '#F3F3F3'
-const btn_text= '#F3F3F3'
-const btn_text_hover= '#018390'
-const ciano= '#27FBB8'
-const button_box= '#F3F3F3'
-const button_box_border= '#018390'
-const button_box_hover= '#018390'
-const button_box_text= '#333333'
-const button_box_text_hover= '#F3F3F3'
-const proj_text= '#00353A'
-//imagens
+//document.cookie = "modoEscuro = false"
+window.addEventListener('load',() => {
+    console.log(getCookie('modoEscuro'))
+})
+//#region cores
+    //cores
+    //variáveis originais
+    var fundo_cinza= '#F3F3F3'
+    var fundo_preto= '#018390'
+    var btn_color= '#018390'
+    var btn_color_hover= '#F3F3F3'
+    var btn_text= '#F3F3F3'
+    var btn_text_hover= '#018390'
+    var ciano= '#27FBB8'
+    var button_box= '#F3F3F3'
+    var button_box_border= '#018390'
+    var button_box_hover= '#018390'
+    var button_box_text= '#333333'
+    var button_box_text_hover= '#F3F3F3'
+    var proj_text= '#00353A'
+    //imagens
 
-//cores claro
-const branco = '#F3F3F3'
-const azul = '#018390'
-const cianoC = '#27FBB8'
-//cores escuro
-const preto = '#1C1C1C'
-const cinza = '#333333'
-const laranja = '#FA8F23'
+    //cores claro
+    var branco = '#F3F3F3'
+    var azul = '#018390'
+    var cianoC = '#27FBB8'
+    //cores escuro
+    var preto = '#1C1C1C'
+    var cinza = '#333333'
+    var laranja = '#FA8F23'
 
-//alternando
-modoEscuro = false
-
-// root.style.setProperty('--fundo-preto','red')
-
-const colorLabel = [
-'--fundo-cinza', 
-'--fundo-preto', 
-'--btn-color', 
-'--btn-color-hover', 
-'--btn-text', 
-'--btn-text-hover', 
-'--ciano', 
-'--button-box', 
-'--button-box-border', 
-'--button-box-hover', 
-'--button-box-text', 
-'--button-box-text-hover', 
-'--proj-text']
-const colorNight = [cinza, preto, azul, azul, branco, branco, azul, cinza, branco, branco, branco,preto,branco]
-const colorLight = [branco, azul, azul, branco, branco, azul, cianoC, branco, azul, azul, azul, branco, azul]
-
+    //alternando
+    
+    // root.style.setProperty('--fundo-preto','red')
+    
+    var colorLabel = [
+        '--fundo-cinza', 
+        '--fundo-preto', 
+        '--btn-color', 
+        '--btn-color-hover', 
+        '--btn-text', 
+        '--btn-text-hover', 
+        '--ciano', 
+        '--button-box', 
+        '--button-box-border', 
+        '--button-box-hover', 
+        '--button-box-text', 
+        '--button-box-text-hover', 
+        '--proj-text']
+    var colorNight = [cinza, preto, azul, azul, branco, branco, azul, cinza, branco, branco, branco,preto,branco]
+    var colorLight = [branco, azul, azul, branco, branco, azul, cianoC, branco, azul, azul, azul, branco, azul]
+        //#endregion 
+        
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    
+    
+    alternateNightMode()
+    
+    function nmSwitch() {
+        if(getCookie('modoEscuro') === 'false')
+        {
+            document.cookie = 'modoEscuro=true'
+        }
+        else if(getCookie('modoEscuro') === 'true')
+        {
+            document.cookie = 'modoEscuro=false'
+        }
+        alternateNightMode()
+    }
 
 function alternateNightMode() {
     let root = document.querySelector(':root')
     let gcs = getComputedStyle(root)
     
-    if(!modoEscuro) {
+    if(getCookie('modoEscuro') === 'true') {
         //alternando para modo escuro
         //variáveis de cores
         for(i=0; i<colorLabel.length;i++) {
@@ -72,7 +95,7 @@ function alternateNightMode() {
         } catch {
         }
     }
-    else if (modoEscuro){
+    else if (getCookie('modoEscuro') === 'false'){
         //alternando para modo claro
         for(i=0; i<colorLabel.length;i++) {
             root.style.setProperty(colorLabel[i],colorLight[i])
@@ -85,17 +108,7 @@ function alternateNightMode() {
             document.getElementById('svg-megafone').setAttribute('src', '../img/Vector_megafone.svg')
 
             document.querySelector('#projeto').style.backgroundImage = "url('../img/aperto\ de\ mães.png')"
-            console.log(document.getElementById('projeto').style.backgroundImage)
-            console.log('Erro, imagem não foi puxada\n'+err)
         } catch {
         }
     }
-
-    modoEscuro = !modoEscuro
 }
-
-
-
-cbutton = document.getElementById('confirm-button')
-
-cbutton.style.fill = '#ffffff'
