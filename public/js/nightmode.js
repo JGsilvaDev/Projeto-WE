@@ -1,6 +1,7 @@
 
-
+//SE FOR A PRIMEIRA VEZ RODANDO, DESCOMENTE ESSA LINHA, EXECUTE O CÓDIGO, E DEPOIS COMENTE NOVAMENTE
 //document.cookie = "modoEscuro = false"
+
 window.addEventListener('load',() => {
     console.log(getCookie('modoEscuro'))
 })

@@ -160,6 +160,7 @@
 
 
     
+    <script src="\js\nightmode.js"></script>
    
 {{-- LIBRAS --}}
 <div vw class="enabled">
@@ -169,7 +170,6 @@
     </div>
 </div>
 
-<script src="\js\nightmode.js"></script>
 </body>
 </html>
 
