@@ -61,22 +61,22 @@
         
         <div id="servicos" class="fundo-cinza">
             <p id="service-titulo" class="txt-titulo">NOSSOS SERVIÇOS</p>
-            <p id="service-desc" class="txt-desc">Fique por dentro do que a agência We pode fazer para que você tenha mais impressões, leads, conversões e venda para seu negócio por meio de nossos serviços de marketinkg digital.</p>
+            <p id="service-desc" class="txt-desc">Fique por dentro do que a agência We pode fazer para que você tenha mais impressões, leads, conversões e venda para seu negócio por meio de nossos serviços de marketing digital.</p>
 
             <div class="button-box" id="button-box-1">
                 <img src="./img/Vector_alvo.svg" id="svg-alvo" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Marketing Digital</p>
-                <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
+                <p id="button-desc" class="btn-desc"> Planejamentos e ações de marketing digital para sua marca conquistar clientes.</p>
             </div>
             <div class="button-box" id="button-box-2">
                 <img src="./img/Vector_aquarela.svg" id="svg-aquarela" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Identidade Visual</p>
-                <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
+                <p id="button-desc" class="btn-desc"> Criação de identidade visual, manual, conceito da marca, logo e demais materiais auxiliares de gestão da marca.</p>
             </div>
             <div class="button-box" id="button-box-3">
                 <img src="./img/Vector_megafone.svg" id="svg-megafone" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Marketing Publicitário</p>
-                <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
+                <p id="button-desc" class="btn-desc"> Confecção de materiais desenvolvidos como flyers, folders, outdoors e proximidade da marca com o cliente.</p>
             </div>
         </div>
 
@@ -101,8 +101,8 @@
                 <div id="input-block">
                     
                     <div id="input-block-campos">
-                        <p id="service-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, harum. Repellat alias eos quas quisquam, fuga nesciunt facilis perferendis sequi tempora itaque delectus magni consectetur corrupti illo fugit error dolorum!</p>
-    
+                        <p id="service-desc">
+                            Não encontra o pacote desejado em nosso site? Isso tem solução. No pacote personalizado você poderá escolher seus serviços de acordo com a sua necessidade. Achou mesmo que a We iria te decepcionar? Veja dicas para montar seu pacote personalizado.</p>
                         <button id="pacote_personalizado" style="width: 55%; font-size: 18px"><b>MONTE SEU  PACOTE ESPECIAL</b></button>
                     </div>    
             </div>

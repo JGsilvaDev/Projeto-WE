@@ -59,29 +59,28 @@
         </div>
         
         <div id="descricao-seg">
-            <h1 id="desc-titulo" class="txt-titulo" style="margin-top:32px; font-weight:bold;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-            <h2 id="desc-subtitulo">Subtítulo, para adicionar coisas que só poderiam ser adicionadas em um subtítulo</h2>
-            <p id="desc-texto" class="txt-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maxime iure numquam saepe ea ipsam omnis vero quasi adipisci esse animi, perspiciatis fugiat! Non, expedita. Aliquam pariatur ad alias iure?</p>
+            <h1 id="desc-titulo" class="txt-titulo" style="margin-top:32px; font-weight:bold;">Eleve seu negócio a outro nível e aumente a visibilidade com a estratégia certa. </h1>
+            <p id="desc-texto" class="txt-desc"> Nós da We Consultoria & Marketing Digital temos o conhecimento e competência no mercado para elevar o seu negócio e triplicar o seu faturamento!</p>
             <button id="orcamento-button" style="margin-bottom: 64px;">Faça seu orçamento</button>
         </div>
         <div id="servicos" class="fundo-cinza">
             <p id="service-titulo" class="txt-titulo">NOSSOS SERVIÇOS</p>
-            <p id="service-desc" class="txt-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iusto, architecto saepe laborum cumque aspernatur ad delectus, eos facilis hic quia, laudantium consectetur veritatis temporibus?</p>
+            <p id="service-desc" class="txt-desc">Trabalhamos com uma linha de criação e estratégia adaptada para o perfil de cada cliente, respeitando a história e personalidade da marca.</p>
 
             <div class="button-box" id="button-box-1">
                 <img src="./img/Vector_alvo.svg" id="svg-alvo" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Marketing Digital</p>
-                <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
+                <p id="button-desc" class="btn-desc"> Planejamentos e ações de marketing digital para sua marca conquistar clientes. </p>
             </div>
             <div class="button-box" id="button-box-2">
                 <img src="./img/Vector_aquarela.svg" id="svg-aquarela" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Identidade Visual</p>
-                <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
+                <p id="button-desc" class="btn-desc"> Criação de identidade visual, manual, conceito da marca, logo e demais materiais auxiliares de gestão da marca. </p>
             </div>
             <div class="button-box" id="button-box-3">
                 <img src="./img/Vector_megafone.svg" id="svg-megafone" class="button-img"></img>
                 <p id="button-titulo" class="btn-titulo">Marketing Publicitário</p>
-                <p id="button-desc" class="btn-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci pariatur blanditiis tempora laudantium illo ab alias nostrum.</p>
+                <p id="button-desc" class="btn-desc"> Confecção de materiais desenvolvidos como flyers, folders, outdoors e proximidade da marca com o cliente.</p>
             </div>
             <button id="servicos-button-end">MONTE SEU PACOTE</button>
         </div>
@@ -91,19 +90,19 @@
             <div id="sobre-intro">
                 <p id="sobre-titulo" class="txt-titulo">SOBRE A WE.</p>
                 <p id="sobre-desc" class="txt-desc">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, recusandae nobis, eaque doloribus cum nulla tempore praesentium qui, labore nisi sapiente repellendus ipsa reiciendis! Voluptatem maiores beatae quisquam! Asperiores recusandae porro nihil hic, magni iusto voluptate ea in excepturi officiis veritatis neque voluptas eligendi reiciendis fugiat aspernatur ratione, natus maiores!
+                    Somos uma agência de consultoria e marketing digital que trabalha a favor do desenvolvimento e a inserção de micro e pequenas empresas no mundo digital. Trabalhamos com soluções e estratégias para conectar sua marca com o consumidor de forma humanizada, proporcionando novas oportunidades de negócio e potencializando suas vendas. Nossos serviços de consultoria e mentoria vai muito além de dar algumas dicas pontuais. Nós formamos uma parceria firmada com sua empresa, para ajudar o seu negócio a se comprometer com uma série de ajustes e mudanças que farão seus lucros crescerem.
                 </p>
             </div>
 
             <div id="detalhe-excelencia" classe="detalhe">
                 <img src="./img/Vector_V.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
                 <p id="detalhe-ex-titulo" class="detalhe-titulo">EXCELÊNCIA E QUALIDADE</p>
-                <p id="detalhe-ex-desc" class="detalhe-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum est ut elit gravida convallis.</p>
+                <p id="detalhe-ex-desc" class="detalhe-desc">Uma equipe completa, preparada e capacitada para potencializar o seu negócio.</p>
             </div>
             <div id="detalhe-integridade" classe="detalhe">
                 <img src="./img/Vector_Aperto.svg" alt="" id="detalhe-int-img" class="detalhe-imagem">
                 <p id="detalhe-int-titulo" class="detalhe-titulo">EXCELÊNCIA E QUALIDADE</p>
-                <p id="detalhe-int-desc" class="detalhe-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum est ut elit gravida convallis.</p>
+                <p id="detalhe-int-desc" class="detalhe-desc">Somos parceiros de projetos, nosso objetivo só é alcançado depois do seu.</p>
             </div>
         </div>
 

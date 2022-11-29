@@ -35,34 +35,34 @@
     <div id="marketing" class="fundo-cinza">
         <img src="./img/umportodos.png" alt="" id="marketing-imagem">
         <div id="marketing-intro">
-            <p id="marketing-titulo" class="txt-titulo">A melhor empresa para cuidar do seu marketing :D</p>
+            <p id="marketing-titulo" class="txt-titulo">Muito mais que uma agência</p>
             <p id="marketing-desc" class="txt-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum est ut elit gravida convallis. Donec vitae urna urna. Aliquam vitae mauris nec quam blandit finibus vitae quis mi. Duis pellentesque nec quam id sodales. Sed a magna interdum, imperdiet mauris quis, mollis dolor. Ut eget nulla neque. Integer molestie, est finibus facilisis volutpat, risus lectus malesuada dui, at maximus tortor ligula at nulla.
+                A We é muito mais que uma agência de consultoria e marketing digital. Somos uma família que preza pela diversidade e inclusão. Nossos sócios e colaboradores estão sempre zelando pelo respeito, transparência e integridade de nossos clientes. Somos movidos por resultados e nascemos com a missão de fazer a diferença no seu negócio. Além de vestir a camisa, vibramos com cada conquista. Inquietos na essência, nossa visão é alcançar nossos objetivos, realizando o seu.
             </p>
         </div>
         <p id="marketing-valores" class="txt-titulo">VALORES</p>
         <div id="marketing-valor1" class="detalhe">
             <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem svg-img">
-            <p id="marketing-detalhe-titulo" class="detalhe-titulo">Valor 1</p>
-            <p id="marketing-detalhe-desc" class="detalhe-desc">Um textinho brabo explicando um pouquinho sobre este valor poderoso que a empresa possui em sua identidade</p>
+            <p id="marketing-detalhe-titulo" class="detalhe-titulo">Transparência</p>
+            <p id="marketing-detalhe-desc" class="detalhe-desc">A comunicação é a base de toda relação. Prezamos sempre em manter o cliente ciente acerca de contratos, prazos e reajustes.</p>
         </div>
 
         <div id="marketing-valor2" class="detalhe">
             <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
-            <p id="marketing-detalhe-titulo" class="detalhe-titulo">Valor 2</p>
-            <p id="marketing-detalhe-desc" class="detalhe-desc">Um textinho brabo explicando um pouquinho sobre este valor poderoso que a empresa possui em sua identidade</p>
+            <p id="marketing-detalhe-titulo" class="detalhe-titulo">Integridade</p>
+            <p id="marketing-detalhe-desc" class="detalhe-desc">Asseguramos que suas informações e projetos serão preservados em nossa base de dados respeitando e privatizando sua marca</p>
         </div>
 
         <div id="marketing-valor3" class="detalhe">
             <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
-            <p id="marketing-detalhe-titulo" class="detalhe-titulo">Valor 3</p>
-            <p id="marketing-detalhe-desc" class="detalhe-desc">Um textinho brabo explicando um pouquinho sobre este valor poderoso que a empresa possui em sua identidade</p>
+            <p id="marketing-detalhe-titulo" class="detalhe-titulo">Criatividade</p>
+            <p id="marketing-detalhe-desc" class="detalhe-desc">A criatividade é tão importante que nossos colaboradores transformam esta intrigante característica em hábito.</p>
         </div>
 
         <div id="marketing-valor4" class="detalhe">
             <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
-            <p id="marketing-detalhe-titulo" class="detalhe-titulo">Valor 4</p>
-            <p id="marketing-detalhe-desc" class="detalhe-desc">Um textinho brabo explicando um pouquinho sobre este valor poderoso que a empresa possui em sua identidade</p>
+            <p id="marketing-detalhe-titulo" class="detalhe-titulo">Diversidade</p>
+            <p id="marketing-detalhe-desc" class="detalhe-desc">Respeitamos seu perfil, sua história e personalidade com a marca.</p>
         </div>
     </div>
 
