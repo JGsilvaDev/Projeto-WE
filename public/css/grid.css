@@ -315,8 +315,10 @@
 
 /*=====SERVIÇOS BANCO======*/
 #servicos-banco {
-    margin: 0;
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+
 }

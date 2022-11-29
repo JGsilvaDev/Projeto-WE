@@ -426,12 +426,12 @@ h1 {
 
 /*====== serviços banco ======*/
 
-#servicos-banco {
+/* #servicos-banco {
     margin: 0;
     display:grid;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
-}
+} */
 
 .button-box-banco {
     display:flex;

@@ -80,18 +80,22 @@
             </div>
         </div>
 
-        <p id="service-titulo" class="txt-titulo fundo-preto" style="color: #fff"><b>PACOTES</b></p>
+        <div class="fundo-preto" style="padding-bottom: 35px; padding-left: 35px; padding-top: 20px; padding-right:35px">
 
-        <div id="servicos-banco" class="fundo-preto" >
-            @foreach ( $produtos as  $prod)
+            <p id="service-titulo" class="txt-titulo" style="color: #fff"><b>PACOTES</b></p>
+
+            <div id="servicos-banco" class="fundo-preto">
+                @foreach ( $produtos as  $prod)
+                    
+                    <div class="button-box-banco" id="button-box-banco-1">
+                        <p id="button-titulo-banco" class="btn-titulo-banco" data-id="{{ $prod->NOME_PRODUTO }}" data-confirm="{{ $prod->ID }}" style="font-size: 24px;text-align:center;">{{ $prod->NOME_PRODUTO }}</p>
+                        <p id="button-desc-banco" class="btn-desc-banco" style="font-size: 16px;text-align:left; display:none;"> {{ $prod->DESCRICAO }}</p>
+                        <button id="btnTeste" onclick="modalClick(event);" style="display:none">Fale Conosco</button>
+                    </div>
                 
-                <div class="button-box-banco" id="button-box-banco-1">
-                    <p id="button-titulo-banco" class="btn-titulo-banco" data-id="{{ $prod->NOME_PRODUTO }}" data-confirm="{{ $prod->ID }}" style="font-size: 24px;text-align:left;">{{ $prod->NOME_PRODUTO }}</p>
-                    <p id="button-desc-banco" class="btn-desc-banco" style="font-size: 16px;text-align:left; display:none;"> {{ $prod->DESCRICAO }}</p>
-                    <button id="btnTeste" onclick="modalClick(event);" style="display:none">Fale Conosco</button>
-                </div>
-            
-            @endforeach
+                @endforeach
+            </div>
+
         </div>
 
         <div id="contato-input-page" class="fundo-cinza">
@@ -192,47 +196,24 @@
 
         var divHeight = $(".button-box-banco").height();
         var debounce = null
-        //a
+
         $(".button-box-banco").mouseenter(function(event){
                 clearTimeout(debounce )
 
                 var desc = event.target.children[1]
                 var btn = event.target.children[2]
+
                 debounce = setTimeout(function(event) {
                     if(desc) {
-                    desc.style.display = 'block'
-                    btn.style.display = 'block'
+                        desc.style.display = 'block'
+                        btn.style.display = 'block'
                     }
                 },100)
-                // await sleep(300)
-                // var id = conteudo.getAttribute("data-confirm");
-                // console.log(conteudo)
-                // if(id == 2 || id == 5){
-                //     $(this).animate({
-                //         height: "190"
-                //     });
-                // }else if(id == 6){
-                //     $(this).animate({
-                //         height: "240"
-                //     });
-
-                // }else if(id == 7){
-                //     $(this).animate({
-                //         height: "200"
-                //     });
-
-                // }else{
-                //     $(this).animate({
-                //         height: "220"
-                //     });
-                // }
-            // }
+                
         }).mouseleave(function(event){
             var desc = event.target.children[1]
             var btn = event.target.children[2]
-                // $(this).animate({
-                //     height: "70"
-                // });
+                
             if(desc) {
                 desc.style.display = 'none'
                 btn.style.display = 'none'
@@ -257,5 +238,11 @@
 
         $('#visualizar').modal('show');
     }
+
+    $('#pacote_personalizado').on('click', function(){
+        window.location.href = 'config_pacote'
+    });
+
+
 
 </script>
