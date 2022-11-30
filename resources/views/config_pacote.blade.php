@@ -80,14 +80,16 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Instruções</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Para utilizar, siga as instruções:</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <h3>Para o melhor uso da ferramenta:</h3>
-                    <p>Essa tela de </p>
+                    <p>- Deve-se clicar no pacote escolhido e manter pressionado arrastando para o lado direito</p>
+                    <p>- Após o procedimento você encontrara o pacote escolhido separado dos que ainda não escolheu</p>
+                    <p>- Pode realizar esse processo quantas vezes necessário</p>
+                    <p>- Caso tenha escolhido o pacote errado, consegue reverter dando um click nele, assim ele sairá das suas opções</p>
                 </div>
             </div>
         </div>

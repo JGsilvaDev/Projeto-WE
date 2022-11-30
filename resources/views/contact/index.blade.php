@@ -34,7 +34,7 @@
         </div>
         
         <div id="contato-titulo">
-            <p class="txt-titulo" id="contato-titulo">CONTATO</p>
+            <p class="txt-titulo" id="contato-titulo" style="padding-left: 50px">CONTATO</p>
         </div>
         
         <div id="contato-desc-campo" class="fundo-cinza">
