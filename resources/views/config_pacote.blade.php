@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="\css\config_pacote.css">
     <link rel="stylesheet" type="text/css" href="\css\style.css">
+    <link rel="stylesheet" type="text/css" href="\css\modal.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
@@ -26,7 +27,7 @@
                 <li id="produto_1"><a href="/sobre" class="header-option" style="color: #fff">SOBRE</a><span class="separador">|</span></li> 
                 <li id="produto_2"><a href="/contato" class="header-option" style="color: #fff">CONTATOS</a><span class="separador">|</span></li> 
                 <li id="produto_3"><a href="/serviços" class="header-option" style="color: #fff">SERVIÇOS</a><span class="separador">|</span></li> 
-                <li id="produto_4"><a href="/" class="header-option" style="color: #fff">PACOTES</a></li>
+                <li id="produto_4"><a href="/config_pacote" class="header-option" style="color: #fff">PACOTES PERSONALIZADOS</a></li>
             </ul>
         </div>
     <p class="txt-desc" id="config-pacote-descricao">Agora você poderá escolher os serviços que melhor atenderem suas necessidades. Após a confirmação, receberemos um chamado e nossa equipe analisará as opções desejadas ofertando as melhores condições e prazos para a realização do serviço. Após a escolha, é só aguardar que instantes a equipe da We entrará em contato.
@@ -73,12 +74,36 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" data-backdrop="static" id="instrucoes" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Instruções</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3>Para o melhor uso da ferramenta:</h3>
+                    <p>Essa tela de </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="rodape">We. 2022 - Todos os direitos reservados</div>
     <script src="\js\nightmode.js"></script>
 </body>
 </html>
 
-<script>//Script para Drag and Drop
+<script>
+
+    $(document).ready(function() {
+        $('#instrucoes').modal('show');
+    })
+
+    //Script para Drag and Drop
 
     var texto = ' '
     var selecionados = [] //array com os produtos que o clique selecionar
@@ -122,55 +147,6 @@
         }
     }
 
-    /*
-    //Drag Events
-    dragItems.forEach(item => {
-        item.addEventListener('dragstart', dragStart);
-    });
-
-    //Drop Events
-    dropBoxes.forEach(box =>{
-        box.addEventListener('dragover', dragOver);
-        box.addEventListener('drop', dropEvent);
-        box.addEventListener('dragleave', dragLeave);
-    });
-
-    //seta o valor do texto ao arrastar
-    function dragStart(e){
-        e.dataTransfer.setData('text/plain', e.target.innerText);
-    }
-    //impede loop
-    function dragOver(e){
-        e.preventDefault();
-    }
-    //passa de uma div pra outra
-    function dropEvent(e){
-        e.preventDefault()
-        this.className = "drag_item";
-        
-        const el = document.createElement('p');
-        el.className = "drag";
-        el.setAttribute('id', 'teste');
-        const dataId = e.dataTransfer.getData('text');
-        el.setAttribute('data-id', dataId);
-        el.innerText =  e.dataTransfer.getData('text');
-
-        this.appendChild(el);
-
-        const es = document.querySelector("[id='teste']");
-        console.log(dataId);
-        selecionados.push(dataId)
-        
-
-    }
-    //seta uma classe pra div
-    function dragLeave(e){
-        e.preventDefault()
-
-        this.className = "drag_item";
-    }
-
-    */
    function btnConfirm(event){
         if(selecionados == ![]) {
             Swal.fire({

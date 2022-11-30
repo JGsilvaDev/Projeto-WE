@@ -18,12 +18,12 @@
                 <img src="./img/logo.svg" alt="" id="logo">
             </a>
             
-            <ul id="botoes-produto" class="header-sobre">
+            <ul id="botoes-produto">
                 <li id="modo_escuro_button" onclick="nmSwitch()"><img src="./img/Vector_nightmode.svg" alt=""></li>
                 <li id="produto_1"><a href="/sobre" class="header-option" style="color: #fff">SOBRE</a><span class="separador">|</span></li> 
                 <li id="produto_2"><a href="/contato" class="header-option" style="color: #fff">CONTATOS</a><span class="separador">|</span></li> 
                 <li id="produto_3"><a href="/serviços" class="header-option" style="color: #fff">SERVIÇOS</a><span class="separador">|</span></li> 
-                <li id="produto_4"><a href="/" class="header-option" style="color: #fff">PACOTES PERSONALIZADOS</a></li>
+                <li id="produto_4"><a href="/config_pacote" class="header-option" style="color: #fff">PACOTES PERSONALIZADOS</a></li>
             </ul>
         </div>
     </div>

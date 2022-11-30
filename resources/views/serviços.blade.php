@@ -51,11 +51,11 @@
             </a>
             
             <ul id="botoes-produto">
-            <li id="modo_escuro_button" onclick="nmSwitch()"><img src="./img/Vector_nightmode.svg" alt=""></li>
+                <li id="modo_escuro_button" onclick="nmSwitch()"><img src="./img/Vector_nightmode.svg" alt=""></li>
                 <li id="produto_1"><a href="/sobre" class="header-option" style="color: #fff">SOBRE</a><span class="separador">|</span></li> 
                 <li id="produto_2"><a href="/contato" class="header-option" style="color: #fff">CONTATOS</a><span class="separador">|</span></li> 
                 <li id="produto_3"><a href="/serviços" class="header-option" style="color: #fff">SERVIÇOS</a><span class="separador">|</span></li> 
-                <li id="produto_4"><a href="/" class="header-option" style="color: #fff">PACOTES PERSONALIZADOS</a></li>
+                <li id="produto_4"><a href="/config_pacote" class="header-option" style="color: #fff">PACOTES PERSONALIZADOS</a></li>
             </ul>
         </div>
         
@@ -99,22 +99,24 @@
         </div>
 
         <div id="contato-input-page" class="fundo-cinza">
-            <div id="service-desc-wrap">
+            <div id="input-block-campos">
 
-                <p id="service-titulo-wrap" class="txt-titulo" style="color: #018390"><b id="service-titulo">MONTE SEU PACOTE PERSONALIZADO</b></p>
-                <div id="input-block">
+                
+                <div id="input-block-flex">
+                    <div >
+                        <p id="service-titulo-wrap" class="txt-titulo" style="color: #018390"><b id="service-titulo">MONTE SEU PACOTE PERSONALIZADO</b></p>
                     
-                    <div id="input-block-campos">
-                        <p id="service-desc">
+                        <p id="service-desc" style="margin-right: 100px">
                             Não encontra o pacote desejado em nosso site? Isso tem solução. No pacote personalizado você poderá escolher seus serviços de acordo com a sua necessidade. Achou mesmo que a We iria te decepcionar? Veja dicas para montar seu pacote personalizado.</p>
                         <button id="pacote_personalizado" style="width: 55%; font-size: 18px"><b>MONTE SEU  PACOTE ESPECIAL</b></button>
-                    </div>    
+                    </div>  
+                    
+                    <div id="redes-sociais-contato" style="margin-right: 60px;">
+                        <img src="\img\caixas.png" width="450" height="450">
+                    </div>
             </div>
 
-                <div id="redes-sociais-contato">
-                    <img src="\img\caixas.png" width="400" height="400">
-                    <!-- <p>AQUI VAI UMA IMAGEM</p> -->
-                </div>
+                
             </div>
         </div>
 

@@ -62,6 +62,12 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 30px;
     justify-content: center;
+} 
+
+#input-block-flex{
+    display: flex;
+    
+    
 }
 #opcoes-list {
     display: grid;
