@@ -150,7 +150,7 @@
         <!--CONTAINER DO CHATBOT-->
         <div id="container">
             <img src="img\mensagem.png" width="64" height="64" onclick="hideshow()" id="icon-show">
-            <p id="bot-titulo" onclick="hideshow()" width=400>-----Chatbot-----</p>
+            <p id="bot-titulo" onclick="hideshow()" width=400>Wezinho</p>
             <iframe id="bot-frame" src="\chatbot" frameborder="0" width=400 height=500></iframe>
         </div>
         <script src="\js\main.js"></script>
