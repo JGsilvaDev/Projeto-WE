@@ -48,19 +48,19 @@
         </div>
 
         <div id="marketing-valor2" class="detalhe">
-            <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
+            <img src="./img/Vector_Aperto.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
             <p id="marketing-detalhe-titulo" class="detalhe-titulo">Integridade</p>
             <p id="marketing-detalhe-desc" class="detalhe-desc">Asseguramos que suas informações e projetos serão preservados em nossa base de dados respeitando e privatizando sua marca</p>
         </div>
 
         <div id="marketing-valor3" class="detalhe">
-            <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
+            <img src="./img/Vector_povo.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
             <p id="marketing-detalhe-titulo" class="detalhe-titulo">Criatividade</p>
             <p id="marketing-detalhe-desc" class="detalhe-desc">A criatividade é tão importante que nossos colaboradores transformam esta intrigante característica em hábito.</p>
         </div>
 
         <div id="marketing-valor4" class="detalhe">
-            <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
+            <img src="./img/Vector_amor.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem">
             <p id="marketing-detalhe-titulo" class="detalhe-titulo">Diversidade</p>
             <p id="marketing-detalhe-desc" class="detalhe-desc">Respeitamos seu perfil, sua história e personalidade com a marca.</p>
         </div>
