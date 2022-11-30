@@ -29,7 +29,8 @@
                 <li id="produto_4"><a href="/" class="header-option" style="color: #fff">PACOTES</a></li>
             </ul>
         </div>
-    <h3 id="pacote-titulo">Selecione os pacotes que deseja</h3>
+    <p class="txt-desc" id="config-pacote-descricao">Agora você poderá escolher os serviços que melhor atenderem suas necessidades. Após a confirmação, receberemos um chamado e nossa equipe analisará as opções desejadas ofertando as melhores condições e prazos para a realização do serviço. Após a escolha, é só aguardar que instantes a equipe da We entrará em contato.
+</p>
     <div id="system">
         <div id="drag-wrap">
             @foreach ( $produtos as $prod )

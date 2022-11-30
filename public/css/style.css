@@ -495,3 +495,9 @@ h1 {
 .acessar-button{
     margin-bottom: 32px;
 }
+
+#config-pacote-descricao {
+    color: var(--proj-text);
+    margin: 10px 0 10px 0;
+    padding: 0 20px 0 20px;
+}

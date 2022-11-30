@@ -54,14 +54,14 @@
                 <li id="produto_1"><a href="/sobre" class="header-option" style="color: #fff">SOBRE</a><span class="separador">|</span></li> 
                 <li id="produto_2"><a href="/contato" class="header-option" style="color: #fff">CONTATOS</a><span class="separador">|</span></li> 
                 <li id="produto_3"><a href="/serviços" class="header-option" style="color: #fff">SERVIÇOS</a><span class="separador">|</span></li> 
-                <li id="produto_4"><a href="/" class="header-option" style="color: #fff">PACOTES</a></li>
+                <li id="produto_4"><a href="/" class="header-option" style="color: #fff">PACOTES PERSONALIZADOS</a></li>
             </ul>
         </div>
         
         <div id="descricao-seg">
             <h1 id="desc-titulo" class="txt-titulo" style="margin-top:32px; font-weight:bold;">Eleve seu negócio a outro nível e aumente a visibilidade com a estratégia certa. </h1>
             <p id="desc-texto" class="txt-desc"> Nós da We Consultoria & Marketing Digital temos o conhecimento e competência no mercado para elevar o seu negócio e triplicar o seu faturamento!</p>
-            <button id="orcamento-button" style="margin-bottom: 64px;">Faça seu orçamento</button>
+            <button id="orcamento-button" style="margin-bottom: 64px;" onclick="redirect('/contato')">Faça seu orçamento</button>
         </div>
         <div id="servicos" class="fundo-cinza">
             <p id="service-titulo" class="txt-titulo">NOSSOS SERVIÇOS</p>
