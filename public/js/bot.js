@@ -105,7 +105,7 @@ const botKeys = opcoes.concat(keys)
                 break;
             case opcoes[0]:
                 await sleep(500)
-                EnviarMensagem('Excelente José! Esses são os pacotes que a empresa possuí atualmente. Eles irão estruturar o seu negócio, e ajudará você a alcançar a identidade desejada. Além disso, também temos nosso serviço de consultoria, que te auxiliará a tomar as melhores decisões. Veja um pouco mais sobre eles',botclass)
+                EnviarMensagem('Excelente '+nome+'! Esses são os pacotes que a empresa possuí atualmente. Eles irão estruturar o seu negócio, e ajudará você a alcançar a identidade desejada. Além disso, também temos nosso serviço de consultoria, que te auxiliará a tomar as melhores decisões. Veja um pouco mais sobre eles',botclass)
                 await sleep(1000)
                 EnviarMensagem('“CRIA PRA MIM”\nCriamos o Material Publicitário (posts para redes sociais, vídeos, flyers, banners, cartão visita, entre outros) ideal para sua empresa!',botclass)
                 
