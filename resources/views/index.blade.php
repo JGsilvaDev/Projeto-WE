@@ -100,7 +100,7 @@
                 <p id="detalhe-ex-desc" class="detalhe-desc">Uma equipe completa, preparada e capacitada para potencializar o seu negócio.</p>
             </div>
             <div id="detalhe-integridade" classe="detalhe">
-                <img src="./img/Vector_Aperto.svg" alt="" id="detalhe-int-img" class="detalhe-imagem">
+                <img src="./img/Vector_Aperto_branco.svg" alt="" id="detalhe-int-img" class="detalhe-imagem">
                 <p id="detalhe-int-titulo" class="detalhe-titulo">EXCELÊNCIA E QUALIDADE</p>
                 <p id="detalhe-int-desc" class="detalhe-desc">Somos parceiros de projetos, nosso objetivo só é alcançado depois do seu.</p>
             </div>

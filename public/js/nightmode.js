@@ -92,7 +92,10 @@ function alternateNightMode() {
             document.getElementById('svg-aquarela').setAttribute('src', '../img/Vector_aquarela_night.svg')
             document.getElementById('svg-megafone').setAttribute('src', '../img/Vector_megafone_night.svg')
 
+            document.querySelector('#descricao-seg').style.backgroundImage = "url('../img/index_night_mode.png')"
             document.querySelector('#projeto').style.backgroundImage = "url('../img/aperto_de_maos_night.png')"
+
+            document.querySelector('#titulo-pagina').style.backgroundImage = "url('../img/bg_night.png')"
         } catch {
         }
     }
@@ -101,13 +104,14 @@ function alternateNightMode() {
         for(i=0; i<colorLabel.length;i++) {
             root.style.setProperty(colorLabel[i],colorLight[i])
         }
-
+        
         //imagens
         try {
             document.getElementById('svg-alvo').setAttribute('src', '../img/Vector_alvo.svg')
             document.getElementById('svg-aquarela').setAttribute('src', '../img/Vector_aquarela.svg')
             document.getElementById('svg-megafone').setAttribute('src', '../img/Vector_megafone.svg')
-
+            
+            document.querySelector('#descricao-seg').style.backgroundImage = "url('../img/scott-graham-5fNmWej4tAA-unsplash 1.png')"
             document.querySelector('#projeto').style.backgroundImage = "url('../img/aperto\ de\ mães.png')"
         } catch {
         }
