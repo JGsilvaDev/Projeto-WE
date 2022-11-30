@@ -47,7 +47,7 @@
     <div id="grade">
         <div id="header" class="fundo-preto" onclick="mudarIframe();">
             <a href="/">
-                <img src="./img/logo.svg" alt="" id="logo" style="width: 200%">
+                <img src="./img/logo.svg" alt="" id="logo">
             </a>
 
             <ul id="botoes-produto">

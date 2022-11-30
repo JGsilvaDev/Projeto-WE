@@ -30,7 +30,7 @@
     
     
         <div id="titulo-pagina">
-            <p id="pag-titulo" class="txt-titulo">SOMOS WE.</p>
+            <p id="pag-titulo" class="txt-titulo" style="padding-left: 50px">SOMOS WE.</p>
         </div>
     <div id="marketing" class="fundo-cinza">
         <img src="./img/umportodos.png" alt="" id="marketing-imagem">
