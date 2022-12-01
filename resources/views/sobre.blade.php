@@ -30,17 +30,17 @@
     
     
         <div id="titulo-pagina">
-            <p id="pag-titulo" class="txt-titulo" style="padding-left: 50px">SOMOS WE.</p>
+            <p id="pag-titulo" class="txt-titulo" style="text-align: center;">SOMOS WE.</p>
         </div>
     <div id="marketing" class="fundo-cinza">
         <img src="./img/umportodos.png" alt="" id="marketing-imagem">
         <div id="marketing-intro">
-            <p id="marketing-titulo" class="txt-titulo">Muito mais que uma agência</p>
+            <p id="marketing-titulo" class="txt-titulo" style="color: #018390;font-weight: bold ">Muito mais que uma agência</p>
             <p id="marketing-desc" class="txt-desc">
                 A We é muito mais que uma agência de consultoria e marketing digital. Somos uma família que preza pela diversidade e inclusão. Nossos sócios e colaboradores estão sempre zelando pelo respeito, transparência e integridade de nossos clientes. Somos movidos por resultados e nascemos com a missão de fazer a diferença no seu negócio. Além de vestir a camisa, vibramos com cada conquista. Inquietos na essência, nossa visão é alcançar nossos objetivos, realizando o seu.
             </p>
         </div>
-        <p id="marketing-valores" class="txt-titulo">VALORES</p>
+        <p id="marketing-valores" class="txt-titulo" style="text-align: center;">VALORES</p>
         <div id="marketing-valor1" class="detalhe">
             <img src="./img/Vector_V_azul.svg" alt="" id="detalhe-ex-img" class="detalhe-imagem svg-img">
             <p id="marketing-detalhe-titulo" class="detalhe-titulo">Transparência</p>

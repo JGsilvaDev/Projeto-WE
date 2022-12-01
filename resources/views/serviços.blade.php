@@ -60,8 +60,8 @@
         </div>
         
         <div id="servicos" class="fundo-cinza">
-            <p id="service-titulo" class="txt-titulo">NOSSOS SERVIÇOS</p>
-            <p id="service-desc" class="txt-desc">Fique por dentro do que a agência We pode fazer para que você tenha mais impressões, leads, conversões e venda para seu negócio por meio de nossos serviços de marketing digital.</p>
+            <p id="service-titulo" class="txt-titulo" style="text-align: center;">NOSSOS SERVIÇOS</p>
+            <p id="service-desc" class="txt-desc" style="text-align: center;">Fique por dentro do que a agência We pode fazer para que você tenha mais impressões, leads, conversões e venda para seu negócio por meio de nossos serviços de marketing digital.</p>
 
             <div class="button-box" id="button-box-1">
                 <img src="./img/Vector_alvo.svg" id="svg-alvo" class="button-img"></img>

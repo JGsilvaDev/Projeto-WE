@@ -52,7 +52,7 @@
 }
 #marketing {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(13, 1fr);
     gap: 30px;
     justify-content: center;
 }
@@ -240,36 +240,36 @@
 /*=============================== PÁGINA 2 =================================*/
 
 #marketing-intro {
-    grid-column-start: 6;
-    grid-column-end: 12;
+    grid-column-start: 8;
+    grid-column-end: 13;
 }
 
 #marketing-imagem {
-    grid-column-start:1;
-    grid-column-end:5; 
+    grid-column-start:2;
+    grid-column-end:7; 
 }
 
 
 #marketing-valores {
-    grid-column-start:1;
-    grid-column-end: 12;
+    grid-column-start:2;
+    grid-column-end: 5;
 }
 
 #marketing-valor1 {
-    grid-column-start:3;
-    grid-column-end: 5;
+    grid-column-start:2;
+    grid-column-end: 4;
 }
 #marketing-valor2 {
     grid-column-start:5;
     grid-column-end: 7;
 }
 #marketing-valor3 {
-    grid-column-start:7;
-    grid-column-end: 9;
+    grid-column-start:8;
+    grid-column-end: 10;
 }
 #marketing-valor4 {
-    grid-column-start:9;
-    grid-column-end: 11;
+    grid-column-start:11;
+    grid-column-end: 13;
 }
 
 /*====================PAGINA DE CONTATOS ==================*/

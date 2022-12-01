@@ -238,8 +238,8 @@ button:hover{
     text-decoration: none;
     color:white;
 }
-#text-button:hover {
-}
+/* #text-button:hover {
+} */
 
 #projeto-button {
     margin-top: 22.5px;
@@ -304,6 +304,7 @@ ul li {
 
 #marketing-titulo {
     color: var(--proj-text);
+    font-size: 50px;
 }
 
 #marketing-desc {
@@ -311,6 +312,7 @@ ul li {
     margin: 0;
     text-align: left;
 }
+
 #marketing-valores,
 #marketing-titulo,
 #marketing-desc,

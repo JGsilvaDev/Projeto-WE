@@ -14,7 +14,8 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -45,7 +46,12 @@
         <div id="drop-wrap" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     </div>
     <div id="dvBtn">
-         <button id="btnCalc" onclick=btnConfirm()>CONFIRMAR PEDIDO</button>
+        <div>
+            <ion-icon name="information-circle" style="font-size: 40px;" onclick="$('#instrucoes').modal('show');">
+            </ion-icon>
+        </div>
+        
+        <button id="btnCalc" onclick=btnConfirm()>CONFIRMAR PEDIDO</button>
     </div>
     <div id="contato" class="fundo-cinza">
             <img src="./img/logo.svg" alt="" id="contato-logo">
@@ -121,9 +127,9 @@
 
 <script>
 
-    // $(document).ready(function() {
-    //     $('#instrucoes').modal('show');
-    // })
+    $(document).ready(function() {
+        $('#instrucoes').modal('show');
+    })
 
     //Script para Drag and Drop
 
