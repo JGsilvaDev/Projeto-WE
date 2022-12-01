@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="\css\config_pacote.css">
     <link rel="stylesheet" type="text/css" href="\css\style.css">
+    <link rel="stylesheet" type="text/css" href="\css\grid.css">
     <link rel="stylesheet" type="text/css" href="\css\modal.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
@@ -42,12 +43,28 @@
             @endforeach
         </div>
         <div id="drop-wrap" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        
-    
-       <div id="dvBtn">
-            <button id="btnCalc" onclick=btnConfirm()><img src="\img\confirm.svg" width=128 height=128 id="confirm-button"></button>
-       </div>
     </div>
+    <div id="dvBtn">
+         <button id="btnCalc" onclick=btnConfirm()>CONFIRMAR PEDIDO</button>
+    </div>
+    <div id="contato" class="fundo-cinza">
+            <img src="./img/logo.svg" alt="" id="contato-logo">
+            <ul id="nav-lista">
+                <p id="nav-lista-titulo">CONTINUE NAVEGANDO</p>
+                <li><a id="nav-lista_1" href="#" class="header-option">SERVICOS</a></li> 
+                <li><a id="nav-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
+                <li><a id="nav-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
+                <li><a id="nav-lista_4" href="#" class="header-option">ORÇAMENTO</a></li>
+            </ul>
+            <ul id="contato-lista">
+                <p id="contato-lista-titulo">CONTINUE NAVEGANDO</p>
+                <li><a id="nav-lista_1" href="#" class="header-option">SERVICOS</a></li> 
+                <li><a id="nav-lista_2" href="/sobre" class="header-option">SOBRE</a></li> 
+                <li><a id="nav-lista_3" href="/contato" class="header-option">CONTATO</a></li> 
+                <li><a id="nav-lista_4" href="#" class="header-option">ORÇAMENTO</a></li>
+            </ul>
+        </div>
+
 
     <div class="modal fade" data-backdrop="static" id="visualizar" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -104,9 +121,9 @@
 
 <script>
 
-    $(document).ready(function() {
-        $('#instrucoes').modal('show');
-    })
+    // $(document).ready(function() {
+    //     $('#instrucoes').modal('show');
+    // })
 
     //Script para Drag and Drop
 

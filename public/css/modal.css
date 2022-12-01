@@ -33,6 +33,7 @@ input, textarea, select {
 .close:hover{
     background-color: #018390;
     color: white;
+    border-style: none;
 }
 
 #email, #nome, #produtosHiden{

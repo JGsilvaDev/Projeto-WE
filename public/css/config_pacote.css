@@ -56,8 +56,16 @@ body {
     
 }
 
+#dvBtn {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45px 0 32px 0;
+}
+
 #btnCalc {
+    color: var(--btn-text);
     border: none;
     background-color: var(--btn-color);
-    height:100%;
+    width: 25%;
 }

@@ -239,7 +239,6 @@ button:hover{
     color:white;
 }
 #text-button:hover {
-    color:red;
 }
 
 #projeto-button {
@@ -339,10 +338,16 @@ ul li {
 #redes-sociais-contato,
 #form-text,
 #contato-desc-top {
-    color: var(--proj-text)
+    color: var(--proj-text);
+}
+
+#contato-desc-top {
+    text-align: center; 
 }
 
 #contato-titulo {
+    text-align: center;
+    color: #F3F3F3;
     margin: 0;
     background-image: url('../img/celular_man.png');
     background-size: 100%;
@@ -361,9 +366,7 @@ input {
     padding:5px 0 5px;
 }
 
-#contato-titulo {
-    color: var(--fundo-cinza);
-}
+
 
 .form-items {
     color: var(--fundo-preto);
@@ -498,8 +501,10 @@ h1 {
 
 #config-pacote-descricao {
     color: var(--proj-text);
-    margin: 10px 0 10px 0;
+    margin: 32px auto;
     padding: 0 20px 0 20px;
+    text-align: center;
+    width: 75%;
 }
 
 #personalizado-header {
