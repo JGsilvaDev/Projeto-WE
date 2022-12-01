@@ -45,6 +45,28 @@ Route::get('/serviços', function () {
     ]);
 });
 
+Route::post('/serviços', function (Request $request) {
+
+    $email = $request->email;
+    $nome = $request->nome;
+    $produtos = $request->produtos;
+
+    //dd($produtos);
+
+    $opcao = 1;
+
+    $data = array(
+        'nome' => $nome,
+        'produtos' => $produtos,
+        'opcao' => $opcao
+    );
+
+    Mail::to($email)
+        ->send(new SendMailUser($data));
+
+    return redirect('/serviços')->with('success', 'Email enviado com sucesso');
+});
+
 
 //ROTAS BOT
 

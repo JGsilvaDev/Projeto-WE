@@ -152,10 +152,10 @@
                     <form method="POST">
                         @csrf
                         <label>Informe seu email:</label>
-                        <input type="email" name="email" id="email"><br>
+                        <input type="email" name="email" id="email" required><br>
                 
                         <label>Nome:</label>
-                        <input type="text" name="nome" id="nome"><br>
+                        <input type="text" name="nome" id="nome" required><br>
                 
                         <label>Produtos:</label>
                         <input type="text" name="produtos" id="produtos" style="display: none"><br>
