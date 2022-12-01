@@ -35,7 +35,7 @@
     <div id="marketing" class="fundo-cinza">
         <img src="./img/umportodos.png" alt="" id="marketing-imagem">
         <div id="marketing-intro">
-            <p id="marketing-titulo" class="txt-titulo" style="color: #018390;font-weight: bold ">Muito mais que uma agência</p>
+            <p id="marketing-titulo" class="txt-titulo" style="color: #018390; font-weight: bold ">Muito mais que uma agência</p>
             <p id="marketing-desc" class="txt-desc">
                 A We é muito mais que uma agência de consultoria e marketing digital. Somos uma família que preza pela diversidade e inclusão. Nossos sócios e colaboradores estão sempre zelando pelo respeito, transparência e integridade de nossos clientes. Somos movidos por resultados e nascemos com a missão de fazer a diferença no seu negócio. Além de vestir a camisa, vibramos com cada conquista. Inquietos na essência, nossa visão é alcançar nossos objetivos, realizando o seu.
             </p>

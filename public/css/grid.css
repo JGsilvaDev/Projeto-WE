@@ -21,7 +21,7 @@
 }
 #servicos {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(13, 1fr);
     gap: 30px;
     justify-content: center;
 }
@@ -127,12 +127,12 @@
 
 #service-titulo {
     text-align: left;
-    grid-column-start:1;
-    grid-column-end: 12;
+    grid-column-start:2;
+    grid-column-end: 13;
 }
 
 #service-desc {
-    grid-column-start:1;
+    grid-column-start:3;
     grid-column-end:12;
 }
 
@@ -141,21 +141,21 @@
 }
 
 #button-box-1{
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 5;
 }
 #button-box-2{
-    grid-column-start: 5;
-    grid-column-end: 8;
+    grid-column-start: 6;
+    grid-column-end: 9;
 }
 #button-box-3{
-    grid-column-start: 9;
-    grid-column-end: 12;
+    grid-column-start: 10;
+    grid-column-end: 13;
 }
 
 #servicos-button-end {
     grid-column-start: 5;
-    grid-column-end: 8;
+    grid-column-end: 10;
 }
 
 /*Segmento 3*/

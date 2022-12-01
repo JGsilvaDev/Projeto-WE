@@ -64,8 +64,8 @@
             <button id="orcamento-button" style="margin-bottom: 64px;" onclick="redirect('/serviços')">Faça seu orçamento</button>
         </div>
         <div id="servicos" class="fundo-cinza">
-            <p id="service-titulo" class="txt-titulo">NOSSOS SERVIÇOS</p>
-            <p id="service-desc" class="txt-desc">Trabalhamos com uma linha de criação e estratégia adaptada para o perfil de cada cliente, respeitando a história e personalidade da marca.</p>
+            <p id="service-titulo" class="txt-titulo" style="text-align: center;">NOSSOS SERVIÇOS</p>
+            <p id="service-desc" class="txt-desc" style="text-align: center;">Trabalhamos com uma linha de criação e estratégia adaptada para o perfil de cada cliente, respeitando a história e personalidade da marca.</p>
 
             <div class="button-box" id="button-box-1">
                 <img src="./img/Vector_alvo.svg" id="svg-alvo" class="button-img"></img>
