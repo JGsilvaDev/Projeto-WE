@@ -68,30 +68,30 @@ input {
 
 #olhoAberto, #olhoFechado{
     position: fixed;
-    top: 61.8%;
+    top: 55.8%;
     right: 35.2%;
 }
 
 #olhoAberto1, #olhoFechado1{
     position: fixed;
-    top: 51.4%;
-    right: 34%;
+    top: 42.5%;
+    right: 36%;
 }
 
 #olhoAberto2, #olhoFechado2{
     position: fixed;
-    top: 64.8%;
-    right: 34%;
+    top: 53.5%;
+    right: 36%;
 }
 
 #olhoAberto3, #olhoFechado3{
     position: fixed;
-    top: 46.1%;
+    top: 43.3%;
     right: 35%;
 }
 
 #olhoAberto4, #olhoFechado4{
     position: fixed;
-    top: 59.7%;
+    top: 54.7%;
     right: 35%;
 }

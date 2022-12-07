@@ -76,7 +76,7 @@ Route::match(['get', 'post'], 'botman', [BotManController::class, "handle"]);
 
 Route::get('/config_pacote', function () {
 
-    $produtos = Produtos::all();
+    $produtos = Produtos_fixos::all();
 
     return view('config_pacote', [
         'produtos' => $produtos,
